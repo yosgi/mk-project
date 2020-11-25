@@ -8,5 +8,5 @@ export default function Layout({
   history,
   match,
 }: IRouteComponentProps) {
-  return <Navigator></Navigator>;
+  return <Navigator children={children}></Navigator>;
 }
