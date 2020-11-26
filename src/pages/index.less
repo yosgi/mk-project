@@ -1,7 +1,38 @@
-
 .normal {
 }
 
 .title {
   background: rgb(121, 242, 157);
+}
+.imgContainer {
+  .col {
+    padding: 0px;
+  }
+  img {
+    width: 100%;
+  }
+  div {
+    width: 100%;
+    position: relative;
+  }
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .shadowContainer:hover a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
 }
