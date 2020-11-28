@@ -4,9 +4,10 @@
 
     // :: 1.0 Preloader Active Code
     browserWindow.on('load', function () {
-        $('.preloader').fadeOut('slow', function () {
-            $(this).remove();
-        });
+        
+    });
+    $('.preloader').fadeOut('slow', function () {
+        $(this).remove();
     });
 
     // :: 2.0 Nav Active Code
@@ -190,3 +191,16 @@
     }
 
 })(jQuery);
+
+var table = [{score:12},{score:24},{score:24},{score:24},{score:25},{score:28}]
+table.sort((a,b) =>  a.score - b.score)
+let rank = 0,pre = table[0].score
+table = table.map((v) => {
+    if (v.score === pre) {
+        v.rank = rank
+    } else {
+        v.rank = ++rank 
+    }
+    return v
+})
+console.log(table)
