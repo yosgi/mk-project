@@ -192,15 +192,16 @@
 
 })(jQuery);
 
-var table = [{score:12},{score:24},{score:24},{score:24},{score:25},{score:28}]
-table.sort((a,b) =>  a.score - b.score)
-let rank = 0,pre = table[0].score
-table = table.map((v) => {
-    if (v.score === pre) {
-        v.rank = rank
-    } else {
-        v.rank = ++rank 
-    }
-    return v
-})
-console.log(table)
+// var table = [{score:12},{score:24},{score:24},{score:24},{score:25},{score:28}]
+// table.sort((a,b) =>  a.score - b.score)
+// let rank = 0,pre = table[0].score
+// table = table.map((v) => {
+//     if (v.score === pre) {
+//         v.rank = rank
+//     } else {
+//         v.rank = ++rank 
+//     }
+//     pre = v.score
+//     return v
+// })
+// console.log(table)
