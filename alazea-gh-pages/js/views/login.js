@@ -54,10 +54,39 @@
         verifyCode: verifyCode,
         phone: phone,
         company: company,
-        success: function () {
-
-        }
       },
+      success: function (json) {
+        console.log(json)
+        return false
+      }
+    })
+  })
+  /**点击跳转注册 */
+  $('#login-register').on('click', function (e) {
+    $('#login-form').hide();
+    $('#register-form').show();
+  })
+  /**点击返回 */
+  $('#goback').on('click', function (e) {
+    $('#login-form').show();
+    $('#register-form').hide();
+  })
+  /**点击登录 */
+  $('#login').on('click', function (e) {
+    var name = $('#username1').val()
+    var password = $('#password1').val()
+    var data = {
+      password: password
+    }
+    if (/^[0-9]+$/.test(name)) {
+      data.phone = name;
+    } else {
+      data.email = name
+    }
+    api({
+      url: '/user/login',
+      method: 'POST',
+      data: data,
       success: function (json) {
         console.log(json)
         return false
