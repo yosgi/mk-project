@@ -71,7 +71,7 @@
     $('#login-form').show();
     $('#register-form').hide();
   })
-  /**点击登陆 */
+  /**点击登录 */
   $('#login').on('click', function (e) {
     var name = $('#username1').val()
     var password = $('#password1').val()
