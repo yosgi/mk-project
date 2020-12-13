@@ -1,0 +1,17 @@
+{
+  "name": "proxyserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-static": "^5.0.0",
+    "request": "^2.88.2"
+  }
+}
