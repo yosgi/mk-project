@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node proxyServer/start.js",
     "sass" :"npx node-sass alazea-gh-pages/scss/style.scss alazea-gh-pages/style.css"
   },
   "author": "",
