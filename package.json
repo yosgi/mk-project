@@ -1,0 +1,15 @@
+{
+  "name": "mk-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass" :"npx node-sass alazea-gh-pages/scss/style.scss alazea-gh-pages/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
