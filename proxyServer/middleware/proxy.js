@@ -1,3 +1,4 @@
+const { debug } = require('request')
 const request = require('request')
 module.exports = function () {
   return async function (ctx, next) {
@@ -6,7 +7,8 @@ module.exports = function () {
       let body = await _proxy()
       ctx.response.body = body
     }
-    function _proxy() {
+    
+    function _proxy() { 
       return new Promise((resolve, reject) => {
         let _body = ''
         try {
