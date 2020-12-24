@@ -91,7 +91,7 @@
 
     // :: 6.0 magnificPopup Active Code
     if ($.fn.magnificPopup) {
-        $('.portfolio-img, .product-img').magnificPopup({
+        $('.portfolio-img ').magnificPopup({
             gallery: {
                 enabled: true
             },

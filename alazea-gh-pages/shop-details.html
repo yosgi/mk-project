@@ -161,7 +161,7 @@
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
         <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/1.jpg);">
-            <h2>SHOP DETAILS</h2>
+            <h2>商品详情</h2>
         </div>
 
         <div class="container">
@@ -191,18 +191,18 @@
                             <div id="product_details_slider" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <a class="product-img" href="img/core-img/test.png" title="Product Image">
-                                        <img class="d-block w-100" src="img/core-img/test.png" alt="1">
+                                        <a class="product-img" href="img/detail/DSC03198.jpg" title="Product Image">
+                                        <img class="d-block w-100" src="img/detail/DSC03198.jpg" alt="1">
                                     </a>
                                     </div>
                                     <div class="carousel-item">
-                                        <a class="product-img" href="img/core-img/test.png" title="Product Image">
-                                        <img class="d-block w-100" src="img/core-img/test.png" alt="1">
+                                        <a class="product-img" href="img/detail/DSC03198.jpg" title="Product Image">
+                                        <img class="d-block w-100" src="img/detail/DSC03198.jpg" alt="1">
                                     </a>
                                     </div>
                                     <div class="carousel-item">
-                                        <a class="product-img" href="img/core-img/test.png" title="Product Image">
-                                        <img class="d-block w-100" src="img/core-img/test.png" alt="1">
+                                        <a class="product-img" href="img/detail/DSC03198.jpg" title="Product Image">
+                                        <img class="d-block w-100" src="img/detail/DSC03198.jpg" alt="1">
                                     </a>
                                     </div>
                                 </div>
@@ -213,14 +213,35 @@
 
                     <div class="col-12 col-md-6">
                         <div class="single_product_desc">
-                            <h4 class="title">商品</h4>
+                            <h4 class="title">玻璃咖啡杯</h4>
                             <h4 class="price">¥9.9</h4>
                             <div class="short_overview">
-                                <p>这里是产品简介</p>
+                                <p>钢化玻璃耐热杯身</p>
+                                <p>密封防漏</p>
+                                <p>直饮口设计</p>
+                                <p>杯盖指针防泼洒创意设计</p>
+                                <p>可拆卸隔热硅胶垫圈</p>
+                                <p>一杯多用</p>
                             </div>
                             <div class="products--meta">
-                                <p><span>颜色:</span> <span>灰色</span>   <span>蓝色</span></p>
-                                <p><span>型号:</span> <span>ABC</span></p>
+                                <p><span>颜色:</span></p>
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label  class="btn btn-default">
+                                        <input  type="checkbox"> 绿色
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input  type="checkbox"> 灰色
+                                    </label>
+                                </div>
+                            <p><span>型号:</span></p>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label  class="btn btn-default">
+                                    <input  type="checkbox"> 小号
+                                </label>
+                                <label class="btn btn-default">
+                                    <input  type="checkbox"> 中号
+                                </label>
+                            </div>
                             </div>
                             <div class="cart--area d-flex flex-wrap align-items-center">
                                 <!-- Add to Cart Form -->
@@ -230,7 +251,7 @@
                                         <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
                                         <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                     </div>
-                                    <button type="submit" name="addtocart" value="5" class="btn alazea-btn ml-15">加入购物车</button>
+                                    <button  name="addtocart" value="5" class="btn alazea-btn ml-15"><a href="cart.html">加入购物车</a></button>
                                    
                                 </form>
                                 <!-- Wishlist & Compare -->
@@ -393,6 +414,7 @@
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="js/bootstrap/popper.min.js"></script>
@@ -402,6 +424,8 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/views/shop.js"></script>
 </body>
 
 </html>

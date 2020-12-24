@@ -343,57 +343,12 @@
                         <div class="shop-widget best-seller mb-50">
                             <!-- <h4 class="widget-title">Best Seller</h4> -->
                             <div class="widget-desc">
-                                <!-- <div class="single-best-seller-product d-flex align-items-center">
-                                    <div class="product-thumbnail">
-                                        <a href="shop-details.html"><img src="img/bg-img/4.jpg" alt=""></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <a href="shop-details.html">商品名称</a>
-                                        <p>¥10.99</p>
-                                        <div class="ratings">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div> -->
-
                                 <!-- Single Best Seller Products -->
                                 <div class="single-best-seller-product d-flex align-items-center">
-                                    <!-- <div class="product-thumbnail">
-                                        <a href="shop-details.html"><img src="img/bg-img/5.jpg" alt=""></a>
-                                    </div> -->
-                                    <!-- <div class="product-info">
-                                        <a href="shop-details.html">Tulip Flower</a>
-                                        <p>¥11.99</p>
-                                        <div class="ratings">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div> -->
                                 </div>
 
                                 <!-- Single Best Seller Products -->
                                 <div class="single-best-seller-product d-flex align-items-center">
-                                    <!-- <div class="product-thumbnail">
-                                        <a href="shop-details.html"><img src="img/bg-img/34.jpg" alt=""></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <a href="shop-details.html">Recuerdos Plant</a>
-                                        <p>¥9.99</p>
-                                        <div class="ratings">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div> -->
                                 </div>
 
                             </div>
@@ -407,210 +362,33 @@
                         <div class="row">
 
                             <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-area mb-50">
+                            <div class="col-12 col-sm-6 col-lg-4" v-for="(v,index) in list">
+                                <div class="single-product-area mb-50" >
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <a href="shop-details.html"><img src="img/core-img/test.png" alt=""></a>
+                                        <a :href=`shop-details.html?id=${v.id}`><img class="product-img-in" :src="v.headImage" alt=""></a>
                                         <!-- Product Tag -->
                                         <div class="product-tag">
                                             <a href="#">Hot</a>
                                         </div>
                                         <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="cart.html" class="add-to-cart-btn">加入购物车</a>
-                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                                            <!-- <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a> -->
+                                            <a :href=`shop-details.html?id=${v.id}` style="margin: 0 auto"  class="add-to-cart-btn">加入购物车</a>
+                                            <!-- <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a> -->
                                         </div>
                                     </div>
                                     <!-- Product Info -->
                                     <div class="product-info mt-15 text-center">
-                                        <a href="shop-details.html">
-                                            <p>商品名称</p>
+                                        <a :href=`shop-details.html?id=${v.id}`>
+                                            <p>{{v.desc}}</p>
                                         </a>
                                         <h6>¥10.99</h6>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-area mb-50">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <a href="shop-details.html"><img src="img/core-img/test.png" alt=""></a>
-                                        <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="cart.html" class="add-to-cart-btn">加入购物车</a>
-                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Info -->
-                                    <div class="product-info mt-15 text-center">
-                                        <a href="shop-details.html">
-                                            <p>商品名称</p>
-                                        </a>
-                                        <h6>¥10.99</h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-area mb-50">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <a href="shop-details.html"><img src="img/core-img/test.png" alt=""></a>
-                                        <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="cart.html" class="add-to-cart-btn">加入购物车</a>
-                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Info -->
-                                    <div class="product-info mt-15 text-center">
-                                        <a href="shop-details.html">
-                                            <p>商品名称</p>
-                                        </a>
-                                        <h6>¥10.99</h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-area mb-50">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <a href="shop-details.html"><img src="img/core-img/test.png" alt=""></a>
-                                        <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="cart.html" class="add-to-cart-btn">加入购物车</a>
-                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Info -->
-                                    <div class="product-info mt-15 text-center">
-                                        <a href="shop-details.html">
-                                            <p>商品名称</p>
-                                        </a>
-                                        <h6>¥10.99</h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-area mb-50">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <a href="shop-details.html"><img src="img/core-img/test.png" alt=""></a>
-                                        <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="cart.html" class="add-to-cart-btn">加入购物车</a>
-                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Info -->
-                                    <div class="product-info mt-15 text-center">
-                                        <a href="shop-details.html">
-                                            <p>商品名称</p>
-                                        </a>
-                                        <h6>¥10.99</h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-area mb-50">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <a href="shop-details.html"><img src="img/core-img/test.png" alt=""></a>
-                                        <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="cart.html" class="add-to-cart-btn">加入购物车</a>
-                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Info -->
-                                    <div class="product-info mt-15 text-center">
-                                        <a href="shop-details.html">
-                                            <p>商品名称</p>
-                                        </a>
-                                        <h6>¥10.99</h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-area mb-50">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <a href="shop-details.html"><img src="img/core-img/test.png" alt=""></a>
-                                        <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="cart.html" class="add-to-cart-btn">加入购物车</a>
-                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Info -->
-                                    <div class="product-info mt-15 text-center">
-                                        <a href="shop-details.html">
-                                            <p>商品名称</p>
-                                        </a>
-                                        <h6>¥10.99</h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-area mb-50">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <a href="shop-details.html"><img src="img/core-img/test.png" alt=""></a>
-                                        <!-- Product Tag -->
-                                        <div class="product-tag sale-tag">
-                                            <a href="#">Sale</a>
-                                        </div>
-                                        <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="cart.html" class="add-to-cart-btn">加入购物车</a>
-                                            <a  class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Info -->
-                                    <div class="product-info mt-15 text-center">
-                                        <a href="shop-details.html">
-                                            <p>商品名称</p>
-                                        </a>
-                                        <h6>¥10.99</h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-area mb-50">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <a href="shop-details.html"><img src="img/core-img/test.png" alt=""></a>
-                                        <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="cart.html" class="add-to-cart-btn">加入购物车</a>
-                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- Product Info -->
-                                    <div class="product-info mt-15 text-center">
-                                        <a href="shop-details.html">
-                                            <p>商品名称</p>
-                                        </a>
-                                        <h6>¥10.99</h6>
-                                    </div>
-                                </div>
-                            </div>
+                     
+                           
                         </div>
 
                         <!-- Pagination -->
@@ -772,6 +550,7 @@
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="js/bootstrap/popper.min.js"></script>
