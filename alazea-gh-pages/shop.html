@@ -16,10 +16,11 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
+        <!-- Active js -->
 
 </head>
 
-<body>
+<body >
         <!-- Preloader -->
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-circle"></div>
@@ -201,7 +202,7 @@
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
-        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/1.jpg);">
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/banner/banner6.jpg);">
             <h2>商城</h2>
         </div>
 
@@ -229,15 +230,15 @@
                     <div class="shop-sorting-data d-flex flex-wrap align-items-center justify-content-between">
                         <!-- Shop Page Count -->
                         <div class="shop-page-count">
-                            <p> 第1–9 个 ，共100个</p>
+                            <p> 第{{pageNo * size + 1 }} – {{ 2 % ((pageNo + 1) * size)}} 个 ，共{{total}}个</p>
                         </div>
                         <!-- Search by Terms -->
                         <div class="search_by_terms">
                             <form action="#" method="post" class="form-inline">
-                                <select class="custom-select widget-title">
+                                <!-- <select class="custom-select widget-title">
                                   <option selected>按照价格</option>
                                   <option value="1">最新品</option>
-                                </select>
+                                </select> -->
                                 <!-- <select class="custom-select widget-title">
                                   <option selected>Show: 9</option>
                                   <option value="1">12</option>
@@ -256,7 +257,7 @@
                     <div class="shop-sidebar-area">
 
                         <!-- Shop Widget -->
-                        <div class="shop-widget price mb-50">
+                        <!-- <div class="shop-widget price mb-50">
                             <h4 class="widget-title">价格</h4>
                             <div class="widget-desc">
                                 <div class="slider-range">
@@ -268,44 +269,38 @@
                                     <div class="range-price">价格: 8元 - 30元</div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Shop Widget -->
-                        <div class="shop-widget catagory mb-50">
+                        <!-- <div class="shop-widget catagory mb-50">
                             <h4 class="widget-title">分类</h4>
                             <div class="widget-desc">
-                                <!-- Single Checkbox -->
                                 <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
                                     <input type="checkbox" class="custom-control-input" id="customCheck1">
                                     <label class="custom-control-label" for="customCheck1">分类1 <span class="text-muted">(72)</span></label>
                                 </div>
-                                <!-- Single Checkbox -->
                                 <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
                                     <input type="checkbox" class="custom-control-input" id="customCheck2">
                                     <label class="custom-control-label" for="customCheck2">分类2 <span class="text-muted">(20)</span></label>
                                 </div>
-                                <!-- Single Checkbox -->
                                 <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
                                     <input type="checkbox" class="custom-control-input" id="customCheck3">
                                     <label class="custom-control-label" for="customCheck3">分类3 <span class="text-muted">(15)</span></label>
                                 </div>
-                                <!-- Single Checkbox -->
                                 <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
                                     <input type="checkbox" class="custom-control-input" id="customCheck4">
                                     <label class="custom-control-label" for="customCheck4">分类4 <span class="text-muted">(20)</span></label>
                                 </div>
-                                <!-- Single Checkbox -->
                                 <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
                                     <input type="checkbox" class="custom-control-input" id="customCheck5">
                                     <label class="custom-control-label" for="customCheck5">分类5 <span class="text-muted">(15)</span></label>
                                 </div>
-                                <!-- Single Checkbox -->
                                 <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
                                     <input type="checkbox" class="custom-control-input" id="customCheck6">
                                     <label class="custom-control-label" for="customCheck6">其他 <span class="text-muted">(2)</span></label>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Shop Widget -->
                         <div class="shop-widget sort-by mb-50">
@@ -366,11 +361,11 @@
                                 <div class="single-product-area mb-50" >
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <a :href=`shop-details.html?id=${v.id}`><img class="product-img-in" :src="v.headImage" alt=""></a>
+                                        <a :href=`shop-details.html?id=${v.id}`><img style="height:224px;" class="product-img-in" :src="v.headImage" alt=""></a>
                                         <!-- Product Tag -->
-                                        <div class="product-tag">
+                                        <!-- <div class="product-tag">
                                             <a href="#">Hot</a>
-                                        </div>
+                                        </div> -->
                                         <div class="product-meta d-flex">
                                             <!-- <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a> -->
                                             <a :href=`shop-details.html?id=${v.id}` style="margin: 0 auto"  class="add-to-cart-btn">加入购物车</a>
@@ -380,23 +375,18 @@
                                     <!-- Product Info -->
                                     <div class="product-info mt-15 text-center">
                                         <a :href=`shop-details.html?id=${v.id}`>
-                                            <p>{{v.desc}}</p>
+                                            <p>{{v.name}}</p>
                                         </a>
                                         <h6>¥10.99</h6>
                                     </div>
                                 </div>
                             </div>
-
-                     
-                           
                         </div>
-
                         <!-- Pagination -->
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
+                                <li class="page-item" v-for="(v,index) in page"><a class="page-link">{{index + 1}}</a></li>
+                                <li class="page-item" @click="this.nextPage"><a class="page-link"><i class="fa fa-angle-right"></i></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -547,10 +537,9 @@
         </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
-
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="js/bootstrap/popper.min.js"></script>
@@ -558,10 +547,12 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
     <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
     <script src="js/api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="js/active.js"></script>
     <script src="js/views/shop.js"></script>
+    
+
 </body>
 
 </html>
