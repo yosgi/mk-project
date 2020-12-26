@@ -89,7 +89,7 @@
         });
     }
 
-    // :: 6.0 magnificPopup Active Code
+    // 首页 关于每刻
     if ($.fn.magnificPopup) {
         $('.portfolio-img ').magnificPopup({
             gallery: {
