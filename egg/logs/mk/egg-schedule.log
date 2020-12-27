@@ -1,0 +1,12 @@
+2020-12-13 15:18:32,675 INFO 8110 [egg-schedule]: register schedule /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-12-13 15:18:32,675 INFO 8110 [egg-schedule]: register schedule /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-12-13 15:18:32,675 INFO 8110 [egg-schedule]: register schedule /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-12-13 15:18:32,771 INFO 8108 [Timer] /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 47487231ms at 2020-12-14 04:30:00.002
+2020-12-13 15:18:32,772 INFO 8108 [Timer] /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 31287229ms at 2020-12-14 00:00:00.001
+2020-12-13 15:18:32,772 INFO 8108 [Timer] /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 31288228ms at 2020-12-14 00:00:01.000
+2020-12-13 15:20:22,446 INFO 8143 [Timer] /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 47377556ms at 2020-12-14 04:30:00.002
+2020-12-13 15:20:22,446 INFO 8143 [Timer] /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 31177554ms at 2020-12-14 00:00:00.000
+2020-12-13 15:20:22,447 INFO 8143 [Timer] /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 31178554ms at 2020-12-14 00:00:01.001
+2020-12-13 15:20:22,361 INFO 8145 [egg-schedule]: register schedule /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-12-13 15:20:22,361 INFO 8145 [egg-schedule]: register schedule /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-12-13 15:20:22,361 INFO 8145 [egg-schedule]: register schedule /Users/chenjiayuan/Documents/mk-project/egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js

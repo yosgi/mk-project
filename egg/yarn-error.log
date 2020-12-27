@@ -1,0 +1,76 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  14.15.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/egg: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:141408:19)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7)
+
+npm manifest: 
+  {
+    "name": "mk",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "egg": {
+      "declarations": true
+    },
+    "dependencies": {
+      "egg": "^2.15.1",
+      "egg-scripts": "^2.11.0",
+      "egg-view-assets": "^1.6.1",
+      "egg-view-nunjucks": "^2.2.0"
+    },
+    "devDependencies": {
+      "autod": "^3.0.1",
+      "autod-egg": "^1.1.0",
+      "egg-bin": "^4.11.0",
+      "egg-ci": "^1.11.0",
+      "egg-mock": "^3.21.0",
+      "eslint": "^5.13.0",
+      "eslint-config-egg": "^7.1.0"
+    },
+    "engines": {
+      "node": ">=10.0.0"
+    },
+    "scripts": {
+      "start": "egg-scripts start --daemon --title=egg-server-mk",
+      "stop": "egg-scripts stop --title=egg-server-mk",
+      "dev": "egg-bin dev",
+      "debug": "egg-bin debug",
+      "test": "npm run lint -- --fix && npm run test-local",
+      "test-local": "egg-bin test",
+      "cov": "egg-bin cov",
+      "lint": "eslint .",
+      "ci": "npm run lint && npm run cov",
+      "autod": "autod"
+    },
+    "ci": {
+      "version": "10"
+    },
+    "repository": {
+      "type": "git",
+      "url": ""
+    },
+    "author": "",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
