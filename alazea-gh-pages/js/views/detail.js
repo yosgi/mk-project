@@ -47,12 +47,14 @@ new Vue({
     submit() {
         var sku = this.skus[this.curSku]
         var count = this.count
-        var promises = new Array(count).fill(
+        let promises = []
+        for(let i = 0 ; i < count  ; i ++) {
             this.createOrder(sku.id,sku.spuId)
-        )
+        }
+        console.log(promises)
         Promise.all(promises)
         .then((res) => {
-            console.log(res)
+            $('.modal').modal('toggle')
         })
     },
     createOrder(skuId,spuId) {

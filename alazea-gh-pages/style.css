@@ -750,13 +750,12 @@ img {
           .single-product-area .product-img .product-meta a {
             font-size: 14px; } }
       .single-product-area .product-img .product-meta .add-to-cart-btn {
+        border-radius: 3px;
         -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(100% - 100px);
         flex: 0 0 calc(100% - 100px);
         max-width: calc(100% - 100px);
-        width: calc(100% - 100px);
-        border-left: 1px solid rgba(235, 235, 235, 0.5);
-        border-right: 1px solid rgba(235, 235, 235, 0.5); }
+        width: calc(100% - 100px); }
   .single-product-area .product-info a p {
     margin-bottom: 0;
     -webkit-transition-duration: 300ms;

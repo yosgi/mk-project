@@ -894,11 +894,12 @@ img {
         }
       }
       .add-to-cart-btn {
+        border-radius: 3px;
         @include flex(0 0 calc(100% - 100px));
         max-width: calc(100% - 100px);
         width: calc(100% - 100px);
-        border-left: 1px solid rgba(235, 235, 235, 0.5);
-        border-right: 1px solid rgba(235, 235, 235, 0.5);
+        // border-left: 1px solid rgba(235, 235, 235, 0.5);
+        // border-right: 1px solid rgba(235, 235, 235, 0.5);
       }
     }
   }
