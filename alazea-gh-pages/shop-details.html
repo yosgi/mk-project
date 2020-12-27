@@ -160,7 +160,7 @@
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
-        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/1.jpg);">
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/banner/banner6.jpg);">
             <h2>商品详情</h2>
         </div>
 
@@ -190,48 +190,38 @@
                         <div class="single_product_thumb">
                             <div id="product_details_slider" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <a class="product-img" href="img/detail/DSC03198.jpg" title="Product Image">
-                                        <img class="d-block w-100" src="img/detail/DSC03198.jpg" alt="1">
-                                    </a>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <a class="product-img" href="img/detail/DSC03198.jpg" title="Product Image">
-                                        <img class="d-block w-100" src="img/detail/DSC03198.jpg" alt="1">
-                                    </a>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <a class="product-img" href="img/detail/DSC03198.jpg" title="Product Image">
-                                        <img class="d-block w-100" src="img/detail/DSC03198.jpg" alt="1">
-                                    </a>
+                                    <div :class="['carousel-item', index === 0 ? 'active' : ''].join(' ') "  v-for="(v,index) in info.otherImage">
+                                        <a class="product-img" :href="v" title="Product Image">
+                                            <img  class="d-block w-100" :src="v" :alt="info.headImage">
+                                        </a>
                                     </div>
                                 </div>
-                            
+                                <ol class="carousel-indicators">
+                                    <li v-for="(v,index) in info.otherImage" :class="index === 0 ? 'active' : ''" data-target="#product_details_slider" :data-slide-to="index" :style="'background-image: url(' + v + ')'">
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6">
                         <div class="single_product_desc">
-                            <h4 class="title">玻璃咖啡杯</h4>
-                            <h4 class="price">¥9.9</h4>
+                            <h4 class="title">{{info.name}}</h4>
+                            <h4 class="price">¥{{skus[curSku]? skus[curSku].price:''}}</h4>
                             <div class="short_overview">
-                                <p>钢化玻璃耐热杯身</p>
-                                <p>密封防漏</p>
-                                <p>直饮口设计</p>
-                                <p>杯盖指针防泼洒创意设计</p>
-                                <p>可拆卸隔热硅胶垫圈</p>
-                                <p>一杯多用</p>
+                                <div v-for="(v,index) in info.desc">
+                                    {{v}}
+                                </div>
                             </div>
                             <div class="products--meta">
                                 <p><span>颜色:</span></p>
-                                <div class="btn-group" data-toggle="buttons">
-                                    <label  class="btn btn-default">
-                                        <input  type="checkbox"> 绿色
-                                    </label>
-                                    <label class="btn btn-default">
-                                        <input  type="checkbox"> 灰色
-                                    </label>
+                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">分类1 <span class="text-muted">(72)</span></label>
+                                </div>
+                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2">分类2 <span class="text-muted">(20)</span></label>
                                 </div>
                             <p><span>型号:</span></p>
                             <div class="btn-group" data-toggle="buttons">
@@ -266,8 +256,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="product_details_tab clearfix">
+                    <div v-for="(v,index) in info.desc">
+                        {{v}}
+                    </div>
+                </div>
+                
             </div>
         </div>
+        
 
       
     </section>
@@ -425,7 +422,8 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
     <script src="js/api.js"></script>
-    <script src="js/views/shop.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="js/views/detail.js"></script>
 </body>
 
 </html>
