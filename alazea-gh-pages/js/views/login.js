@@ -2,18 +2,18 @@
   var canClick = true;
   /**验证码 */
   $('#sendVerifyCode').on('click', function (e) {
+    $('#vsrifyError').hide()
     if (!canClick) {
       return false
     }
     var phone = $('#phone').val()
     api({
-      url: '/user/sendVerifyCode',
+      url: '/user/sendVerifyCode?phone=' + phone,
       method: 'POST',
       data: {
         phone: phone
       },
       success: function (json) {
-        console.log(json)
         return false
       }
     })
@@ -45,7 +45,7 @@
     var phone = $('#phone').val()
     var verifyCode = $('#VerifyCode').val()
     api({
-      url: '/user/register',
+      url: '/user/register?' + 'name=' + name + '&company=' + company + '&phone=' + phone + '&email=' + email + '&password=' + password + '&verifyCode=' + verifyCode,
       method: 'POST',
       data: {
         name: name,
@@ -56,7 +56,31 @@
         company: company,
       },
       success: function (json) {
-        console.log(json)
+        var json = JSON.parse(json)
+        $('#vsrifyError').hide()
+        $('#vsrifyEmailError').hide()
+        $('#vsrifyPhoneError').hide()
+        if (json.code === 500) {
+          if (json.msg === 'Incorrect verification code') {
+            $('#vsrifyError').show();
+          }
+          if (json.msg === 'the email already registry, you can login directly') {
+            $('#vsrifyEmailError').show()
+          }
+          if (json.msg === 'the phone already registry, you can login directly') {
+            $('#vsrifyPhoneError').show()
+          }
+        } else {
+          $('#registerSucess').show()
+          $('#vsrifyError').hide()
+          $('#vsrifyEmailError').hide()
+          $('#vsrifyPhoneError').hide()
+          setTimeout(function () {
+            $('#registerSucess').hide()
+            $('#login-form').hide();
+            $('#register-form').show();
+          }, 3000)
+        }
         return false
       }
     })
@@ -83,12 +107,23 @@
     } else {
       data.email = name
     }
+    $('#passwordError').hide()
     api({
-      url: '/user/login',
+      url: '/user/login?phone=' + name + '&password=' + password,
       method: 'POST',
       data: data,
       success: function (json) {
-        console.log(json)
+        var json = JSON.parse(json)
+        if (json.code === 500) {
+          $('#passwordError').show()
+        } else {
+          sessionStorage.setItem('token', json.data.token)
+          $('#loginSucess').show();
+          setTimeout(function () {
+            $('#loginSucess').hide();
+            window.location.href = 'index.html';
+          }, 3000)
+        }
         return false
       }
     })
