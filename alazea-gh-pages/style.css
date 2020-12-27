@@ -1028,22 +1028,27 @@ img {
   .single_product_desc .products--meta {
     position: relative;
     z-index: 1;
-    padding-top: 50px; }
+    padding-top: 50px;
+    line-height: 27px; }
+    .single_product_desc .products--meta label {
+      margin: 0 10px 0 0;
+      background-color: #f2f4f5; }
+    .single_product_desc .products--meta .active {
+      color: #ffffff;
+      background-color: #111111; }
     .single_product_desc .products--meta p {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
       .single_product_desc .products--meta p span:first-child {
         font-weight: 500;
-        color: #303030;
         -webkit-box-flex: 0;
         -ms-flex: 0 0 150px;
         flex: 0 0 150px;
         max-width: 150px;
-        width: 150px; }
+        width: 80px; }
       .single_product_desc .products--meta p span:last-child {
-        font-weight: 400;
-        color: #707070; }
+        font-weight: 400; }
         .single_product_desc .products--meta p span:last-child a {
           color: #cccccc;
           font-size: 14px;

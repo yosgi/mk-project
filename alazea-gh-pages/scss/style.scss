@@ -1223,18 +1223,28 @@ img {
     position: relative;
     z-index: 1;
     padding-top: 50px;
+    line-height: 27px;
+    .btn {
+      // padding: 0px
+    }
+    label {
+      margin:0 10px 0 0;
+      background-color: $bg-gray;
+    }
+    .active {
+      color:$white-color;
+      background-color: $bg-default;
+    }
     p {
       @include display-flex(flex);
       span:first-child {
         font-weight: 500;
-        color: $heading-color;
         @include flex(0 0 150px);
         max-width: 150px;
-        width: 150px;
+        width: 80px;
       }
       span:last-child {
         font-weight: 400;
-        color: $text-color;
         a {
           color: #cccccc;
           font-size: 14px;

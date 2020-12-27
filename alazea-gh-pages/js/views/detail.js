@@ -4,7 +4,9 @@ new Vue({
   data: {
     info:{},
     curSku:0,
-    skus:[]
+    skus:[],
+    spuAttribute:{key:[]},
+    count:1
   },
   computed: {
     query() {
@@ -21,14 +23,50 @@ new Vue({
         }
         return  obj=new parseQueryString(window.location.href);
     },
-    page() {
-      return new Array(Math.floor(this.total / this.size) + 1).fill(1)
+    keyMap() {
+        //商品属性名 id
+        let res = {}
+        this.spuAttribute.key.forEach(v => {
+            res[v.id] = v.name
+        })
+        return res
+    },
+    valMap() {
+        // 商品属性值
+        var vals = {}
+        this.spuAttribute.value.forEach(v => {
+            vals[v.id] = v.name
+        })
+        return vals
     }
   },
   created() {
     this.fetch()
   },
   methods:{
+    submit() {
+        var sku = this.skus[this.curSku]
+        var count = this.count
+        var promises = new Array(count).fill(
+            this.createOrder(sku.id,sku.spuId)
+        )
+        Promise.all(promises)
+        .then((res) => {
+            console.log(res)
+        })
+    },
+    createOrder(skuId,spuId) {
+        return new Promise((resolve,reject) => {
+            api({
+                url: `/product/order/createOrder?token=${token}&spuId=${spuId}&skuId=${skuId}&addressId=2`,
+                method: 'POST',
+                success: function (json) {
+                    resolve()
+                }
+            })
+        })
+        
+    },
     fetch() {
       var _this = this
       api({
@@ -39,9 +77,9 @@ new Vue({
             data.otherImage = JSON.parse(data.otherImage).splice(0,3)
             data.detail = JSON.parse(data.detail)
             data.desc = data.desc.split('\n')
-            
             console.log(data)
             _this.skus = data.skus
+            _this.spuAttribute = data.spuAttribute
             _this.info = data
           }
       })
