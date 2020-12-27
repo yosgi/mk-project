@@ -222,12 +222,12 @@
             <div class="row alazea-portfolio">
 
                 <!-- Single Portfolio Area -->
-                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item design home-design">
+                <div v-for="(v,index) in list"  class="col-12 col-sm-6 col-lg-3 single_portfolio_item design home-design">
                     <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/makeitnow1.jpg);"></div>
+                    <div class="portfolio-thumbnail bg-img" :style="'background-image: url('+ v.headImage +');'"></div>
                     <!-- Portfolio Hover Text -->
                     <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/makeitnow1.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 1">
+                        <a :href="v.headImage" class="portfolio-img d-flex align-items-center justify-content-center" :title="index">
                             <div class="port-hover-text">
                                 <h3>¥ 89.00</h3>
                                 <h5>makeitnow儿童餐盘分格吸盘碗卡通硅胶防摔辅食碗宝宝餐具</h5>
@@ -236,7 +236,6 @@
                     </div>
                 </div>
 
-                <!-- Single Portfolio Area -->
                 <div class="col-12 col-sm-6 col-lg-6 single_portfolio_item garden">
                     <!-- Portfolio Thumbnail -->
                     <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/makeitnow2.jpg);"></div>
@@ -251,140 +250,7 @@
                     </div>
                 </div>
 
-                <!-- Single Portfolio Area -->
-                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden office-design">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/makeitnow3.jpg);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/makeitnow2.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 4">
-                            <div class="port-hover-text">
-                                <div class="port-hover-text">
-                                    <h3>¥ 99.00-169.00</h3>
-                                    <h5>儿童餐盘卡通硅胶吸盘式分格餐盘防摔防滑宝宝辅食盘子</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Portfolio Area -->
-                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item design office-design">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/makeitnow4.jpg);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/makeitnow4.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 5">
-                            <div class="port-hover-text">
-                                <h3>¥ 29.90</h3>
-                                <h5>min婴儿辅食勺子儿童吃饭训练硅胶软勺6/9/12个月宝宝餐具勺子</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Portfolio Area -->
-                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/makeitnow5.jpg);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/makeitnow5.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 6">
-                            <div class="port-hover-text">
-                                <h3>¥ 19.90-59.90 </h3>
-                                <h5>min宝宝牙胶磨牙棒婴儿咬咬乐玩具防吃手神器可水煮果蔬咬胶</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Portfolio Area -->
-                <div class="col-12 col-sm-6 col-lg-6 single_portfolio_item home-design">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/makeitnow6.jpg);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/makeitnow6.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
-                            <div class="port-hover-text">
-                                <h3>¥ 39.90-49.90 </h3>
-                                <h5>min硅胶奶瓶刷子清洁刷套装婴儿奶嘴奶瓶清洗刷旋转清洗奶瓶神器</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Single Portfolio Area -->
-                <!-- <div class="col-12 col-sm-6 col-lg-6 single_portfolio_item design home-design">
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/16.jpg);"></div>
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/16.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 1">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden">
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/17.jpg);"></div>
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/17.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 2">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden office-design">
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/19.jpg);"></div>
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/19.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 4">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item design office-design">
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/20.jpg);"></div>
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/20.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 5">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden">
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/21.jpg);"></div>
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/21.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 6">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-6 single_portfolio_item home-design">
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/22.jpg);"></div>
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/22.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
-                            <div class="port-hover-text">
-                                <h3>Minimal Flower Store</h3>
-                                <h5>Office Plants</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div> -->
+           
 
             </div>
         </div>
@@ -539,6 +405,9 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <script src="js/api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="js/views/portfolio.js"></script>
 </body>
 
 </html>

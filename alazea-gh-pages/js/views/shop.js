@@ -1,8 +1,3 @@
-// (function ($) {
-    
-    
-    
-//   })(jQuery);
 
   var token = '812ca916-d1f3-4e68-888c-5cb553fc4f78'
     new Vue({
