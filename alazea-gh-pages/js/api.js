@@ -8,7 +8,7 @@
     var success = args.success
     var error = args.error
     $.ajax({
-      url: baseUrl + '/api' + url, //上线请删除/api
+      url: '/' + url, //上线请删除/api
       type: method,
       success: success,
       data: data,
