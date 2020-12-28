@@ -207,7 +207,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="alazea-portfolio-filter">
+                    <!-- <div class="alazea-portfolio-filter">
                         <div class="portfolio-filter">
                             <button class="btn active" data-filter="*">所有</button>
                             <button class="btn" data-filter=".design"> 热卖</button>
@@ -215,43 +215,30 @@
                             <button class="btn" data-filter=".home-design">婴儿水杯</button>
                             <button class="btn" data-filter=".office-design">出行用品</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
             <div class="row alazea-portfolio">
 
                 <!-- Single Portfolio Area -->
-                <div v-for="(v,index) in list"  class="col-12 col-sm-6 col-lg-3 single_portfolio_item design home-design">
+                <div v-for="(v,index) in list"  class="col-12 col-sm-6 col-lg-3 single_portfolio_item">
                     <!-- Portfolio Thumbnail -->
                     <div class="portfolio-thumbnail bg-img" :style="'background-image: url('+ v.headImage +');'"></div>
                     <!-- Portfolio Hover Text -->
                     <div class="portfolio-hover-overlay">
-                        <a :href="v.headImage" class="portfolio-img d-flex align-items-center justify-content-center" :title="index">
+                        <a :href=`single-portfolio.html?id=${v.id}` class="portfolio-img d-flex align-items-center justify-content-center" :title="index">
                             <div class="port-hover-text">
-                                <h3>¥ 89.00</h3>
-                                <h5>makeitnow儿童餐盘分格吸盘碗卡通硅胶防摔辅食碗宝宝餐具</h5>
+                                <h3>{{v.name}}</h3>
+                                <!-- <p style="color:#fff" v-for="(v,index) in JSON.parse(v.tags)">
+                                    {{v}}
+                                </p> -->
                             </div>
                         </a>
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-lg-6 single_portfolio_item garden">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" style="background-image: url(img/bg-img/makeitnow2.jpg);"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a href="img/bg-img/makeitnow2.jpg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 2">
-                            <div class="port-hover-text">
-                                <h3>¥ 59.00-189.00</h3>
-                                <h5>makeitnow儿童餐具套装快乐伴成长7件套</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-           
-
+         
             </div>
         </div>
     </section>

@@ -1425,7 +1425,7 @@ img {
       border: none;
       border-bottom: none;
       font-size: 20px;
-      padding: 0 0 30px 0;
+      // padding: 0 0 30px 0;
       color: $heading-color;
       font-weight: 500;
       text-transform: uppercase;
@@ -1979,6 +1979,14 @@ img {
 
 /* :: 15.0 Portfolio Area CSS */
 
+#portfolio {
+  text-align: center;
+  .portfolio-img {
+    display: inline-block;
+    width: 80%;
+    
+  }
+}
 .alazea-portfolio-filter {
   position: relative;
   z-index: 1;

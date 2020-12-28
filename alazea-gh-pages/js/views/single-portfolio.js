@@ -1,6 +1,6 @@
 var token = '812ca916-d1f3-4e68-888c-5cb553fc4f78'
 new Vue({
-  el: '.single_product_details_area',
+  el: '#portfolio',
   data: {
     info:{},
     curSku:0,
@@ -45,39 +45,17 @@ new Vue({
   },
   methods:{
     submit() {
-        var  product = this.skus[this.curSku]
-        var skuId = product.id
+        var sku = this.skus[this.curSku]
         var count = this.count
-        var spuId = product.spuId
-        var name = this.info.name
-        var src = this.info.headImage
-        var price = product.price
-        var detail = ''
-        JSON.parse(product.skuAttribute).forEach(v => {
-          detail += this.valMap[v.value]
+        let promises = []
+        for(let i = 0 ; i < count  ; i ++) {
+            this.createOrder(sku.id,sku.spuId)
+        }
+        console.log(promises)
+        Promise.all(promises)
+        .then((res) => {
+            $('.modal').modal('toggle')
         })
-        var lib = new localStorageDB("library", localStorage);
-        if (! lib.tableExists('products')){
-          lib.createTable("products", ["name", "src", "count", "price", "detail",'skuId','spuId']);
-        }
-        if (lib.query("products", {skuId}).length ){
-          lib.update("products", {skuId}, function(row) {
-            row.count+=count
-            return row;
-          });        
-        } else {
-          lib.insert("products", {name, src, count, price, skuId,spuId,detail})
-        }
-        var res = lib.commit();
-        res && $('.modal').modal('toggle')
-         // for(let i = 0 ; i < count  ; i ++) {
-        //     this.createOrder(sku.id,sku.spuId)
-        // }
-        // console.log(promises)
-        // Promise.all(promises)
-        // .then((res) => {
-        //     $('.modal').modal('toggle')
-        // })
     },
     createOrder(skuId,spuId) {
         return new Promise((resolve,reject) => {

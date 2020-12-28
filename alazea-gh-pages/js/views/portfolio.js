@@ -24,6 +24,7 @@
             method: 'POST',
             success: function (json) {
               var data  = JSON.parse(json).data
+              console.log(data)
               _this.total= data.totalCount
               _this.list = data.list
             }
