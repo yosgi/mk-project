@@ -1,6 +1,6 @@
 (function ($) {
   'use strict';
-  var baseUrl = 'http://127.0.0.1:3000'
+  var baseUrl = 'http://47.115.38.175'
   function api(args) {
     var url = args.url;
     var method = args.method;
@@ -8,7 +8,7 @@
     var success = args.success
     var error = args.error
     $.ajax({
-      url: '/' + url, //上线请删除/api
+      url: baseUrl+ '/' + url, //上线请删除/api
       type: method,
       success: success,
       data: data,
