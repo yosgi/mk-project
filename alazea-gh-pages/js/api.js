@@ -1,6 +1,6 @@
 (function ($) {
   'use strict';
-  var baseUrl = 'http://127.0.0.1:3000'
+  var baseUrl = 'http://47.115.38.175:3000'
   function api(args) {
     var url = args.url;
     var method = args.method;
