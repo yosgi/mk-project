@@ -1,6 +1,6 @@
 (function ($) {
   'use strict';
-  var baseUrl = 'http://minmakeitnow.com/:3000'
+  var baseUrl = 'http://minmakeitnow.com'
   function api(args) {
     var url = args.url;
     var method = args.method;
