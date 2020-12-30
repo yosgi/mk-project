@@ -8,4 +8,4 @@ const proxyServer = require('./middleware/proxy')
 app.use(koaBody());
 app.use(proxyServer());
 app.use(static(path.join('../alazea-gh-pages')))
-app.listen(3000)
+app.listen(80)
