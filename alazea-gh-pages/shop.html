@@ -16,122 +16,130 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
-        <!-- Active js -->
+    <!-- Active js -->
 
 </head>
 
-<body >
-        <!-- Preloader -->
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-circle"></div>
-            <div class="preloader-img">
-                <img src="img/core-img/mlogo.webp" alt="">
-            </div>
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="img/core-img/mlogo.webp" alt="">
         </div>
-    
-        <!-- ##### Header Area Start ##### -->
-        <header class="header-area">
-    
-            <!-- ***** Top Header Area ***** -->
-            <div class="top-header-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="top-header-content d-flex align-items-center justify-content-between">
-                                <!-- Top Header Content -->
-                                <div class="top-header-meta">
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com">
-                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                        <span>邮箱: 12345678@gmail.com</span>
-                                    </a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122">
-                                        <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <span>联系我们: +1234567</span>
-                                    </a>
-                                </div>
-    
-                                <!-- Top Header Content -->
-                                <div class="top-header-meta d-flex">
-                                    <!-- Language Dropdown -->
-                                    <div class="language-dropdown">
-                                        <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false">语言</button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">简体中文</a>
-                                                <a class="dropdown-item" href="#">English</a>
-                                                <!-- <a class="dropdown-item" href="#">Bangla</a>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- ***** Top Header Area ***** -->
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-header-content d-flex align-items-center justify-content-between">
+                            <!-- Top Header Content -->
+                            <div class="top-header-meta">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <span>邮箱: 12345678@gmail.com</span>
+                                </a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>联系我们: +1234567</span>
+                                </a>
+                            </div>
+
+                            <!-- Top Header Content -->
+                            <div class="top-header-meta d-flex">
+                                <!-- Language Dropdown -->
+                                <div class="language-dropdown">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">语言</button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">简体中文</a>
+                                            <a class="dropdown-item" href="#">English</a>
+                                            <!-- <a class="dropdown-item" href="#">Bangla</a>
                                                 <a class="dropdown-item" href="#">Hindi</a>
                                                 <a class="dropdown-item" href="#">Spanish</a>
                                                 <a class="dropdown-item" href="#">Latin</a> -->
-                                            </div>
                                         </div>
                                     </div>
-                                    <!-- Login -->
-                                    <div class="login">
-                                        <a href="login.html">
-                                            <i class="fa fa-user" aria-hidden="true"></i>
-                                            <span>登陆</span>
-                                        </a>
-                                    </div>
-                                    <!-- Cart -->
-                                    <div class="cart">
-                                        <a href="cart.html">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                            <span>购物车
-                                                <span class="cart-quantity"></span>
-                                            </span>
-                                        </a>
-                                    </div>
+                                </div>
+                                <!-- Login -->
+                                <div class="login">
+                                    <a href="login.html" id="title_login">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <span>登陆</span>
+                                    </a>
+                                </div>
+                                <div class="login">
+                                    <a href="checkout.html" id="title_login1" style="display: none">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <span>地址</span>
+                                    </a>
+                                </div>
+                                <!-- Cart -->
+                                <div class="cart">
+                                    <a href="cart.html">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <span>购物车
+                                            <span class="cart-quantity"></span>
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    
-            <!-- ***** Navbar Area ***** -->
-            <div class="alazea-main-menu">
-                <div class="classy-nav-container breakpoint-off">
-                    <div class="container">
+        </div>
+
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+
+                        <!-- Nav Brand -->
+
+                        <a href="index.html" class="nav-brand">
+                            <img src="img/core-img/logo.png" alt="">
+                        </a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+
                         <!-- Menu -->
-                        <nav class="classy-navbar justify-content-between" id="alazeaNav">
-    
-                            <!-- Nav Brand -->
-                            
-                            <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
-    
-                            <!-- Navbar Toggler -->
-                            <div class="classy-navbar-toggler">
-                                <span class="navbarToggler">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </span>
-                            </div>
-    
-                            <!-- Menu -->
-                            <div class="classy-menu">
-    
-                                <!-- Close Button -->
-                                <div class="classycloseIcon">
-                                    <div class="cross-wrap">
-                                        <span class="top"></span>
-                                        <span class="bottom"></span>
-                                    </div>
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap">
+                                    <span class="top"></span>
+                                    <span class="bottom"></span>
                                 </div>
-    
-                                <!-- Navbar Start -->
-                                <div class="classynav">
-                                    <ul>
-                                        <li>
-                                            <a href="index.html">首页</a>
-                                        </li>
-                                        <!-- about.html -->
-                                        <li>
-                                            <a href="about.html">关于我们</a>
-                                        </li>
-                                        <!-- <li><a href="#">导航</a>
+                            </div>
+
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li>
+                                        <a href="index.html">首页</a>
+                                    </li>
+                                    <!-- about.html -->
+                                    <li>
+                                        <a href="about.html">关于我们</a>
+                                    </li>
+                                    <!-- <li><a href="#">导航</a>
                                             <ul class="dropdown">
                                                 <li><a href="index.html">首页</a></li>
                                                 <li><a href="about.html">关于</a></li>
@@ -158,46 +166,46 @@
                                                 <li><a href="contact.html">联系我们</a></li>
                                             </ul>
                                         </li> -->
-                                        <li>
-                                            <a href="shop.html">商城</a>
-                                        </li>
-                                        <!-- shop.html -->
-                                        <li>
-                                            <a href="portfolio.html">产品</a>
-                                        </li>
-                                        <!-- portfolio.html -->
-                                        <li>
-                                            <a href="contact.html">联系我们</a>
-                                        </li>
-                                        <!-- contact.html -->
-                                    </ul>
-    
-                                    <!-- Search Icon -->
-                                    <div id="searchIcon">
-                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                    </div>
-    
+                                    <li>
+                                        <a href="shop.html">商城</a>
+                                    </li>
+                                    <!-- shop.html -->
+                                    <li>
+                                        <a href="portfolio.html">产品</a>
+                                    </li>
+                                    <!-- portfolio.html -->
+                                    <li>
+                                        <a href="contact.html">联系我们</a>
+                                    </li>
+                                    <!-- contact.html -->
+                                </ul>
+
+                                <!-- Search Icon -->
+                                <div id="searchIcon">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
                                 </div>
-                                <!-- Navbar End -->
+
                             </div>
-                        </nav>
-    
-                        <!-- Search Form -->
-                        <div class="search-form">
-                            <form action="#" method="get">
-                                <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
-                                <button type="submit" class="d-none"></button>
-                            </form>
-                            <!-- Close Icon -->
-                            <div class="closeIcon">
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+
+                    <!-- Search Form -->
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                            <button type="submit" class="d-none"></button>
+                        </form>
+                        <!-- Close Icon -->
+                        <div class="closeIcon">
+                            <i class="fa fa-times" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- ##### Header Area End ##### -->
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
@@ -211,7 +219,10 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> 首页</a></li>
+                            <li class="breadcrumb-item">
+                                <a href="#">
+                                    <i class="fa fa-home"></i> 首页</a>
+                            </li>
                             <li class="breadcrumb-item active" aria-current="page">商城</li>
                         </ol>
                     </nav>
@@ -358,17 +369,19 @@
 
                             <!-- Single Product Area -->
                             <div class="col-12 col-sm-6 col-lg-4" v-for="(v,index) in list">
-                                <div class="single-product-area mb-50" >
+                                <div class="single-product-area mb-50">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <a :href=`shop-details.html?id=${v.id}`><img style="height:224px;" class="product-img-in" :src="v.headImage" alt=""></a>
+                                        <a :href=`shop-details.html?id=${v.id}`>
+                                            <img style="height:224px;" class="product-img-in" :src="v.headImage" alt="">
+                                        </a>
                                         <!-- Product Tag -->
                                         <!-- <div class="product-tag">
                                             <a href="#">Hot</a>
                                         </div> -->
                                         <div class="product-meta d-flex">
                                             <!-- <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a> -->
-                                            <a :href=`shop-details.html?id=${v.id}` style="margin: 0 auto"  class="add-to-cart-btn">查看详情</a>
+                                            <a :href=`shop-details.html?id=${v.id}` style="margin: 0 auto" class="add-to-cart-btn">查看详情</a>
                                             <!-- <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a> -->
                                         </div>
                                     </div>
@@ -385,8 +398,14 @@
                         <!-- Pagination -->
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
-                                <li class="page-item" v-for="(v,index) in page"><a class="page-link">{{index + 1}}</a></li>
-                                <li class="page-item" @click="this.nextPage"><a class="page-link"><i class="fa fa-angle-right"></i></a></li>
+                                <li class="page-item" v-for="(v,index) in page">
+                                    <a class="page-link">{{index + 1}}</a>
+                                </li>
+                                <li class="page-item" @click="this.nextPage">
+                                    <a class="page-link">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -397,7 +416,7 @@
     <!-- ##### Shop Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area bg-img" >
+    <footer class="footer-area bg-img">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
             <div class="container">
@@ -478,7 +497,7 @@
                                 <p>
                                     <span>邮箱:</span> hao123@gmail.com</p>
                                 <p>
-                                    <span>营业时间:</span> 周一  ~ 周五: 8 AM to 9 PM</p>
+                                    <span>营业时间:</span> 周一 ~ 周五: 8 AM to 9 PM</p>
                             </div>
                         </div>
                     </div>
@@ -551,7 +570,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="js/active.js"></script>
     <script src="js/views/shop.js"></script>
-    
+
 
 </body>
 

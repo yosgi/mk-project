@@ -4,7 +4,7 @@
 
     // :: 1.0 Preloader Active Code
     browserWindow.on('load', function () {
-        
+
     });
     $('.preloader').fadeOut('slow', function () {
         $(this).remove();
@@ -14,7 +14,6 @@
     if ($.fn.classyNav) {
         $('#alazeaNav').classyNav();
     }
-
     // :: 3.0 Search Active Code
     $('#searchIcon').on('click', function () {
         $('.search-form').toggleClass('active');
@@ -188,6 +187,15 @@
     // :: 14.0 wow Active Code
     if (browserWindow.width() > 767) {
         new WOW().init();
+    }
+
+    var token = sessionStorage.getItem('token')
+    if (token) {
+        $('#title_login').hide()
+        $('#title_login1').show()
+    } else {
+        $('#title_login').show()
+        $('#title_login1').hide()
     }
 
 })(jQuery);

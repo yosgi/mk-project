@@ -68,9 +68,15 @@
                                 </div>
                                 <!-- Login -->
                                 <div class="login">
-                                    <a href="login.html">
+                                    <a href="login.html" id="title_login">
                                         <i class="fa fa-user" aria-hidden="true"></i>
                                         <span>登陆</span>
+                                    </a>
+                                </div>
+                                <div class="login">
+                                    <a href="checkout.html" id="title_login1" style="display: none">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <span>地址</span>
                                     </a>
                                 </div>
                                 <!-- Cart -->
@@ -97,11 +103,17 @@
                     <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                         <!-- Nav Brand -->
-                        <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="index.html" class="nav-brand">
+                            <img src="img/core-img/logo.png" alt="">
+                        </a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                            <span class="navbarToggler">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
                         </div>
 
                         <!-- Menu -->
@@ -109,7 +121,10 @@
 
                             <!-- Close Button -->
                             <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                                <div class="cross-wrap">
+                                    <span class="top"></span>
+                                    <span class="bottom"></span>
+                                </div>
                             </div>
 
                             <!-- Navbar Start -->
@@ -149,7 +164,9 @@
                             <button type="submit" class="d-none"></button>
                         </form>
                         <!-- Close Icon -->
-                        <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+                        <div class="closeIcon">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -169,8 +186,13 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> 首页</a></li>
-                            <li class="breadcrumb-item"><a href="#">商城</a></li>
+                            <li class="breadcrumb-item">
+                                <a href="#">
+                                    <i class="fa fa-home"></i> 首页</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">商城</a>
+                            </li>
                             <li class="breadcrumb-item active" aria-current="page">详情</li>
                         </ol>
                     </nav>
@@ -190,14 +212,15 @@
                         <div class="single_product_thumb">
                             <div id="product_details_slider" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div :class="['carousel-item', index === 0 ? 'active' : ''].join(' ') "  v-for="(v,index) in info.otherImage">
+                                    <div :class="['carousel-item', index === 0 ? 'active' : ''].join(' ') " v-for="(v,index) in info.otherImage">
                                         <a class="product-img" :href="v" title="Product Image">
-                                            <img  class="d-block w-100" :src="v" :alt="info.headImage">
+                                            <img class="d-block w-100" :src="v" :alt="info.headImage">
                                         </a>
                                     </div>
                                 </div>
                                 <ol class="carousel-indicators">
-                                    <li v-for="(v,index) in info.otherImage" :class="index === 0 ? 'active' : ''" data-target="#product_details_slider" :data-slide-to="index" :style="'background-image: url(' + v + ')'">
+                                    <li v-for="(v,index) in info.otherImage" :class="index === 0 ? 'active' : ''" data-target="#product_details_slider" :data-slide-to="index"
+                                        :style="'background-image: url(' + v + ')'">
                                     </li>
                                 </ol>
                             </div>
@@ -214,34 +237,37 @@
                                 </div>
                             </div>
                             <div class="products--meta">
-                                <p
-
-                                ><span>选择规格</span>
+                                <p>
+                                    <span>选择规格</span>
                                 </p>
-                                <p> 
-                                    <label v-for="(v,index) in skus"  @click="curSku = index" :class="['btn','btn-default',curSku === index?'active':'' ].join(' ') ">
+                                <p>
+                                    <label v-for="(v,index) in skus" @click="curSku = index" :class="['btn','btn-default',curSku === index?'active':'' ].join(' ') ">
                                         <span v-for="(val,key) in JSON.parse(v.skuAttribute)">
                                             {{valMap[val.value]}}
                                         </span>
                                     </label>
 
-                            </p>
+                                </p>
                             </div>
                             <div class="cart--area d-flex flex-wrap align-items-center">
                                 <!-- Add to Cart Form -->
                                 <form class="cart clearfix d-flex align-items-center" method="post">
                                     <div class="quantity">
-                                        <span class="qty-minus" @click="count > 1 ? count--:'' "><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                        <span class="qty-minus" @click="count > 1 ? count--:'' ">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </span>
                                         <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" :value="count">
-                                        <span class="qty-plus" @click="count++"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                        <span class="qty-plus" @click="count++">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </span>
                                     </div>
-                                    
-                                    
+
+
                                 </form>
-                                    <button @click="submit" name="addtocart" value="5" class="btn alazea-btn ml-15">
-                                        加入购物车
-                                    </button>
-                                  
+                                <button @click="submit" name="addtocart" value="5" class="btn alazea-btn ml-15">
+                                    加入购物车
+                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -251,35 +277,35 @@
                         {{v}}
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
 
-      
+
     </section>
     <!-- ##### Single Product Details Area End ##### -->
     <div class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">通知</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">通知</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>加入成功，是否进入购物车查看 ？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="location.href='cart.html'">前往</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">不了</button>
+                </div>
             </div>
-            <div class="modal-body">
-              <p>加入成功，是否进入购物车查看 ？</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" onclick="location.href='cart.html'">前往</button>
-              <button type="button" class="btn btn-default" data-dismiss="modal">不了</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area bg-img" >
+    <footer class="footer-area bg-img">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
             <div class="container">
@@ -342,7 +368,7 @@
                         </div>
                     </div>
 
-           
+
 
                     <!-- Single Footer Widget -->
                     <div class="col-12 col-sm-6 col-lg-3">
@@ -359,7 +385,7 @@
                                 <p>
                                     <span>邮箱:</span> hao123@gmail.com</p>
                                 <p>
-                                    <span>营业时间:</span> 周一  ~ 周五: 8 AM to 9 PM</p>
+                                    <span>营业时间:</span> 周一 ~ 周五: 8 AM to 9 PM</p>
                                 <p>
                             </div>
                         </div>

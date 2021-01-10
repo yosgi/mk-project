@@ -7,8 +7,8 @@ module.exports = function () {
       let body = await _proxy()
       ctx.response.body = body
     }
-    
-    function _proxy() { 
+
+    function _proxy() {
       return new Promise((resolve, reject) => {
         let _body = ''
         try {
