@@ -6,8 +6,8 @@ module.exports = function () {
     if (/api/.test(url)) {
       let body = await _proxy()
       ctx.response.body = body
-    }
-
+    } 
+    
     function _proxy() {
       return new Promise((resolve, reject) => {
         let _body = ''
@@ -18,7 +18,7 @@ module.exports = function () {
         }
         request({
           method,
-          url: 'http://47.115.38.175:8090' + url.replace('/api', ''),
+          url: 'http://minmakeitnow.com',
           header,
           body: _body
         }, (err, response, body) => {

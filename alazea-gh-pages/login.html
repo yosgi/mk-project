@@ -66,7 +66,7 @@
                 <div class="login">
                   <a href="login.html" id="title_login">
                     <i class="fa fa-user" aria-hidden="true"></i>
-                    <span>登陆</span>
+                    <span>登录</span>
                   </a>
                 </div>
                 <div class="login">
@@ -174,7 +174,7 @@
   <div class="breadcrumb-area">
     <!-- Top Breadcrumb Area -->
     <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/banner/banner6.jpg);">
-      <h2>登陆</h2>
+      <h2>登录</h2>
     </div>
 
     <div class="container">
@@ -186,7 +186,7 @@
                 <a href="#">
                   <i class="fa fa-home"></i>用户</a>
               </li>
-              <li class="breadcrumb-item active" aria-current="page">登陆</li>
+              <li class="breadcrumb-item active" aria-current="page">登录</li>
             </ol>
           </nav>
         </div>
@@ -197,8 +197,10 @@
 
   <!-- ##### About Area Start ##### -->
   <section class="about-us-area">
-    <div class="container" id='register-form' style='display: none'>
-      <div style="padding: 60px 0px">
+    
+    <div class="container row justify-content-center" id='register-form' style='display: none'>
+      <div style="padding: 60px 0px" class="col-6 ">
+        
         <div class="form-group">
           <label for="username">用户名</label>
           <input type="text" class="form-control" id="username" aria-describedby="username">
@@ -222,41 +224,56 @@
         </div>
         <div class="form-group">
           <label for="phone">手机号</label>
-          <input type="number" class="form-control" id="phone">
-          <p style='color: red;display: none' id="vsrifyPhoneError">手机号已注册</p>
+          <div class="row justify-content-between">
+            <div class="col-8">
+              <input type="number" class="form-control" id="phone">
+              <p style='color: red;display: none' id="vsrifyPhoneError">手机号已注册</p>
+            </div>
+            <div class="col-4">
+              <button class="btn alazea-btn" id="sendVerifyCode" style="width:100%">发送验证码</button>
+            </div>
+          </div>
+
+         
         </div>
         <div class="form-group">
           <label for="VerifyCode">验证码</label>
-          <div class="row">
-            <div class="col-7">
-              <input type="text" class="form-control" id="VerifyCode" aria-describedby="VerifyCode" />
-              <p style='color: red;display: none' id="vsrifyError">验证码错误</p>
-            </div>
-            <div class="col-4">
-              <button class="btn alazea-btn" id="sendVerifyCode" style="min-width: 120px">发送验证码</button>
-            </div>
-          </div>
+            <input type="text" class="form-control" id="VerifyCode" aria-describedby="VerifyCode" />
+            <p style='color: red;display: none' id="vsrifyError">验证码错误</p>
         </div>
-        <button type="submit" class="btn alazea-btn mt-15" id="register" style="width: 100px;">注册</button>
-        <button type="submit" class="btn alazea-btn mt-15" id="goback" style="width: 100px;margin-left: 20px;">返回</button>
+        <button type="submit" class="btn alazea-btn mt-15" id="register" style="width: 50%">创建账号</button>
         <div class="alert alert-success" role="alert" style='margin-top: 10px;display: none' id='registerSucess'>注册成功</div>
       </div>
     </div>
-    <div class="container" id="login-form">
-      <div style="padding: 60px 0px">
-        <div class="form-group">
-          <label for="username1">用户名</label>
-          <input type="text" class="form-control" id="username1" aria-describedby="username1" placeholder="手机或者邮箱">
+    <div class=" row justify-content-around" id="login-form">
+      <div class="col-4 " >
+        <div class="row" id='address_mes' >
+          <div class="col-12 mb-4">
+              <label for="username1">请登录您的makeitnow 账户 （手机 / 邮箱）</label>
+              <input type="number" class="form-control" id="username1" placeholder="手机或者邮箱">
+          </div>
+          <div class="col-12 mb-4">
+              <label for="company">密码</label>
+              <input type="password" class="form-control" id="password1" >
+              <p style='color: red;display: none' id="passwordError">密码错误</p>
+          </div>
+          <div class="col-12 mb-4">
+            <button type="submit" class="btn alazea-btn mt-15" id="login" style="width:50%">登录</button>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="password1">密码</label>
-          <input type="password" class="form-control" id="password1">
-          <p style='color: red;display: none' id="passwordError">密码错误</p>
-        </div>
-        <button type="submit" class="btn alazea-btn mt-15" id="login" style="width: 100px;">登陆</button>
-        <button type="submit" class="btn alazea-btn mt-15" id="login-register" style="margin-left: 20px;width: 100px;">注册</button>
-        <div class="alert alert-success" role="alert" style='margin-top: 10px;display: none' id='loginSucess'>登陆成功</div>
+        <div class="alert alert-success" role="alert" style='margin-top: 10px;display: none' id='loginSucess'>登录成功</div>
       </div>
+      <div class="col-4 ">
+        <h3>创建账户</h3>
+        
+        <p>为您加快结算流程，便于查看订单历史及购物车</p>
+
+        <button type="submit" class="btn alazea-btn mt-15" id="login-register" style="width:50%">注册</button>
+
+
+      </div>  
+    </div>
+
     </div>
   </section>
   <!-- ##### About Area End ##### -->

@@ -8,7 +8,7 @@
     }
     var phone = $('#phone').val()
     api({
-      url: '/user/sendVerifyCode?phone=' + phone,
+      url: '/user/sendVerifyCode',
       method: 'POST',
       data: {
         phone: phone
@@ -45,7 +45,7 @@
     var phone = $('#phone').val()
     var verifyCode = $('#VerifyCode').val()
     api({
-      url: '/user/register?' + 'name=' + name + '&company=' + company + '&phone=' + phone + '&email=' + email + '&password=' + password + '&verifyCode=' + verifyCode,
+      url: '/user/register',
       method: 'POST',
       data: {
         name: name,
@@ -56,7 +56,6 @@
         company: company,
       },
       success: function (json) {
-        var json = JSON.parse(json)
         $('#vsrifyError').hide()
         $('#vsrifyEmailError').hide()
         $('#vsrifyPhoneError').hide()
@@ -109,11 +108,10 @@
     }
     $('#passwordError').hide()
     api({
-      url: '/user/login?phone=' + name + '&password=' + password,
+      url: '/user/login',
       method: 'POST',
       data: data,
       success: function (json) {
-        var json = JSON.parse(json)
         if (json.code === 500) {
           $('#passwordError').show()
         } else {

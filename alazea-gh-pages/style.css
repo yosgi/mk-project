@@ -819,9 +819,7 @@ img {
   .shop-widget .custom-control .custom-control-label {
     font-size: 16px;
     color: #707070; }
-  .shop-widget .custom-checkbox
-.custom-control-input:checked
-~ .custom-control-label::before {
+  .shop-widget .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
     background-color: #111111; }
   .shop-widget .single-best-seller-product {
     position: relative;
@@ -2661,5 +2659,8 @@ img {
     margin-bottom: 0; }
   .portfolio-details-meta:last-child {
     margin-bottom: 0; }
+
+#register-form input {
+  height: 46px; }
 
 /* ======= The End ======= */

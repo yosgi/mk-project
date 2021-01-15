@@ -4,15 +4,14 @@
   var curId = 0;
   function getList() {
     api({
-      url: '/address/list?token=' + sessionStorage.getItem('token') + '&pageNo=1&pageSize=1',
+      url: '/address/list',
       method: 'POST',
-      data: {
+      data:{
         token: sessionStorage.getItem('token'),
-        pageNo: 1,
-        pageSize: 1
+        pageNo:0,
+        pageSize: 10
       },
       success: function (json) {
-        var json = JSON.parse(json)
         var list = []
         if (json.data && json.data.list) {
           list = json.data.list
@@ -70,7 +69,7 @@
     }
     if (isUpdate) {
       api({
-        url: '/address/updateAddress?token=' + sessionStorage.getItem('token') + '&receiverName=' + usrname + '&phone=' + phone + '&address=' + address + '&addressId=' + curId,
+        url: '/address/updateAddress',
         method: 'POST',
         success: function (json) {
           getList();
@@ -87,7 +86,12 @@
       })
     } else {
       api({
-        url: '/address/createAddress?token=' + sessionStorage.getItem('token') + '&receiverName=' + usrname + '&phone=' + phone + '&address=' + address,
+        url: '/address/createAddress' ,
+        data:{
+          receiverName:usrname,
+          phone,
+          address
+        },
         method: 'POST',
         success: function (json) {
           getList();

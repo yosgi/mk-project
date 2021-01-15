@@ -1,5 +1,5 @@
 
-  var token = '812ca916-d1f3-4e68-888c-5cb553fc4f78'
+var token = sessionStorage.getItem('token');
   new Vue({
     el: '.alazea-portfolio-area',
     data: {
@@ -23,8 +23,7 @@
             url: '/product/getList?token=' + token + "&pageNo=0&pageSize=10",
             method: 'POST',
             success: function (json) {
-              var data  = JSON.parse(json).data
-              console.log(data)
+              var data  = json.data
               _this.total= data.totalCount
               _this.list = data.list
             }

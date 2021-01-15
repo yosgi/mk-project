@@ -1,4 +1,4 @@
-var token = '812ca916-d1f3-4e68-888c-5cb553fc4f78'
+var token = sessionStorage.getItem('token');
 new Vue({
   el: '.single_product_details_area',
   data: {
@@ -97,11 +97,10 @@ new Vue({
           url: '/product/getDetail?token=' + token + "&spuId="+ _this.query.id,
           method: 'POST',
           success: function (json) {
-            var data  = JSON.parse(json).data
+            var data  = json.data
             data.otherImage = JSON.parse(data.otherImage).splice(0,3)
-            data.detail = JSON.parse(data.detail)
+            data.detail = data.detail
             data.desc = data.desc.split('\n')
-            console.log(data)
             _this.skus = data.skus
             _this.spuAttribute = data.spuAttribute
             _this.info = data
