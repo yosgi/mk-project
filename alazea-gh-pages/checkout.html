@@ -68,10 +68,15 @@
                                 </div>
                                 <!-- Login -->
                                 <div class="login">
-                                    <a href="checkout.html">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <span>地址</span>
-                                    </a>
+                                    <div class="dropdown language-dropdown"  id="title_login1" style="display: none">
+                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">我的</button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="checkout.html">收货地址</a>
+                                            <a class="dropdown-item" href="order.html">我的订单</a>
+                                            <a class="dropdown-item" href="#" id="quit">退出登录</a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- Cart -->
                                 <div class="cart">
@@ -203,8 +208,8 @@
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
-        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
-            <h2>收货信息</h2>
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/banner/banner6.jpg);">
+            <h2>联系我们</h2>
         </div>
 
         <div class="container">
@@ -216,7 +221,7 @@
                                 <a href="#">
                                     <i class="fa fa-home"></i> 首页</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">收货信息</li>
+                            <li class="breadcrumb-item active" aria-current="page">联系我们</li>
                         </ol>
                     </nav>
                 </div>

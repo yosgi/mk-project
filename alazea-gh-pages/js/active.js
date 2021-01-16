@@ -190,13 +190,23 @@
     }
 
     var token = sessionStorage.getItem('token')
-    if (token) {
+    function showMe() {
         $('#title_login').hide()
         $('#title_login1').show()
-    } else {
+    }
+    function showLogin() {
         $('#title_login').show()
         $('#title_login1').hide()
     }
+    if (token) {
+        showMe()
+    } else {
+        showLogin()
+    }
+    $('#quit').on('click',function() {
+        sessionStorage.removeItem('token')
+        location.reload()
+    })
 
 })(jQuery);
 

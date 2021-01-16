@@ -59,10 +59,6 @@
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a class="dropdown-item" href="#">简体中文</a>
                                             <a class="dropdown-item" href="#">English</a>
-                                            <!-- <a class="dropdown-item" href="#">Bangla</a>
-                                            <a class="dropdown-item" href="#">Hindi</a>
-                                            <a class="dropdown-item" href="#">Spanish</a>
-                                            <a class="dropdown-item" href="#">Latin</a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -74,10 +70,15 @@
                                     </a>
                                 </div>
                                 <div class="login">
-                                    <a href="checkout.html" id="title_login1" style="display: none">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <span>地址</span>
-                                    </a>
+                                    <div class="dropdown language-dropdown"  id="title_login1" style="display: none">
+                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">我的</button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="checkout.html">收货地址</a>
+                                            <a class="dropdown-item" href="order.html">我的订单</a>
+                                            <a class="dropdown-item" href="#" id="quit">退出登录</a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- Cart -->
                                 <div class="cart">

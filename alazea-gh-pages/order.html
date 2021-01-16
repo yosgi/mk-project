@@ -24,7 +24,7 @@
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-circle"></div>
         <div class="preloader-img">
-            <img src="img/core-img/mlogo.webp" alt="">
+            <img src="img/core-img/leaf.png" alt="">
         </div>
     </div>
 
@@ -57,8 +57,8 @@
                                         <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">语言</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">English</a>
                                             <a class="dropdown-item" href="#">简体中文</a>
+                                            <a class="dropdown-item" href="#">English</a>
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +107,6 @@
                         <a href="index.html" class="nav-brand">
                             <img src="img/core-img/logo.png" alt="">
                         </a>
-
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -180,7 +179,7 @@
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
         <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/banner/banner6.jpg);">
-            <h2>产品列表</h2>
+            <h2>我的订单</h2>
         </div>
 
         <div class="container">
@@ -190,9 +189,9 @@
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a href="#">
-                                    <i class="fa fa-home"></i> 首页</a>
+                                    <i class="fa fa-home"></i> 我的</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">产品列表</li>
+                            <li class="breadcrumb-item active" aria-current="page">订单</li>
                         </ol>
                     </nav>
                 </div>
@@ -201,61 +200,42 @@
     </div>
     <!-- ##### Breadcrumb Area End ##### -->
 
-    <!-- ##### Portfolio Area Start ##### -->
-    <section class="alazea-portfolio-area portfolio-page section-padding-0-100">
+    <!-- ##### Cart Area Start ##### -->
+    <div class="cart-area section-padding-0-100 clearfix" id="orderArea">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Heading -->
-                    <div class="section-heading text-center">
-                        <h2>我们的产品</h2>
-                        <p>您身边的育婴专家</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+         
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- <div class="alazea-portfolio-filter">
-                        <div class="portfolio-filter">
-                            <button class="btn active" data-filter="*">所有</button>
-                            <button class="btn" data-filter=".design"> 热卖</button>
-                            <button class="btn" data-filter=".garden">辅食</button>
-                            <button class="btn" data-filter=".home-design">婴儿水杯</button>
-                            <button class="btn" data-filter=".office-design">出行用品</button>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-
-            <div class="row alazea-portfolio">
-
-                <!-- Single Portfolio Area -->
-                <div v-for="(v,index) in list" class="col-12 col-sm-6 col-lg-3 single_portfolio_item">
-                    <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" :style="'background-image: url('+ v.headImage +');'"></div>
-                    <!-- Portfolio Hover Text -->
-                    <div class="portfolio-hover-overlay">
-                        <a :href=`single-portfolio.html?id=${v.id}` class="portfolio-img d-flex align-items-center justify-content-center" :title="index">
-                            <div class="port-hover-text">
-                                <h3>{{v.name}}</h3>
-                                <!-- <p style="color:#fff" v-for="(v,index) in JSON.parse(v.tags)">
-                                    {{v}}
-                                </p> -->
-                            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="card" v-for="(v,index) in list">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0 row justify-content-between">
+                        <a class="btn  ml-30 col-7" style="text-align: left;" type="button" data-toggle="collapse" :data-target="'#collapse' + index" aria-expanded="true" :aria-controls="'collapse' + index">
+                           {{v.name}}
                         </a>
+                        <a class="btn col-4" type="button" >
+                             {{getStatus(v.status)}}
+                         </a>
+                      </h2>
+                    </div>
+                
+                    <div :id="'collapse' + index"   :class="['collapse',index === 0 ? 'show' :''].join('')" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>价格: ¥{{v.finalPrice}}</p>
+                        <p>地址: {{v.addressDetail.address}}</p>
+                        <p>姓名: {{v.addressDetail.receiverName}}</p>
+                        <p>联系电话: {{v.addressDetail.phone}}</p>
+                        <p>创建时间: {{getTime(v.createTime)}}</p>
+                        <p>id: {{v.id}}</p>
+                      </div>
                     </div>
                 </div>
 
+              </div>
 
-            </div>
         </div>
-    </section>
-    <!-- ##### Portfolio Area End ##### -->
+    </div>
+    <!-- ##### Cart Area End ##### -->
 
-    <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area bg-img">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
@@ -318,6 +298,7 @@
                             </nav>
                         </div>
                     </div>
+
 
 
                     <!-- Single Footer Widget -->
@@ -403,9 +384,11 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-    <script src="js/api.js"></script>
+    <script src="js/moment/moment.js"></script>
+    <script src="js/localstoragedb/localstoragedb.js"></script>
     <script src="js/vue/vue.js"></script>
-    <script src="js/views/portfolio.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/views/order.js"></script>
 </body>
 
 </html>

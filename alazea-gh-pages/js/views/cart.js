@@ -7,7 +7,8 @@ window.onload = function () {
     data: {
       list: [],
       address:[],
-      curAddress:''
+      curAddress:'',
+      orderId:0
     },
     computed: {
       total() {
@@ -28,7 +29,6 @@ window.onload = function () {
       createOrder(e) {
         e.preventDefault()
         var product = lib.queryAll('products');
-        console.log(product)
         api({
           url: '/order/createOrder?token=' + token,
           method: 'POST',
@@ -38,9 +38,24 @@ window.onload = function () {
             orderDetail:product
           }),
           success:(json) => {
-            debugger
+            this.orderId = json.data.orderId
+            this.pay()
           }
       })
+      },
+      pay() {
+        api({
+          url: '/pay/alipay?token='+token + '&orderId=' + this.orderId,
+          method: 'POST',
+          contentType:'application/json',
+          success:(json) => {
+             console.log(json)
+          },
+          error:(err) => {
+            $('body').html(err.responseText)
+            console.log(err.responseText)
+          }
+        })
       },
       getAdress() {
         api({
