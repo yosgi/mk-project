@@ -77,7 +77,7 @@ new Vue({
           success: function (json) {
             var data  = json.data
             data.otherImage = JSON.parse(data.otherImage).splice(0,3)
-            data.detail = data.detail
+            data.detail = JSON.parse(data.detail)
             data.desc = data.desc.split('\n')
             console.log(data)
             _this.skus = data.skus

@@ -6,7 +6,7 @@ var token = sessionStorage.getItem('token');
         pageNo:0,
         list:[],
         total:0,
-        size:10,
+        size:6,
       },
       computed: {
         page() {
@@ -20,7 +20,7 @@ var token = sessionStorage.getItem('token');
         fetch() {
           var _this = this
           api({
-              url: '/product/getList?token=' + token + "&pageNo=0&pageSize=10",
+              url: `/product/getList?token=${token}&pageNo=${this.pageNo}&pageSize=${this.size}`,
               method: 'POST',
               success: function (json) {
                 data = json.data
@@ -29,8 +29,12 @@ var token = sessionStorage.getItem('token');
               }
           })
         },
+        jump(page) {
+          this.pageNo = page
+          this.fetch()
+        },
         nextPage() {
-          if (this.pageNo < this.page.length - 1) {
+          if (this.pageNo <= this.page.length - 1) {
             this.pageNo ++
             this.fetch()
           }

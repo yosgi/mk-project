@@ -2879,13 +2879,18 @@ img {
       padding: 0;
       margin: 0 10px;
 
+      &.active,
       &:hover,
       &:focus {
-        border-color: $pri-color;
-        background-color: $pri-color;
-        color: $white-color;
+        border-color: $pri-color !important;
+        background-color: $pri-color !important;
+        color: $white-color !important;
       }
+
     }
+
+
+
   }
 }
 

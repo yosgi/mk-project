@@ -1,5 +1,61 @@
 (function ($) {
   var canClick = true;
+  function register(data) {
+    api({
+      url: '/user/register',
+      method: 'POST',
+      data:data,
+      success: function (json) {
+        $('#vsrifyError').hide()
+        $('#vsrifyEmailError').hide()
+        $('#vsrifyPhoneError').hide()
+        if (json.code === 500) {
+          if (json.msg === 'Incorrect verification code') {
+            $('#vsrifyError').show();
+          }
+          if (json.msg === 'the email already registry, you can login directly') {
+            $('#vsrifyEmailError').show()
+          }
+          if (json.msg === 'the phone already registry, you can login directly') {
+            $('#vsrifyPhoneError').show()
+          }
+        } else {
+          $('#registerSucess').show()
+          $('#vsrifyError').hide()
+          $('#vsrifyEmailError').hide()
+          $('#vsrifyPhoneError').hide()
+          login(data)
+          setTimeout(function () {
+            $('#registerSucess').hide()
+            $('#login-form').hide();
+            $('#register-form').show();
+            location.reload()
+          }, 3000)         
+        }
+        return false
+      }
+    })
+  }
+  function login(data) {
+    api({
+      url: '/user/login',
+      method: 'POST',
+      data: data,
+      success: function (json) {
+        if (json.code === 500) {
+          $('#passwordError').show()
+        } else {
+          sessionStorage.setItem('token', json.data.token)
+          $('#loginSucess').show();
+          setTimeout(function () {
+            $('#loginSucess').hide();
+            // window.location.href = 'index.html';
+          }, 3000)
+        }
+        return false
+      }
+    })
+  }
   /**验证码 */
   $('#sendVerifyCode').on('click', function (e) {
     $('#vsrifyError').hide()
@@ -44,45 +100,15 @@
     var company = $('#company').val()
     var phone = $('#phone').val()
     var verifyCode = $('#VerifyCode').val()
-    api({
-      url: '/user/register',
-      method: 'POST',
-      data: {
-        name: name,
-        password: password,
-        email: email,
-        verifyCode: verifyCode,
-        phone: phone,
-        company: company,
-      },
-      success: function (json) {
-        $('#vsrifyError').hide()
-        $('#vsrifyEmailError').hide()
-        $('#vsrifyPhoneError').hide()
-        if (json.code === 500) {
-          if (json.msg === 'Incorrect verification code') {
-            $('#vsrifyError').show();
-          }
-          if (json.msg === 'the email already registry, you can login directly') {
-            $('#vsrifyEmailError').show()
-          }
-          if (json.msg === 'the phone already registry, you can login directly') {
-            $('#vsrifyPhoneError').show()
-          }
-        } else {
-          $('#registerSucess').show()
-          $('#vsrifyError').hide()
-          $('#vsrifyEmailError').hide()
-          $('#vsrifyPhoneError').hide()
-          setTimeout(function () {
-            $('#registerSucess').hide()
-            $('#login-form').hide();
-            $('#register-form').show();
-          }, 3000)
-        }
-        return false
-      }
-    })
+    var data = {
+      name: name,
+      password: password,
+      email: email,
+      verifyCode: verifyCode,
+      phone: phone,
+      company: company,
+    }
+    register(data)
   })
   /**点击跳转注册 */
   $('#login-register').on('click', function (e) {
@@ -107,23 +133,6 @@
       data.email = name
     }
     $('#passwordError').hide()
-    api({
-      url: '/user/login',
-      method: 'POST',
-      data: data,
-      success: function (json) {
-        if (json.code === 500) {
-          $('#passwordError').show()
-        } else {
-          sessionStorage.setItem('token', json.data.token)
-          $('#loginSucess').show();
-          setTimeout(function () {
-            $('#loginSucess').hide();
-            window.location.href = 'index.html';
-          }, 3000)
-        }
-        return false
-      }
-    })
-  })
+    login(data)
+  })  
 })(jQuery);

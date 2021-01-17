@@ -306,6 +306,9 @@
                         <div class="checkout-btn">
                             <a @click="createOrder" href="" class="btn alazea-btn w-100">结算</a>
                         </div>
+                        <div v-if="!login" style="margin-top:30px" class="alert alert-secondary" role="alert">
+                            还没有登录，<a href="login.html" class="alert-link">点击</a>进行登录.
+                          </div>
                     </div>
                 </div>
             </div>

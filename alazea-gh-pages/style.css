@@ -2136,10 +2136,10 @@ img {
     line-height: 44px;
     padding: 0;
     margin: 0 10px; }
-    .pagination .page-item .page-link:hover, .pagination .page-item .page-link:focus {
-      border-color: #111111;
-      background-color: #111111;
-      color: #ffffff; }
+    .pagination .page-item .page-link.active, .pagination .page-item .page-link:hover, .pagination .page-item .page-link:focus {
+      border-color: #111111 !important;
+      background-color: #111111 !important;
+      color: #ffffff !important; }
 
 .shop-products-area .pagination {
   position: relative;

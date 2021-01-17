@@ -8,7 +8,8 @@ window.onload = function () {
       list: [],
       address:[],
       curAddress:'',
-      orderId:0
+      orderId:0,
+      login:true
     },
     computed: {
       total() {
@@ -28,6 +29,11 @@ window.onload = function () {
       },
       createOrder(e) {
         e.preventDefault()
+        if (!token) {
+         this.login = false
+        } else {
+          this.login = true
+        }
         var product = lib.queryAll('products');
         api({
           url: '/order/createOrder?token=' + token,
@@ -41,7 +47,7 @@ window.onload = function () {
             this.orderId = json.data.orderId
             this.pay()
           }
-      })
+        })
       },
       pay() {
         api({

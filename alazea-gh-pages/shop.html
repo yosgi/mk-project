@@ -246,7 +246,7 @@
                     <div class="shop-sorting-data d-flex flex-wrap align-items-center justify-content-between">
                         <!-- Shop Page Count -->
                         <div class="shop-page-count">
-                            <p> 第{{pageNo * size + 1 }} – {{ 2 % ((pageNo + 1) * size)}} 个 ，共{{total}}个</p>
+                            <p> 第{{pageNo * size + 1 }} – {{ ((pageNo + 1) * size)}} 个 ，共{{total}}个</p>
                         </div>
                         <!-- Search by Terms -->
                         <div class="search_by_terms">
@@ -403,10 +403,10 @@
                         <!-- Pagination -->
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
-                                <li class="page-item" v-for="(v,index) in page">
-                                    <a class="page-link">{{index + 1}}</a>
+                                <li class="page-item" @click="jump(index)" v-for="(v,index) in page">
+                                    <a :class="['page-link',index === pageNo? 'active':''].join(' ') ">{{index + 1}}</a>
                                 </li>
-                                <li class="page-item" @click="this.nextPage">
+                                <li class="page-item" @click="nextPage">
                                     <a class="page-link">
                                         <i class="fa fa-angle-right"></i>
                                     </a>
