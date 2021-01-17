@@ -1,7 +1,7 @@
 var token = sessionStorage.getItem('token');
 (function ($) {
   'use strict';
-  var baseUrl = '/'
+  var baseUrl = 'http://minmakeitnow.com/'
   function api(args) {
     if (args.data && typeof args.data === 'object') {
       args.data.token = token
@@ -19,7 +19,7 @@ var token = sessionStorage.getItem('token');
       success: function (json) {
         if (json.code === 500) {
           if (json.msg === 'token过期，请重新登录') {
-
+            
           }
         } else {
           success(json)
