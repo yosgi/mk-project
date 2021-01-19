@@ -1,7 +1,7 @@
 var token = sessionStorage.getItem('token');
 (function ($) {
   'use strict';
-  //http://127.0.0.1:3000
+  // var baseUrl = 'http://127.0.0.1:3000'
   var baseUrl = 'http://minmakeitnow.com/'
   function api(args) {
     if (args.data && typeof args.data === 'object') {

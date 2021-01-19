@@ -7,6 +7,8 @@ var token = sessionStorage.getItem('token');
       list:[],
       total:0,
       size:30,
+      map:['所有','餐具','水瓶','饭兜','其它'],
+      cur:0
     },
     computed: {
       page() {

@@ -132,21 +132,19 @@
                             <!-- Navbar Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li>
-                                        <a href="index.html">首页</a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">关于我们</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html">商城</a>
-                                    </li>
-                                    <li>
-                                        <a href="portfolio.html">产品</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">联系我们</a>
-                                    </li>
+                                   <li>
+    <a href="index.html">首页</a>
+</li>
+<li>
+    <a href="portfolio.html">每刻产品</a>
+</li>
+<li>
+    <a href="shop.html">每刻商城</a>
+</li>
+<li>
+    <a href="about.html">品牌故事</a>
+</li>
+
                                 </ul>
 
                                 <!-- Search Icon -->
@@ -218,22 +216,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- <div class="alazea-portfolio-filter">
+                    <div class="alazea-portfolio-filter">
                         <div class="portfolio-filter">
-                            <button class="btn active" data-filter="*">所有</button>
-                            <button class="btn" data-filter=".design"> 热卖</button>
-                            <button class="btn" data-filter=".garden">辅食</button>
-                            <button class="btn" data-filter=".home-design">婴儿水杯</button>
-                            <button class="btn" data-filter=".office-design">出行用品</button>
+                            <button class="btn active" v-for="(v,index) in map" @click="cur = index" data-filter="*">{{v}}</button>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
 
             <div class="row alazea-portfolio">
 
                 <!-- Single Portfolio Area -->
-                <div v-for="(v,index) in list" class="col-12 col-sm-6 col-lg-3 single_portfolio_item">
+                <div v-for="(v,index) in list" v-show="cur === 0 || v.category === cur" class="col-12 col-sm-6 col-lg-3 single_portfolio_item eat">
                     <!-- Portfolio Thumbnail -->
                     <div class="portfolio-thumbnail bg-img" :style="'background-image: url('+ v.headImage +');'"></div>
                     <!-- Portfolio Hover Text -->

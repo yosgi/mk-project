@@ -78,6 +78,7 @@
     //             });
     //         });
     //         // init Isotope
+           
     //         var $grid = $('.alazea-portfolio').isotope({
     //             itemSelector: '.single_portfolio_item',
     //             percentPosition: true,
