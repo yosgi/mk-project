@@ -1570,7 +1570,7 @@ img {
   z-index: 1;
   margin-bottom: 50px; }
   .single-benefits-area img {
-    margin-bottom: 30px; }
+    width: 100%; }
   .single-benefits-area p {
     margin-bottom: 0; }
 
@@ -1666,7 +1666,7 @@ img {
   text-align: center; }
   #portfolio .portfolio-img {
     display: inline-block;
-    width: 80%; }
+    width: 100%; }
 
 .alazea-portfolio-filter {
   position: relative;
@@ -1887,7 +1887,6 @@ img {
       margin-bottom: 20px; }
     .footer-area .single-footer-widget .social-info a {
       display: inline-block;
-      border: 1px solid #b7b7b7;
       width: 40px;
       height: 40px;
       border-radius: 50%;

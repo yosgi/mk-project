@@ -2105,7 +2105,8 @@ img {
   margin-bottom: 50px;
 
   img {
-    margin-bottom: 30px;
+    width: 100%;
+    // margin-bottom: 30px;
   }
 
   p {
@@ -2244,7 +2245,7 @@ img {
 
   .portfolio-img {
     display: inline-block;
-    width: 80%;
+    width: 100%;
 
   }
 }
@@ -2520,7 +2521,7 @@ img {
     .social-info {
       a {
         display: inline-block;
-        border: 1px solid $secondary-color;
+
         width: 40px;
         height: 40px;
         border-radius: 50%;
