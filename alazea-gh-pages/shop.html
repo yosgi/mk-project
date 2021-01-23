@@ -340,12 +340,16 @@
                         <div class="row">
 
                             <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4" v-for="(v,index) in list">
-                                <div class="single-product-area mb-50">
+                            <div class="col-12 col-sm-6 col-lg-4"  v-for="(v,index) in list" 
+                            @mouseover="hoverHandler(index,true)"
+                            @mouseleave="hoverHandler(index,false)"  >
+                                <div class="single-product-area mb-50" >
                                     <!-- Product Image -->
                                     <div class="product-img">
                                         <a :href=`shop-details.html?id=${v.id}`>
-                                            <img style="height:224px;" class="product-img-in" :src="v.headImage" alt="">
+                                            <img  class="product-img-in" 
+                                            
+                                            :src="index === curHover? v.coverImageHover : v.coverImage" alt="">
                                         </a>
                                         <!-- Product Tag -->
                                         <!-- <div class="product-tag">
@@ -362,7 +366,7 @@
                                         <a :href=`shop-details.html?id=${v.id}`>
                                             <p>{{v.name}}</p>
                                         </a>
-                                        <h6>¥10.99</h6>
+                                        <h6>¥{{v.price}}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -407,13 +411,31 @@
                                 <a href=" https://weibo.com/u/7483500874?is_all=1">
                                     <img src="img/contact-icons/weibo.png">
                                 </a>
+                               
+                                
+                         
+                                <span class="dropup" >
+                                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                             <img src="img/contact-icons/weixin.png">
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <img src="img/contact-icons/weixin-url.png">
+                                    </div>
+                                </span>
+
+
+                                <span class="dropup" >
+                                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                        <img src="img/contact-icons/mini.png">
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <img src="img/contact-icons/mini-url.png">
+                                    </div>
+                                </span>
+                               
                                 <a href="https://makeitnow.tmall.com">
-                                    <img src="img/contact-icons/weixin.png">
-                                </a>
-                                <a href="#">
-                                    <img src="img/contact-icons/mini.png">
-                                </a>
-                                <a href="#">
                                     <img src="img/contact-icons/tianmao.png">
                                 </a>
                             </div>

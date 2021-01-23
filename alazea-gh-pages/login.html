@@ -62,6 +62,7 @@
                     </div>
                   </div>
                 </div>
+               
                 <!-- Login -->
                 <div class="login">
                   <a href="login.html" id="title_login">
@@ -263,8 +264,19 @@
               <p style='color: red;display: none' id="passwordError">密码错误</p>
           </div>
           <div class="col-12 mb-4">
-            <button type="submit" class="btn alazea-btn mt-15" id="login" style="width:50%">登录</button>
+            <button type="submit"
+             class="btn alazea-btn mt-15" 
+             id="login" style="width:50%">登录</button>
+       
+          
           </div>
+          <div class="col-12 mb-4 third_login">
+              <!-- <img src='./img/core-img/zfb.png' /> -->
+              <a href="https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2021002114639881&scope=SCOPE&redirect_uri=http%3A%2F%2Fminmakeitnow.com%2F">
+                支付宝登录
+              </a>
+          </div>
+
         </div>
         <div class="alert alert-success" role="alert" style='margin-top: 10px;display: none' id='loginSucess'> 
           登录成功
@@ -274,7 +286,7 @@
       </div>
       <div class="col-4 ">
         <h3>创建账户</h3>
-        
+       
         <p>为您加快结算流程，便于查看订单历史及购物车</p>
 
         <button type="submit" class="btn alazea-btn mt-15" id="login-register" style="width:50%">注册</button>
@@ -308,13 +320,31 @@
                 <a href=" https://weibo.com/u/7483500874?is_all=1">
                     <img src="img/contact-icons/weibo.png">
                 </a>
+               
+                
+         
+                <span class="dropup" >
+                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                             <img src="img/contact-icons/weixin.png">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <img src="img/contact-icons/weixin-url.png">
+                    </div>
+                </span>
+
+
+                <span class="dropup" >
+                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                        <img src="img/contact-icons/mini.png">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <img src="img/contact-icons/mini-url.png">
+                    </div>
+                </span>
+               
                 <a href="https://makeitnow.tmall.com">
-                    <img src="img/contact-icons/weixin.png">
-                </a>
-                <a href="#">
-                    <img src="img/contact-icons/mini.png">
-                </a>
-                <a href="#">
                     <img src="img/contact-icons/tianmao.png">
                 </a>
             </div>

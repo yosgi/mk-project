@@ -7,6 +7,7 @@ var token = sessionStorage.getItem('token');
         list:[],
         total:0,
         size:6,
+        curHover:-1
       },
       computed: {
         page() {
@@ -17,6 +18,14 @@ var token = sessionStorage.getItem('token');
         this.fetch()
       },
       methods:{
+        hoverHandler(index,flg) {
+          if (flg) {
+            this.curHover = index
+          } else {
+            this.curHover =  -1
+          }
+          console.log(this.curHover)
+        },
         fetch() {
           var _this = this
           api({

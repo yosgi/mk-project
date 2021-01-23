@@ -15,7 +15,7 @@ Version: - v1.0
 
 /* :: 1.0 Import Fonts */
 
-@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
+// @import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
 
 /* :: 2.0 Import All CSS */
 
@@ -214,6 +214,17 @@ img {
     font-size: 16px;
     color: $text-color;
     margin-bottom: 0;
+  }
+}
+
+.third_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+  img {
+    width: 60px;
   }
 }
 
@@ -2105,8 +2116,8 @@ img {
   margin-bottom: 50px;
 
   img {
-    width: 100%;
-    // margin-bottom: 30px;
+    width: 50px;
+    margin-bottom: 30px;
   }
 
   p {

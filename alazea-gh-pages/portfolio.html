@@ -133,17 +133,17 @@
                             <div class="classynav">
                                 <ul>
                                    <li>
-    <a href="index.html">首页</a>
-</li>
-<li>
-    <a href="portfolio.html">每刻产品</a>
-</li>
-<li>
-    <a href="shop.html">每刻商城</a>
-</li>
-<li>
-    <a href="about.html">品牌故事</a>
-</li>
+                                    <a href="index.html">首页</a>
+                                </li>
+                                <li>
+                                    <a href="portfolio.html">每刻产品</a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">每刻商城</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">品牌故事</a>
+                                </li>
 
                                 </ul>
 
@@ -218,7 +218,8 @@
                 <div class="col-12">
                     <div class="alazea-portfolio-filter">
                         <div class="portfolio-filter">
-                            <button class="btn active" v-for="(v,index) in map" @click="cur = index" data-filter="*">{{v}}</button>
+                            <!-- @click="cur = index" -->
+                            <button class="btn active" v-for="(v,index) in map"  :data-filter="index === 0 ?'*' : '.' + index">{{v}}</button>
                         </div>
                     </div>
                 </div>
@@ -227,17 +228,16 @@
             <div class="row alazea-portfolio">
 
                 <!-- Single Portfolio Area -->
-                <div v-for="(v,index) in list" v-show="cur === 0 || v.category === cur" class="col-12 col-sm-6 col-lg-3 single_portfolio_item eat">
+                <!-- v-show="cur === 0 || v.category === cur" -->
+                <div v-for="(v,index) in list"  :class=" 'col-12 col-sm-6 col-lg-3 single_portfolio_item ' +  v.category ">
                     <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" :style="'background-image: url('+ v.headImage +');'"></div>
+                    <div class="portfolio-thumbnail bg-img" :style="'background-image: url('+ v.coverImageHover +');'"></div>
                     <!-- Portfolio Hover Text -->
                     <div class="portfolio-hover-overlay">
                         <a :href=`single-portfolio.html?id=${v.id}` class="portfolio-img d-flex align-items-center justify-content-center" :title="index">
                             <div class="port-hover-text">
                                 <h3>{{v.name}}</h3>
-                                <!-- <p style="color:#fff" v-for="(v,index) in JSON.parse(v.tags)">
-                                    {{v}}
-                                </p> -->
+                             
                             </div>
                         </a>
                     </div>
@@ -269,13 +269,31 @@
                                 <a href=" https://weibo.com/u/7483500874?is_all=1">
                                     <img src="img/contact-icons/weibo.png">
                                 </a>
+                               
+                                
+                         
+                                <span class="dropup" >
+                                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                             <img src="img/contact-icons/weixin.png">
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <img src="img/contact-icons/weixin-url.png">
+                                    </div>
+                                </span>
+
+
+                                <span class="dropup" >
+                                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                        <img src="img/contact-icons/mini.png">
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <img src="img/contact-icons/mini-url.png">
+                                    </div>
+                                </span>
+                               
                                 <a href="https://makeitnow.tmall.com">
-                                    <img src="img/contact-icons/weixin.png">
-                                </a>
-                                <a href="#">
-                                    <img src="img/contact-icons/mini.png">
-                                </a>
-                                <a href="#">
                                     <img src="img/contact-icons/tianmao.png">
                                 </a>
                             </div>
