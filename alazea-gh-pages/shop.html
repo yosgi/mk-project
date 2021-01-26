@@ -255,35 +255,18 @@
                         </div> -->
 
                         <!-- Shop Widget -->
-                        <!-- <div class="shop-widget catagory mb-50">
+                        <div class="shop-widget catagory mb-50">
                             <h4 class="widget-title">分类</h4>
                             <div class="widget-desc">
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">分类1 <span class="text-muted">(72)</span></label>
+                                <div 
+        
+                                v-for="(v,index) in categoryMap" class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                                    <input  type="checkbox" :checked="category == index" class="custom-control-input" :id=" 'customCheck' + index">
+                                    <label @click="change(index)" class="custom-control-label" for="'customCheck' + index">{{v}}</label>
                                 </div>
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                    <label class="custom-control-label" for="customCheck2">分类2 <span class="text-muted">(20)</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                    <label class="custom-control-label" for="customCheck3">分类3 <span class="text-muted">(15)</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                    <label class="custom-control-label" for="customCheck4">分类4 <span class="text-muted">(20)</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                    <label class="custom-control-label" for="customCheck5">分类5 <span class="text-muted">(15)</span></label>
-                                </div>
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                    <label class="custom-control-label" for="customCheck6">其他 <span class="text-muted">(2)</span></label>
-                                </div>
+                           
                             </div>
-                        </div> -->
+                        </div>
 
                         <!-- Shop Widget -->
                         <div class="shop-widget sort-by mb-50">

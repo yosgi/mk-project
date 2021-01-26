@@ -224,26 +224,26 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="row alazea-portfolio">
+               
 
-                <!-- Single Portfolio Area -->
-                <!-- v-show="cur === 0 || v.category === cur" -->
-                <div v-for="(v,index) in list"  :class=" 'col-12 col-sm-6 col-lg-3 single_portfolio_item ' +  v.category ">
+                <div v-for="(v,index) in list"  
+                :class="'col-12 col-sm-6 col-lg-' + 
+                getLg(index) + ' single_portfolio_item ' +  v.category">
                     <!-- Portfolio Thumbnail -->
-                    <div class="portfolio-thumbnail bg-img" :style="'background-image: url('+ v.coverImageHover +');'"></div>
+                    <div class="portfolio-thumbnail bg-img" :style="'background-image:url('+ v.coverImageHover +');'"></div>
                     <!-- Portfolio Hover Text -->
                     <div class="portfolio-hover-overlay">
-                        <a :href=`single-portfolio.html?id=${v.id}` class="portfolio-img d-flex align-items-center justify-content-center" :title="index">
+                        <a :href=`single-portfolio.html?id=${v.id}` 
+                        class="portfolio-img d-flex align-items-center justify-content-center" 
+                        :title="v.name">
                             <div class="port-hover-text">
-                                <h3>{{v.name}}</h3>
-                             
+                                <h3>{{v.name}}</h3> 
                             </div>
                         </a>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>

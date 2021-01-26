@@ -135,18 +135,18 @@
                             <!-- Navbar Start -->
                             <div class="classynav">
                                 <ul>
-                                   <li>
-    <a href="index.html">首页</a>
-</li>
-<li>
-    <a href="portfolio.html">每刻产品</a>
-</li>
-<li>
-    <a href="shop.html">每刻商城</a>
-</li>
-<li>
-    <a href="about.html">品牌故事</a>
-</li>
+                                    <li>
+                                        <a href="index.html">首页</a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio.html">每刻产品</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html">每刻商城</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html">品牌故事</a>
+                                    </li>
 
                                 </ul>
 
@@ -235,23 +235,25 @@
                             <h4 class="title">{{info.name}}</h4>
                             <h4 class="price">¥{{skus[curSku]? skus[curSku].price:''}}</h4>
                             <div class="short_overview">
-                              
-                                <div v-for="(v,index) in JSON.parse(info.tags)">
-                                    {{v}}
-                                </div>
+                                <ul>
+                                    <li v-for="(v,index) in info.tags" style="list-style:inside">
+                                       
+                                        {{v}}
+                                    </li>
+                                </ul>
                             </div>
                             <div class="products--meta">
                                 <p>
                                     <span>选择规格</span>
                                 </p>
-                                <p>
-                                    <label v-for="(v,index) in skus" @click="curSku = index" :class="['btn','btn-default',curSku === index?'active':'' ].join(' ') ">
+                                <div style="width: 600px;margin-bottom: 10px;">
+                                    <label style="margin:5px 5px 5px 0;width:130px" v-for="(v,index) in skus" @click="curSku = index" :class="['btn','btn-default',curSku === index?'active':'' ].join(' ') ">
                                         <span v-for="(val,key) in JSON.parse(v.skuAttribute)">
                                             {{valMap[val.value]}}
                                         </span>
                                     </label>
 
-                                </p>
+                                </div>
                             </div>
                             <div class="cart--area d-flex flex-wrap align-items-center">
                                 <!-- Add to Cart Form -->
@@ -324,8 +326,8 @@
                                 </a>
                             </div>
                             <p>请联系我们</p>
-                            <div class="">
-                                <a href=" https://weibo.com/u/7483500874?is_all=1">
+                            <div class="social-info">
+                                <a href="https://weibo.com/u/7483500874?is_all=1">
                                     <img src="img/contact-icons/weibo.png">
                                 </a>
                                 <a href="https://makeitnow.tmall.com">

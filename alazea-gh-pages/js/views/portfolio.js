@@ -20,6 +20,9 @@ var token = sessionStorage.getItem('token');
       this.fetch()
     },
     methods:{
+      getLg(index) {
+        return (index - 1) % 4 === 0 ? 6 : 3
+      },
       fetch() {
         var _this = this
         api({
@@ -36,15 +39,12 @@ var token = sessionStorage.getItem('token');
       },
       addFilterAction() {
         $('.alazea-portfolio').imagesLoaded(function () {
-          // filter items on button click
           $('.portfolio-filter').on('click', 'button', function () {
               var filterValue = $(this).attr('data-filter');
               $grid.isotope({
                   filter: filterValue
               });
           });
-          // init Isotope
-         
           var $grid = $('.alazea-portfolio').isotope({
               itemSelector: '.single_portfolio_item',
               percentPosition: true,

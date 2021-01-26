@@ -101,6 +101,7 @@ new Vue({
             data.otherImage = JSON.parse(data.otherImage).splice(0,3)
             data.detail = data.detail
             data.desc = data.desc.split('\n')
+            data.tags = JSON.parse(data.tags)
             _this.skus = data.skus
             _this.spuAttribute = data.spuAttribute
             _this.info = data
