@@ -98,7 +98,7 @@ new Vue({
           method: 'POST',
           success: function (json) {
             var data  = json.data
-            data.otherImage = JSON.parse(data.otherImage).splice(0,3)
+            data.otherImage = JSON.parse(data.otherImage)
             data.detail = data.detail
             data.desc = data.desc.split('\n')
             data.tags = JSON.parse(data.tags)

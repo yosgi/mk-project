@@ -229,7 +229,11 @@ img {
 }
 
 /* :: 3.5.0 Preloader */
-
+.alazea-benefits-area{
+  img {
+    width: 50px;
+  }
+}
 .preloader {
   background-color: $bg-gray;
   width: 100%;
@@ -293,7 +297,11 @@ img {
 }
 
 /* :: 3.6.0 Miscellaneous */
-
+.nav-brand{
+  img {
+    width: 50px;
+  }
+}
 .bg-img {
   background-position: center center;
   background-size: cover;
@@ -327,7 +335,7 @@ img {
   background-size: cover;
 
   &::after {
-    background-color: rgba(17, 17, 17, 0.5);
+    // background-color: rgba(17, 17, 17, 0.5);
     position: absolute;
     z-index: -1;
     top: 0;
@@ -368,13 +376,17 @@ img {
 }
 
 /* :: 3.8.0 alazea Button */
-
+.footer-logo{
+  img {
+    width: 56px;
+  }
+}
 .alazea-btn {
   @include trans-duration(400ms);
   position: relative;
   z-index: 1;
   display: inline-block;
-  min-width: 150px;
+  min-width: 130px;
   height: 46px;
   color: $white-color;
   background-color: $pri-color;
@@ -706,7 +718,7 @@ img {
 
   .is-sticky {
     .alazea-main-menu {
-      background-color: $dark-color;
+      background-color: $header-color;
       position: fixed;
       width: 100%;
       top: 0;
@@ -1232,9 +1244,9 @@ img {
     margin-top: 30px;
 
     li {
-      @include flex(0 0 100px);
-      width: 100px;
-      height: 100px;
+      @include flex(0 0 50px);
+      width: 50px;
+      height: 50px;
       margin-right: 15px;
       margin-left: 15px;
       cursor: pointer;
@@ -2116,7 +2128,6 @@ img {
   margin-bottom: 50px;
 
   img {
-    width: 50px;
     margin-bottom: 30px;
   }
 
@@ -2503,7 +2514,7 @@ img {
   z-index: 1;
 
   &::after {
-    background-color: rgba(4, 43, 15, 0.8);
+    background-color:$header-color;
     position: absolute;
     z-index: -1;
     top: 0;
