@@ -32,10 +32,10 @@ $(document).ready(function () {
             url: '/user/alipayLogin?authCode=' + a.auth_code,
             method: 'POST',
             success: function (json) {
-                $.sendSuccessToTop('登录成功！', 3000, function(){
+                sessionStorage.setItem('token', json.data.token)
+                $.sendSuccessToTop('登录成功！', 1000, function(){
                     location.reload()
                 });
-                sessionStorage.setItem('token', json.data.token)
             }
         })
     }

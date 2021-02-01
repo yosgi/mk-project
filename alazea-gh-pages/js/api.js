@@ -4,7 +4,7 @@ var token = sessionStorage.getItem('token');
   //var baseUrl = 'http://127.0.0.1:3001'
   var baseUrl = 'http://minmakeitnow.com/'
   function api(args) {
-    if (args.data && typeof args.data === 'object') {
+    if (args.data && typeof args.data === 'object' && token) {
       args.data.token = token
     }
     var contentType = args.contentType || 'application/x-www-form-urlencoded';
@@ -21,7 +21,7 @@ var token = sessionStorage.getItem('token');
         if (json.code === 500) {
           if (json.msg === 'token过期，请重新登录') {
             sessionStorage.removeItem('token')
-            $.sendWarning('状态过期，请重新登录', 3000, function(){
+            $.sendWarning('超时，请重新登录', 3000, function(){
               location.reload()
             });
           }
