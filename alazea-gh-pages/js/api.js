@@ -20,7 +20,11 @@ var token = sessionStorage.getItem('token');
       success: function (json) {
         if (json.code === 500) {
           if (json.msg === 'token过期，请重新登录') {
-            console.log('token过期，请重新登录')
+            $.sendWarning('状态过期，请重新登录', 3000, function(){
+              sessionStorage.removeItem('token')
+              location.reload()
+            });
+            return 
           }
         }  
         success(json)
