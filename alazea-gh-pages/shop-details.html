@@ -24,7 +24,7 @@
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-circle"></div>
         <div class="preloader-img">
-            <img src="img/core-img/leaf.png" alt="">
+            <img src="img/logos/logo深灰色字.png" alt="">
         </div>
     </div>
 
@@ -217,12 +217,12 @@
                                 <div class="carousel-inner">
                                     <div :class="['carousel-item', index === 0 ? 'active' : ''].join(' ') " v-for="(v,index) in info.otherImage">
                                         <a class="product-img"  title="Product Image">
-                                            <img class="d-block w-100" :src="v" :alt="info.headImage">
+                                            <img class="d-block w-100 my-foto" :src="v" :alt="info.headImage">
                                         </a>
                                     </div>
                                 </div>
                                 <ol class="carousel-indicators" >
-                                    <li v-for="(v,index) in info.otherImage" :class="index === 0 ? 'active' : ''" data-target="#product_details_slider" :data-slide-to="index"
+                                    <li v-for="(v,index) in info.otherImage" :class="index === cur ? 'active' : ''" data-target="#product_details_slider" :data-slide-to="index"
                                         :style="'background-image: url(' + v + ')'">
                                     </li>
                                 </ol>
@@ -246,12 +246,22 @@
                                 <p>
                                     <span>选择规格</span>
                                 </p>
+                                <img  :src="skus.length ? skus[curSku].image :''" :data-large="skus.length ? skus[curSku].image :''"  style="width: 100px;">
                                 <div style="width: 600px;margin-bottom: 10px;">
-                                    <label style="margin:5px 5px 5px 0;width:130px" v-for="(v,index) in skus" @click="curSku = index" :class="['btn','btn-default',curSku === index?'active':'' ].join(' ') ">
-                                        <span v-for="(val,key) in JSON.parse(v.skuAttribute)">
-                                            {{valMap[val.value]}}
-                                        </span>
-                                    </label>
+                                    <label
+                                        style="margin:5px 5px 5px 0;width:130px" 
+                                        v-for="(v,index) in skus"
+                                        @click="curSku = index" 
+                                        type="button" 
+           
+                                        :class="['btn','btn-default',curSku === index?'active':'' ].join(' ') ">
+                                            <span v-for="(val,key) in JSON.parse(v.skuAttribute)">
+                                                {{valMap[val.value]}}
+                                            </span>
+                                        </label>
+
+
+                                    
 
                                 </div>
                             </div>
@@ -433,9 +443,9 @@
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
     <script src="js/vue/vue.js"></script>
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+     <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery/jquery.ez-plus.js"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->

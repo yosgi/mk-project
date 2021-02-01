@@ -21,7 +21,7 @@ var token = sessionStorage.getItem('token');
     },
     methods:{
       getLg(index) {
-        return (index - 1) % 4 === 0 ? 6 : 3
+        return (index - 1) % 3 === 0 ? 6 : 3
       },
       fetch() {
         var _this = this

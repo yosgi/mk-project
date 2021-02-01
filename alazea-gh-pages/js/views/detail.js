@@ -1,4 +1,7 @@
 var token = sessionStorage.getItem('token');
+
+
+
 new Vue({
   el: '.single_product_details_area',
   data: {
@@ -6,7 +9,8 @@ new Vue({
     curSku:0,
     skus:[],
     spuAttribute:{key:[]},
-    count:1
+    count:1,
+    cur:0
   },
   computed: {
     query() {
@@ -26,7 +30,7 @@ new Vue({
     keyMap() {
         //商品属性名 id
         let res = {}
-        this.spuAttribute.key.forEach(v => {
+        this.spuAttribute.key.forEach(function (v) {
             res[v.id] = v.name
         })
         return res
@@ -34,7 +38,7 @@ new Vue({
     valMap() {
         // 商品属性值
         var vals = {}
-        this.spuAttribute.value.forEach(v => {
+        this.spuAttribute.value.forEach(function (v) {
             vals[v.id] = v.name
         })
         return vals
@@ -80,7 +84,7 @@ new Vue({
         // })
     },
     createOrder(skuId,spuId) {
-        return new Promise((resolve,reject) => {
+        return new Promise(function (resolve,reject)  {
             api({
                 url: `/product/order/createOrder?token=${token}&spuId=${spuId}&skuId=${skuId}&addressId=2`,
                 method: 'POST',
@@ -105,7 +109,13 @@ new Vue({
             _this.skus = data.skus
             _this.spuAttribute = data.spuAttribute
             _this.info = data
+            _this.addZoom()
           }
+      })
+    },
+    addZoom() {
+      this.$nextTick(function () {
+        $(".my-foto").ezPlus();
       })
     },
     nextPage() {

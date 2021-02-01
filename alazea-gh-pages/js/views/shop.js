@@ -6,14 +6,14 @@ var token = sessionStorage.getItem('token');
         pageNo:0,
         list:[],
         total:0,
-        size:6,
+        size:10,
         curHover:-1,
         category:0,
         categoryMap:['所有','餐具','水瓶','饭兜','其它'],
       },
       computed: {
         page() {
-          return new Array(Math.floor(this.total / this.size) + 1).fill(1)
+          return new Array(Math.floor(this.total / this.size) ).fill(1)
         }
       },
       created() {

@@ -67,7 +67,6 @@ new Vue({
                 }
             })
         })
-        
     },
     fetch() {
       var _this = this

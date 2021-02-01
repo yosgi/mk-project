@@ -13,7 +13,7 @@ window.onload = function () {
     },
     computed: {
       total() {
-        return this.list.reduce((total, cur) => {
+        return this.list.reduce(function (total, cur)  {
           return new Decimal(total).plus(new Decimal(cur.price). mul(new Decimal(cur.count)))
         }, 0);
       },
@@ -28,6 +28,7 @@ window.onload = function () {
           this.fetch();
       },
       createOrder(e) {
+        var _this = this
         e.preventDefault()
         if (!token) {
          this.login = false
@@ -43,9 +44,9 @@ window.onload = function () {
             addressId:this.curAddress,
             orderDetail:product
           }),
-          success:(json) => {
-            this.orderId = json.data.orderId
-            this.pay()
+          success:function (json)  {
+            _this.orderId = json.data.orderId
+            _this.pay()
           }
         })
       },
@@ -54,16 +55,17 @@ window.onload = function () {
           url: '/pay/alipay?token='+token + '&orderId=' + this.orderId,
           method: 'POST',
           contentType:'application/json',
-          success:(json) => {
+          success:function (json) {
              console.log(json)
           },
-          error:(err) => {
+          error:function (err) {
             $('body').html(err.responseText)
             console.log(err.responseText)
           }
         })
       },
       getAdress() {
+        var _this = this
         api({
           url: '/address/list',
           method: 'POST',
@@ -71,10 +73,10 @@ window.onload = function () {
             pageNo:0,
             pageSize:10
           },
-          success:(json) => {
-              this.address = json.data.list
-              if (this.address && this.address.length) {
-                this.curAddress = this.address[0].id
+          success:function(json) {
+            _this.address = json.data.list
+              if (_this.address && _this.address.length) {
+                _this.curAddress = _this.address[0].id
               }
           }
       })
