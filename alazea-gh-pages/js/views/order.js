@@ -50,10 +50,9 @@ new Vue({
     fetch() {
       var _this = this
       api({
-          url:  `/order/getList?token=${this.token}&pageNo=${this.pageNo}&pageSize=${this.size}`,
+          url:  `/order/getList?token=${token}&pageNo=${this.pageNo}&pageSize=${this.size}`,
           method: 'POST',
           success: function (json) {
-            debugger
             data = json.data
             _this.total= data.totalCount
             _this.list = data.list
