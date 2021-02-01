@@ -38,7 +38,7 @@ new Vue({
     confirm(Id) {
       var _this = this
       api({
-          url: `/order/confirmReceive?token=${token}&orderId=${Id}`,
+          url: `/order/confirmReceive?&orderId=${Id}`,
           method: 'POST',
           success: function (json) {
             data = json.data
@@ -50,7 +50,7 @@ new Vue({
     fetch() {
       var _this = this
       api({
-          url:  `/order/getList?token=${token}&pageNo=${this.pageNo}&pageSize=${this.size}`,
+          url:  `/order/getList?&pageNo=${this.pageNo}&pageSize=${this.size}`,
           method: 'POST',
           success: function (json) {
             data = json.data

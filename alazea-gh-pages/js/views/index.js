@@ -33,8 +33,8 @@ $(document).ready(function () {
             method: 'POST',
             success: function (json) {
                 sessionStorage.setItem('token', json.data.token)
-                $.sendSuccessToTop('登录成功！', 1000, function(){
-                    location.reload()
+                showMe()
+                $.sendSuccessToTop('登录成功！', 1000, function(){ 
                 });
             }
         })

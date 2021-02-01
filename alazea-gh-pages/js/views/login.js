@@ -30,7 +30,7 @@
             $('#login-form').hide();
             $('#register-form').show();
             location.reload()
-          }, 3000)         
+          }, 3000)
         }
         return false
       }

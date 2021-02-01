@@ -192,7 +192,7 @@
     $('#quit').on('click',function() {
         location.href = location.origin
         sessionStorage.removeItem('token')
-        location.reload()
+        showLogin()
     })
 
 })(jQuery);
