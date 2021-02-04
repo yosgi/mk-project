@@ -616,7 +616,6 @@ img {
           font-size: 24px; } }
     .single-hero-post .hero-slides-content p {
       font-size: 18px;
-      color: #ffffff;
       margin-bottom: 50px; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .single-hero-post .hero-slides-content p {
@@ -1936,10 +1935,10 @@ img {
       flex-wrap: wrap; }
       .footer-area .single-footer-widget .widget-nav ul li {
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-        width: 50%; }
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        max-width: 30%;
+        width: 30%; }
         .footer-area .single-footer-widget .widget-nav ul li a {
           display: block;
           color: #b7b7b7;

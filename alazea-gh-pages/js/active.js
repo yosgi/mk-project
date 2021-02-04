@@ -75,15 +75,15 @@
 
     // 首页 关于每刻
     if ($.fn.magnificPopup) {
-        $('.portfolio-img ').magnificPopup({
-            gallery: {
-                enabled: true
-            },
-            type: 'image'
-        });
-        $('.video-icon').magnificPopup({
-            type: 'iframe'
-        });
+        // $('.portfolio-img ').magnificPopup({
+        //     gallery: {
+        //         enabled: true
+        //     },
+        //     type: 'image'
+        // });
+        // $('.video-icon').magnificPopup({
+        //     type: 'iframe'
+        // });
     }
 
     // :: 7.0 Barfiller Active Code
@@ -188,13 +188,15 @@
     } else {
         showLogin()
     }
-   
     $('#quit').on('click',function() {
         location.href = location.origin
         sessionStorage.removeItem('token')
         showLogin()
     })
 
+    $('.send').on('click',function() {
+        $.sendSuccess('发送成功', 1000);
+    })
 })(jQuery);
 
 // var table = [{score:12},{score:24},{score:24},{score:24},{score:25},{score:28}]
