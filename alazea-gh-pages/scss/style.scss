@@ -1446,7 +1446,9 @@ img {
   padding: 50px 0;
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
-
+  div {
+    min-height:30px
+  }
   .nav-tabs {
     border-bottom: none;
     @include justify-content-center;
@@ -2541,6 +2543,10 @@ img {
     }
 
     .social-info {
+      [type='button'] {
+        -webkit-appearance: none;
+        
+      }
       a {
         display: inline-block;
 

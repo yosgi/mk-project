@@ -48,6 +48,9 @@ new Vue({
     this.fetch()
   },
   methods:{
+    getText(text) {
+      console.log(text)
+    },
     submit() {
         var  product = this.skus[this.curSku]
         var skuId = product.id

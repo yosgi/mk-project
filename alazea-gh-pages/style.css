@@ -1073,6 +1073,8 @@ img {
   padding: 50px 0;
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb; }
+  .product_details_tab div {
+    min-height: 30px; }
   .product_details_tab .nav-tabs {
     border-bottom: none;
     -webkit-box-pack: center;
@@ -1899,6 +1901,8 @@ img {
     .footer-area .single-footer-widget p {
       color: #b7b7b7;
       margin-bottom: 20px; }
+    .footer-area .single-footer-widget .social-info [type='button'] {
+      -webkit-appearance: none; }
     .footer-area .single-footer-widget .social-info a {
       display: inline-block;
       width: 40px;
