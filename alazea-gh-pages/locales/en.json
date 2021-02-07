@@ -1,0 +1,85 @@
+{
+  "header": {
+    "email": "Email",
+    "contact": "Contact Us",
+    "language": "Language",
+    "login": "Log in",
+    "cart": "Cart"
+  },
+  "navbar": {
+    "min": "MIN",
+    "products": "Products",
+    "store": "Store",
+    "brand": "Brand Story"
+  },
+  "index": {
+    "title": "Make It Now",
+    "slogan": "A companion, in every moment.",
+    "shop": "Shop",
+    "contact": "Contact us"
+  },
+  "cart": {
+    "products": "Products",
+    "sort": "sort",
+    "quantity": "quantity",
+    "price": "price",
+    "shopping-cart": "Shopping Cart",
+    "address": "Address",
+    "update-address": "Update address",
+    "total": "Total",
+    "make-a-payment": "Make a payment"
+  },
+  "about": {
+    "brand-story": "Brand Story",
+    "front-page": "Front page",
+    "brandstory": "Brand story",
+    "our-brand": "Our Brand",
+    "motto": "MAKE IT NOW has years of expertise and first-hand experiences, we focuses not only the big picture but also the fine details within each product. The high quality of each item are reflected through our deep respect for Greenism.",
+    "our-story": "Our Story",
+    "a-companion": "A companion, in every moment.",
+    "description": "In recent years, global non-renewable resources have been rapidly reduced due to extensive and continuous exploitation by human beings. Global temperature rise, glacier melting, micro-plastic pollution, ocean acidification and other environmental problems with global impacts have become increasingly prominent, posing a serious threat to human survival and development.\n\nSince its establishment in 2017, MAKE IT NOW has focused on the study and sales of food-grade silicone products. We have an exclusive production chain, including strict quality control and audits on raw materials and the production process. Our company uses directly sourced environmentally friendly materials to create environmentally friendly, safe and durable high-quality home, kitchen, and baby products.\n\nAnd we ask you to join us, for a new life style that can help our planet.",
+    "contact-us": "Contact us",
+    "address": "Address",
+    "address-txt": "Guangdong, Shenzhen China",
+    "phone": "Phone",
+    "phone-txt": "0755-82569749",
+    "email": "Email",
+    "email-txt": "assistant@min-makeitnow.com",
+    "send-message": "Send us a message",
+    "your-name": "Your name",
+    "your-email": "Your E-mail",
+    "title": "Title",
+    "message": "Message",
+    "send": "Send"
+  },
+  "blog": {},
+  "checkout": {},
+  "contact": {},
+  "login": {
+    "please-login": "Please log in with your MakeItNow account(Phone/Email)",
+    "phone-email": "Phone/Email",
+    "password": "Password",
+    "login": "Log in",
+    "login-alipay": "Log in with Alipay",
+    "create-an-account": "Create an account",
+    "check-status": "To make your shopping easier, check your shopping status and history",
+    "signup": "Sign up"
+  },
+  "register": {
+    "account": "Account name",
+    "password": "Password",
+    "confirm-password": "Confirm Password",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone number",
+    "send-verify": "send verify number",
+    "verify-number": "Verify Number",
+    "create-account": "Create an account"
+  },
+  "order": {},
+  "portfolio": {},
+  "shop-details": {},
+  "shop": {},
+  "single-portfolio": {},
+  "single-post": {}
+}
