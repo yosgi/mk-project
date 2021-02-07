@@ -13,10 +13,42 @@
     "brand": "Brand Story"
   },
   "index": {
-    "title": "Make It Now",
-    "slogan": "A companion, in every moment.",
     "shop": "Shop",
-    "contact": "Contact us"
+    "contact": "Contact us",
+    "about-now": "About Make It Now",
+    "about-now-txt": "Manufacturing all kinds of food-grade silicone products, stems from the green concept, and falls into the living.",
+    "hotsales": "Hot Sales",
+    "product1": "Baby Bib",
+    "product1-desc": "Catch all your drops, easy clean",
+    "product2": "Tick Tock Collapsible Travel Cup",
+    "product2-desc": "Multiple size, easy to travel with",
+    "product3": "Tick Tock Coffee Cup",
+    "product3-desc": "Hot & spit proof, safer use",
+    "product4": "Bunny Baby Bowl",
+    "product4-desc": "Multiple functions, satisfy all kinds of needed",
+    "product5": "Bunny All in one Plate",
+    "product5-desc": "Divided plate, balance nutrition",
+    "product6": "Bunny Collapsible Bottle",
+    "product6-desc": "Multiple size, spit proof, easy to travel with",
+    "FDA": "FDA Approval",
+    "PVC": "PVC Free",
+    "BPA": "BPA Free",
+    "Phthalate": "Phthalate Free",
+    "environmental": "Environmental Friendly",
+    "environmental-1": "Degradable",
+    "environmental-2": "Produce no toxic smoke after burning, from production to use, to recycling, no pollution.",
+    "silicone": "Food Grade Silicone",
+    "silicone-1": "Food contact directly, zero toxic to human body.",
+    "material": "Raw Material",
+    "material-1": "Extracted from silicon. Environmentally friendly material.",
+    "application": "Application",
+    "application-1": "Silicone is widely used in daily, medical, and product contact products.",
+    "traits": "Traits",
+    "traits-1": "Soft material, fine ductility, life time using.",
+    "brand-story": "Brand Story",
+    "learn-more": "Learn More",
+    "contact-us": "Contact us",
+    "send-message": "Send us a message, we will get back to you soon."
   },
   "cart": {
     "products": "Products",
@@ -38,13 +70,7 @@
     "our-story": "Our Story",
     "a-companion": "A companion, in every moment.",
     "description": "In recent years, global non-renewable resources have been rapidly reduced due to extensive and continuous exploitation by human beings. Global temperature rise, glacier melting, micro-plastic pollution, ocean acidification and other environmental problems with global impacts have become increasingly prominent, posing a serious threat to human survival and development.\n\nSince its establishment in 2017, MAKE IT NOW has focused on the study and sales of food-grade silicone products. We have an exclusive production chain, including strict quality control and audits on raw materials and the production process. Our company uses directly sourced environmentally friendly materials to create environmentally friendly, safe and durable high-quality home, kitchen, and baby products.\n\nAnd we ask you to join us, for a new life style that can help our planet.",
-    "contact-us": "Contact us",
-    "address": "Address",
-    "address-txt": "Guangdong, Shenzhen China",
-    "phone": "Phone",
-    "phone-txt": "0755-82569749",
-    "email": "Email",
-    "email-txt": "assistant@min-makeitnow.com",
+    "contact-us": "",
     "send-message": "Send us a message",
     "your-name": "Your name",
     "your-email": "Your E-mail",
@@ -56,6 +82,7 @@
   "checkout": {},
   "contact": {},
   "login": {
+    "user": "User",
     "please-login": "Please log in with your MakeItNow account(Phone/Email)",
     "phone-email": "Phone/Email",
     "password": "Password",
@@ -77,9 +104,33 @@
     "create-account": "Create an account"
   },
   "order": {},
-  "portfolio": {},
-  "shop-details": {},
-  "shop": {},
+  "portfolio": {
+    "product-page": "Product Page",
+    "product-list": "Products list",
+    "our-products": "Our products",
+    "filters": ["All", "Tableware", "Bottle", "Bibs", "Others"]
+  },
+  "shop-details": {
+    "shop-detail": "Product Details",
+    "detail": "Details"
+  },
+  "shop": {
+    "store": "Store",
+    "category": "Category",
+    "filters": ["All","Tableware","Bottle","Bibs","Others"],
+    "details": "Details"
+  },
   "single-portfolio": {},
-  "single-post": {}
+  "single-post": {},
+  "footer": {
+    "follow-us": "Follow us below",
+    "fast-nav": "Fast navigation",
+    "contact": "Contact Us",
+    "address": "Address",
+    "address-txt": "Guangdong, Shenzhen China",
+    "phone": "Phone",
+    "email": "Email",
+    "workhour": "Work Hour",
+    "workhour-txt": "Monday ~ Friday: 8 AM to 9 PM"
+  }
 }

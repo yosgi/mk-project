@@ -20,15 +20,16 @@
 </head>
 
 <body>
-  <!-- Preloader -->
-  <div class="preloader d-flex align-items-center justify-content-center">
-    <div class="preloader-circle"></div>
-    <div class="preloader-img">
-      <img src="img/logos/logo深灰色字.png" alt="">
-    </div>
-  </div>
-
   <div id="cartPage">
+
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+      <div class="preloader-circle"></div>
+      <div class="preloader-img">
+        <img src="img/logos/logo深灰色字.png" alt="">
+      </div>
+    </div>
+
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
 
@@ -56,7 +57,8 @@
                   <div class="language-dropdown">
                     <div class="dropdown">
                       <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $t("header.language") }}</button>
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $t("header.language")
+                        }}</button>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#" @click="switchLocale('zh')">简体中文</a>
                         <a class="dropdown-item" href="#" @click="switchLocale('en')">English</a>
@@ -86,7 +88,7 @@
                     <a href="cart.html">
                       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                       <span>{{ $t("header.cart") }}</span>
-                        <span class="cart-quantity"></span>
+                      <span class="cart-quantity"></span>
                       </span>
                     </a>
                   </div>
@@ -179,7 +181,7 @@
       <!-- Top Breadcrumb Area -->
       <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
         style="background-image: url(img/banner/banner6.jpg);">
-        <h2>购物车</h2>
+        <h2>{{ $t("cart.shopping-cart") }}</h2>
       </div>
 
       <div class="container">
@@ -189,9 +191,9 @@
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="#">
-                    <i class="fa fa-home"></i> 首页</a>
+                    <i class="fa fa-home"></i> {{ $t("about.front-page") }}</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">购物车</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $t("cart.shopping-cart") }}</li>
               </ol>
             </nav>
           </div>
@@ -210,10 +212,10 @@
                 <thead>
                   <tr>
                     <th></th>
-                    <th>商品</th>
-                    <th>规格</th>
-                    <th>数量</th>
-                    <th>单价</th>
+                    <th>{{ $t("cart.products") }}</th>
+                    <th>{{ $t("cart.sort") }}</th>
+                    <th>{{ $t("cart.quantity") }}</th>
+                    <th>{{ $t("cart.price") }}</th>
                     <!-- <th>总价</th> -->
                     <th></th>
                   </tr>
@@ -276,13 +278,13 @@
           <!-- Cart Totals -->
           <div class="col-12 col-lg-6">
             <div class="cart-totals-area mt-70">
-              <h5 class="title--">购物车</h5>
+              <h5 class="title--">{{ $t("cart.shopping-cart") }}</h5>
               <!-- <div class="subtotal d-flex justify-content-between">
                             <h5>总计</h5>
                             <h5>¥9.99</h5>
                         </div> -->
               <div class="shipping d-flex justify-content-between">
-                <h5>地址</h5>
+                <h5>{{ $t("cart.address") }}</h5>
 
                 <div class="shipping-address">
 
@@ -294,18 +296,18 @@
                   <!-- <input type="text" name="shipping-text" id="shipping-text" placeholder="State">
                                     <input type="text" name="shipping-zip" id="shipping-zip" placeholder="ZIP"> -->
                   <a href="/checkout.html"><button>
-                      更新地址
+                    {{ $t("cart.update-address") }}
                     </button></a>
 
 
                 </div>
               </div>
               <div class="total d-flex justify-content-between">
-                <h5>总计</h5>
+                <h5>{{ $t("cart.total") }}</h5>
                 <h5>¥{{total}}</h5>
               </div>
               <div class="checkout-btn">
-                <a @click="createOrder" href="" class="btn alazea-btn w-100">结算</a>
+                <a @click="createOrder" href="" class="btn alazea-btn w-100">{{ $t("cart.make-a-payment") }}</a>
               </div>
               <div v-if="!login" style="margin-top:30px" class="alert alert-secondary" role="alert">
                 还没有登录，<a href="login.html" class="alert-link">点击</a>进行登录.
@@ -332,7 +334,7 @@
                     <img src="img/logos/logo白字.png" alt="">
                   </a>
                 </div>
-                <p>请联系我们</p>
+                <p>{{ $t("footer.contact") }}</p>
                 <div class="social-info">
                   <a href=" https://weibo.com/u/7483500874?is_all=1">
                     <img src="img/contact-icons/weibo.png">
@@ -372,18 +374,18 @@
             <div class="col-12 col-sm-6 col-lg-4">
               <div class="single-footer-widget">
                 <div class="widget-title">
-                  <h5>快速导航</h5>
+                  <h5>{{ $t("footer.fast-nav") }}</h5>
                 </div>
                 <nav class="widget-nav">
                   <ul>
                     <li>
-                      <a href="/portfolio.html">产品</a>
+                      <a href="/portfolio.html">{{ $t("navbar.products") }}</a>
                     </li>
                     <li>
-                      <a href="/shop.html">商城</a>
+                      <a href="/shop.html">{{ $t("navbar.store") }}</a>
                     </li>
                     <li>
-                      <a href="/about.html">品牌故事</a>
+                      <a href="/about.html">{{ $t("navbar.brand") }}</a>
                     </li>
                   </ul>
                 </nav>
@@ -396,21 +398,21 @@
             <div class="col-12 col-sm-6 col-lg-4">
               <div class="single-footer-widget">
                 <div class="widget-title">
-                  <h5>联系我们</h5>
+                  <h5>{{ $t("footer.contact") }}</h5>
                 </div>
 
                 <div class="contact-information">
                   <p>
-                    <span>地址:</span> 深圳市福田区卓越梅林中心广场卓悦汇B座801B
+                    <span>{{ $t("footer.address") }}</span>:</span> {{ $t("footer.address-txt") }}
                   </p>
                   <p>
-                    <span>电话:</span>0755-82569749
+                    <span>{{ $t("footer.phone") }}:</span>0755-82569749
                   </p>
                   <p>
-                    <span>邮箱:</span>assistant@min-makeitnow.com
+                    <span>{{ $t("footer.email") }}:</span>assistant@min-makeitnow.com
                   </p>
                   <p>
-                    <span>营业时间:</span> 周一 ~ 周五: 8 AM to 9 PM
+                    <span>{{ $t("footer.workhour") }}:</span> {{ $t("footer.workhour-txt") }}
                   </p>
                   <p>
                 </div>
@@ -444,13 +446,13 @@
                 <nav>
                   <ul>
                     <li>
-                      <a href="/portfolio.html">产品</a>
+                      <a href="/portfolio.html">{{ $t("navbar.products") }}</a>
                     </li>
                     <li>
-                      <a href="/shop.html">商城</a>
+                      <a href="/shop.html">{{ $t("navbar.store") }}</a>
                     </li>
                     <li>
-                      <a href="/about.html">品牌故事</a>
+                      <a href="/about.html">{{ $t("navbar.brand") }}</a>
                     </li>
                   </ul>
                 </nav>

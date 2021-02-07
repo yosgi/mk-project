@@ -2,313 +2,302 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!-- Title -->
-    <title>DO IT NOW</title>
+  <!-- Title -->
+  <title>DO IT NOW</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/core-img/mlogo.webp">
+  <!-- Favicon -->
+  <link rel="icon" href="img/core-img/mlogo.webp">
 
-    <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/dialog.css">
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/dialog.css">
 </head>
 
 <body>
+  <div id="aboutPage">
+
     <!-- Preloader -->
     <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-circle"></div>
-        <div class="preloader-img">
-            <img src="img/logos/logo深灰色字.png" alt="">
-        </div>
+      <div class="preloader-circle"></div>
+      <div class="preloader-img">
+        <img src="img/logos/logo深灰色字.png" alt="">
+      </div>
     </div>
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
 
-        <!-- ***** Top Header Area ***** -->
-        <div class="top-header-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="top-header-content d-flex align-items-center justify-content-between">
-                            <!-- Top Header Content -->
-                            <div class="top-header-meta">
-                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com">
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                    <span>邮箱: assistant@min-makeitnow.com</span>
-                                </a>
-                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>联系我们: 0755-82569749</span>
-                                </a>
-                            </div>
-
-                            <!-- Top Header Content -->
-                            <div class="top-header-meta d-flex">
-                                <!-- Language Dropdown -->
-                                <div class="language-dropdown">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">语言</button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">简体中文</a>
-                                            <a class="dropdown-item" href="#">English</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Login -->
-                                <div class="login">
-                                    <a href="login.html" id="title_login">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <span>登录</span>
-                                    </a>
-                                </div>
-                                <div class="login">
-                                    <div class="dropdown language-dropdown"  id="title_login1" style="display: none">
-                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">我的</button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="checkout.html">收货地址</a>
-                                            <a class="dropdown-item" href="order.html">我的订单</a>
-                                            <a class="dropdown-item" href="#" id="quit">退出登录</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Cart -->
-                                <div class="cart">
-                                    <a href="cart.html">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        <span>购物车
-                                            <span class="cart-quantity"></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- ***** Top Header Area ***** -->
+      <div class="top-header-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="top-header-content d-flex align-items-center justify-content-between">
+                <!-- Top Header Content -->
+                <div class="top-header-meta">
+                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <span>{{ $t("header.email") }}: assistant@min-makeitnow.com</span>
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>{{ $t("header.contact") }}: 0755-82569749</span>
+                  </a>
                 </div>
-            </div>
-        </div>
 
-        <!-- ***** Navbar Area ***** -->
-        <div class="alazea-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
-
-                        <!-- Nav Brand -->
-                        <a href="index.html" class="nav-brand">
-                            <img src="img/logos/logo白字.png" alt="">
-                        </a>
-
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </div>
-
-                        <!-- Menu -->
-                        <div class="classy-menu">
-
-                            <!-- Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap">
-                                    <span class="top"></span>
-                                    <span class="bottom"></span>
-                                </div>
-                            </div>
-
-                            <!-- Navbar Start -->
-                            <div class="classynav">
-                                <ul>
-                                   <li>
-                                    <a href="index.html">首页</a>
-                                </li>
-                                <li>
-                                    <a href="portfolio.html">每刻产品</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html">每刻商城</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">品牌故事</a>
-                                </li>
-
-                                </ul>
-
-                                <!-- Search Icon -->
-                                <div id="searchIcon">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
-
-                            </div>
-                            <!-- Navbar End -->
-                        </div>
-                    </nav>
-
-                    <!-- Search Form -->
-                    <div class="search-form">
-                        <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
-                            <button type="submit" class="d-none"></button>
-                        </form>
-                        <!-- Close Icon -->
-                        <div class="closeIcon">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                        </div>
+                <!-- Top Header Content -->
+                <div class="top-header-meta d-flex">
+                  <!-- Language Dropdown -->
+                  <div class="language-dropdown">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $t("header.language")
+                        }}</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#" @click="switchLocale('zh')">简体中文</a>
+                        <a class="dropdown-item" href="#" @click="switchLocale('en')">English</a>
+                      </div>
                     </div>
+                  </div>
+                  <!-- Login -->
+                  <div class="login">
+                    <a href="login.html" id="title_login">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                      <span>{{ $t("header.login") }}</span>
+                    </a>
+                  </div>
+                  <div class="login">
+                    <div class="dropdown language-dropdown" id="title_login1" style="display: none">
+                      <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">我的</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="checkout.html">收货地址</a>
+                        <a class="dropdown-item" href="order.html">我的订单</a>
+                        <a class="dropdown-item" href="#" id="quit">退出登录</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Cart -->
+                  <div class="cart">
+                    <a href="cart.html">
+                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      <span>{{ $t("header.cart") }}
+                        <span class="cart-quantity"></span>
+                      </span>
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- ***** Navbar Area ***** -->
+      <div class="alazea-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <!-- Menu -->
+            <nav class="classy-navbar justify-content-between" id="alazeaNav">
+
+              <!-- Nav Brand -->
+              <a href="index.html" class="nav-brand">
+                <img src="img/logos/logo白字.png" alt="">
+              </a>
+
+              <!-- Navbar Toggler -->
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+
+              <!-- Menu -->
+              <div class="classy-menu">
+
+                <!-- Close Button -->
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span>
+                    <span class="bottom"></span>
+                  </div>
+                </div>
+
+                <!-- Navbar Start -->
+                <div class="classynav">
+                  <ul>
+                    <li>
+                      <a href="index.html">{{ $t("navbar.min") }}</a>
+                    </li>
+                    <li>
+                      <a href="portfolio.html">{{ $t("navbar.products") }}</a>
+                    </li>
+                    <li>
+                      <a href="shop.html">{{ $t("navbar.store") }}</a>
+                    </li>
+                    <li>
+                      <a href="about.html">{{ $t("navbar.brand") }}</a>
+                    </li>
+
+                  </ul>
+
+                  <!-- Search Icon -->
+                  <div id="searchIcon">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </div>
+
+                </div>
+                <!-- Navbar End -->
+              </div>
+            </nav>
+
+            <!-- Search Form -->
+            <div class="search-form">
+              <form action="#" method="get">
+                <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                <button type="submit" class="d-none"></button>
+              </form>
+              <!-- Close Icon -->
+              <div class="closeIcon">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
-        <!-- Top Breadcrumb Area -->
-        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/banner/banner6.jpg);">
-            <h2>关于我们</h2>
-        </div>
+      <!-- Top Breadcrumb Area -->
+      <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
+        style="background-image: url(img/banner/banner6.jpg);">
+        <h2>{{ $t("about.brand-story") }}</h2>
+      </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="#">
-                                    <i class="fa fa-home"></i> 首页</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">关于</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">
+                    <i class="fa fa-home"></i> {{ $t("about.front-page") }}</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $t("about.brandstory") }}</li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
     <!-- ##### Breadcrumb Area End ##### -->
 
     <!-- ##### About Area Start ##### -->
     <section class="about-us-area section-padding-100-0">
-      
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="border-line"></div>
-                </div>
-            </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="border-line"></div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- ##### About Area End ##### -->
 
     <!-- ##### Service Area Start ##### -->
     <section class="our-services-area  section-padding-100-0">
-        <div class="container">
-       
+      <div class="container">
 
-            <div class="row align-items-center justify-content-between">
-                <div class="col-12 col-lg-6">
-                    <div class="alazea-video-area bg-overlay mb-100">
-                        <video src="img/video/兔子餐盘final.mp4" controls="controls" style="width: 400px;"></video>
-                        <!-- <img src="img/about/3.jpg" alt="">
+
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-lg-6">
+            <div class="alazea-video-area bg-overlay mb-100">
+              <video src="img/video/兔子餐盘final.mp4" controls="controls" style="width: 400px;"></video>
+              <!-- <img src="img/about/3.jpg" alt="">
                         <a href="img/video/兔子餐盘final.mp4" class="video-icon">
                             <i class="fa fa-play" aria-hidden="true"></i>
                         </a> -->
-                    </div>
-                </div>
-                <div class="col-12 col-lg-5">
-                    <div class="alazea-service-area mb-100">
-
-                        <!-- Single Service Area -->
-                        <div class="single-service-area d-flex align-items-center">
-                            <!-- Icon -->
-                            <div class="service-icon mr-30">
-                                
-                            </div>
-                            <!-- Content -->
-                            <div class="service-content">
-                                <h2>BRAND INTRODUCTION</h2>
-                                <h5>品牌简介</h5>
-                                <p>Make It Now致力于让环保成为人人可参与的行为。在产品创新、环保方面脚步不停，坚持为消费者打造更便利、环保的家居生活，我们认为，环保不应该是适应克制，而是更简易愉快的生活方式
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
             </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="alazea-service-area mb-100">
+
+              <!-- Single Service Area -->
+              <div class="single-service-area d-flex align-items-center">
+                <!-- Icon -->
+                <div class="service-icon mr-30">
+
+                </div>
+                <!-- Content -->
+                <div class="service-content">
+                  <h2>BRAND INTRODUCTION</h2>
+                  <h5>{{ $t("about.our-brand") }}</h5>
+                  <p>{{ $t("about.motto") }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
+      </div>
     </section>
     <!-- ##### Service Area End ##### -->
-    
+
     <!-- ##### Testimonial Area Start ##### -->
     <section class="testimonial-area section-padding-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div >
-                        <!-- Single Testimonial Slide -->
-                        <div >
-                            <div class="row align-items-center">
-                              
-                                <div class="col-12 col-md-12">
-                                    <div class="testimonial-content">
-                                        <!-- Section Heading -->
-                                        <div class="section-heading" style="text-align:center">
-                                            <h2>我们的故事</h2>
-                                            <p>让环保成为一种生活方式</p>
-                                        </div>
-                                        <p>近年来，全球的不可再生资源由于人类不断开采和大量使用，储量正急剧减少。全球气温上升，冰川融化，微塑料污染，海洋酸化等具有全球性影响的环境问题日益突出，对人类生存和发展构成严重的威胁。
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div>
+              <!-- Single Testimonial Slide -->
+              <div>
+                <div class="row align-items-center">
 
-                                            2016年，全球共售出4800亿个塑料瓶。一般塑料回收率为10%。
-                                            
-                                            海洋微塑料污染，每年平均增长10%，造成海洋酸化，冰川溶解，加速冰的流失速度为过去20年的6倍.。
-                                            
-                                            每年有1300万公顷的树木被砍伐，其中一大部分用于制造一次性餐具。而盛放过食物的餐具甚至无法被二次回收。
-                                            
-                                            在能源危机和生态危机的双重威胁下，保护环境，势在必行！
-                                            
-                                            何不让环保从日常生活中出发？为消费者打造环保、安全、高品质的日常生活家居用品，是Make It Now品牌成立的初衷。
-                                            
-                                            要践行环保，就要减少对不可再生资源的索取，产品势必要使用环保材料。硅胶是取用于硅元素加工出来的一种可回收的天然原料，无色无味无毒，燃烧后不产生有毒气体，目前已广泛应用于母婴、餐具用品及医疗行业。
-                                            
-                                            Make It Now品牌自2017年成立至今，一直专注于食品级硅胶制品的研发和销售，我们拥有专属生产链，对原材料及生产有严格的审核及品质把控，企业从源头上采用环保材料，以更出色的设计，为消费者打造环保安全且耐用的高品质家居、餐厨、母婴产品。 </p>
-                                        <p>Make It Now致力于让环保成为人人可参与的行为。在产品创新、环保方面脚步不停，坚持为消费者打造更便利、环保的家居生活，我们认为，环保不应该是适应克制，而是更简易愉快的生活方式
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-12 row">
-                                    <div class="single-benefits-area col-4">
-                                        <img src="img/about/img3.jpg" alt="">
-                                    </div>
-                                    <div class="single-benefits-area col-4">
-                                        <img src="img/about/img2.jpg" alt="">
-                                    </div>
-                                    <div class="single-benefits-area col-4">
-                                        <img src="img/about/img1.jpg" alt="">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-               
-
+                  <div class="col-12 col-md-12">
+                    <div class="testimonial-content">
+                      <!-- Section Heading -->
+                      <div class="section-heading" style="text-align:center">
+                        <h2>{{ $t("about.our-story") }}</h2>
+                        <p>{{ $t("about.a-companion") }}</p>
+                      </div>
+                      <p>{{ $t("about.description") }}
+                      </p>
                     </div>
+                  </div>
+                  <div class="col-12 row">
+                    <div class="single-benefits-area col-4">
+                      <img src="img/about/img3.jpg" alt="">
+                    </div>
+                    <div class="single-benefits-area col-4">
+                      <img src="img/about/img2.jpg" alt="">
+                    </div>
+                    <div class="single-benefits-area col-4">
+                      <img src="img/about/img1.jpg" alt="">
+                    </div>
+                  </div>
+
                 </div>
+              </div>
+
+
+
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- ##### Testimonial Area End ##### -->
 
@@ -318,370 +307,383 @@
 
     <!-- ##### Team Area Start ##### -->
     <section class="team-area section-padding-100-0" style="display: none">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Heading -->
-                    <div class="section-heading text-center">
-                        <h2>OUR TEAM</h2>
-                        <p>A team of dedicated experienced professionals.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Section Heading -->
+            <div class="section-heading text-center">
+              <h2>OUR TEAM</h2>
+              <p>A team of dedicated experienced professionals.</p>
             </div>
-
-            <div class="row">
-
-                <!-- Single Team Member Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-team-member text-center mb-100">
-                        <!-- Team Member Thumb -->
-                        <div class="team-member-thumb">
-                            <img src="img/bg-img/team1.png" alt="">
-                            <!-- Social Info -->
-                            <div class="team-member-social-info">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Team Member Info -->
-                        <div class="team-member-info mt-30">
-                            <h5>Joseph Corbin</h5>
-                            <p>CEO &amp; Founder</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Team Member Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-team-member text-center mb-100">
-                        <!-- Team Member Thumb -->
-                        <div class="team-member-thumb">
-                            <img src="img/bg-img/team2.png" alt="">
-                            <!-- Social Info -->
-                            <div class="team-member-social-info">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Team Member Info -->
-                        <div class="team-member-info mt-30">
-                            <h5>Tasha Deserio</h5>
-                            <p>Garden Designer</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Team Member Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-team-member text-center mb-100">
-                        <!-- Team Member Thumb -->
-                        <div class="team-member-thumb">
-                            <img src="img/bg-img/team3.png" alt="">
-                            <!-- Social Info -->
-                            <div class="team-member-social-info">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Team Member Info -->
-                        <div class="team-member-info mt-30">
-                            <h5>Cody Baker</h5>
-                            <p>Plan Manager</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Team Member Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-team-member text-center mb-100">
-                        <!-- Team Member Thumb -->
-                        <div class="team-member-thumb">
-                            <img src="img/bg-img/team4.png" alt="">
-                            <!-- Social Info -->
-                            <div class="team-member-social-info">
-                                <a href="#">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Team Member Info -->
-                        <div class="team-member-info mt-30">
-                            <h5>Pearl Kansas</h5>
-                            <p>Marketer</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+          </div>
         </div>
+
+        <div class="row">
+
+          <!-- Single Team Member Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single-team-member text-center mb-100">
+              <!-- Team Member Thumb -->
+              <div class="team-member-thumb">
+                <img src="img/bg-img/team1.png" alt="">
+                <!-- Social Info -->
+                <div class="team-member-social-info">
+                  <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- Team Member Info -->
+              <div class="team-member-info mt-30">
+                <h5>Joseph Corbin</h5>
+                <p>CEO &amp; Founder</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Team Member Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single-team-member text-center mb-100">
+              <!-- Team Member Thumb -->
+              <div class="team-member-thumb">
+                <img src="img/bg-img/team2.png" alt="">
+                <!-- Social Info -->
+                <div class="team-member-social-info">
+                  <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- Team Member Info -->
+              <div class="team-member-info mt-30">
+                <h5>Tasha Deserio</h5>
+                <p>Garden Designer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Team Member Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single-team-member text-center mb-100">
+              <!-- Team Member Thumb -->
+              <div class="team-member-thumb">
+                <img src="img/bg-img/team3.png" alt="">
+                <!-- Social Info -->
+                <div class="team-member-social-info">
+                  <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- Team Member Info -->
+              <div class="team-member-info mt-30">
+                <h5>Cody Baker</h5>
+                <p>Plan Manager</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Team Member Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single-team-member text-center mb-100">
+              <!-- Team Member Thumb -->
+              <div class="team-member-thumb">
+                <img src="img/bg-img/team4.png" alt="">
+                <!-- Social Info -->
+                <div class="team-member-social-info">
+                  <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- Team Member Info -->
+              <div class="team-member-info mt-30">
+                <h5>Pearl Kansas</h5>
+                <p>Marketer</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
     <!-- ##### Team Area End ##### -->
-  
-    <div class="contact-area-info section-padding-0-100">
-       
-        <div class="container">
-            <h2>CONTACT US</h2>
-            <h2 style="margin-bottom: 30px;">联系我们</h2>
-            <div class="row align-items-center justify-content-between">
-                <!-- Contact Thumbnail -->
-                <div class="col-12 col-md-6">
-                    <div class="contact--thumbnail">
-                        <img src="img/logos/logo深灰色字.jpg" alt="">
-                    </div>
-                </div>
 
-                <div class="col-12 col-md-5">
-                    <!-- Contact Information -->
-                    <div class="contact-information">
-                        <p>
-                            <span>地址:</span> 深圳市福田区卓越梅林中心广场卓悦汇B座801B</p>
-                        <p>
-                            <span>电话:</span> 0755-82569749</p>
-                        <p>
-                            <span>邮箱:</span>assistant@min-makeitnow.com</p>
-                    </div>
-                </div>
+    <div class="contact-area-info section-padding-0-100">
+
+      <div class="container">
+        <h2>CONTACT US</h2>
+        <h2 style="margin-bottom: 30px;">{{ $t("about.contact-us") }}</h2>
+        <div class="row align-items-center justify-content-between">
+          <!-- Contact Thumbnail -->
+          <div class="col-12 col-md-6">
+            <div class="contact--thumbnail">
+              <img src="img/logos/logo深灰色字.jpg" alt="">
             </div>
+          </div>
+
+          <div class="col-12 col-md-5">
+            <!-- Contact Information -->
+            <div class="contact-information">
+              <p>
+                <span>{{ $t("footer.address") }}:</span> {{ $t("footer.address-txt") }}
+              </p>
+              <p>
+                <span>{{ $t("footer.phone") }}:</span> 0755-82569749
+              </p>
+              <p>
+                <span>{{ $t("footer.email") }}:</span> assistant@min-makeitnow.com
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- ##### Contact Area Info End ##### -->
 
     <!-- ##### Contact Area Start ##### -->
     <section class="contact-area">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-12 col-lg-5">
-                    <!-- Section Heading -->
-                    <div class="section-heading">
-                        <h2>发送信息，我们都在 </h2>
-                    </div>
-                    <!-- Contact Form Area -->
-                    <div class="contact-form-area mb-100">
-                      
-                            <div class="row">
-                                <div class="col-12 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="contact-name" placeholder="您的姓名">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="contact-email" placeholder="您的邮箱">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="contact-subject" placeholder="问题">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="消息"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn alazea-btn mt-15 send">发送</button>
-                                </div>
-                            </div>
-                        
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-6">
-                    <!-- Google Maps -->
-                    <div class="map-area mb-100">
-                        <img src="img/core-img/map.png">
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-lg-5">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <h2>{{ $t("about.send-message") }}</h2>
             </div>
+            <!-- Contact Form Area -->
+            <div class="contact-form-area mb-100">
+
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="contact-name" :placeholder="$t('about.your-name')">
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="contact-email" :placeholder="$t('about.your-email')">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="contact-subject" :placeholder="$t('about.title')">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <textarea class="form-control" name="message" id="message" cols="30" rows="10"
+                      :placeholder="$t('about.message')"></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn alazea-btn mt-15 send">{{ $t("about.send") }}</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <!-- Google Maps -->
+            <div class="map-area mb-100">
+              <img src="img/core-img/map.png">
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area bg-img">
-        <!-- Main Footer Area -->
-        <div class="main-footer-area">
-            <div class="container">
-                <div class="row">
+      <!-- Main Footer Area -->
+      <div class="main-footer-area">
+        <div class="container">
+          <div class="row">
 
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="single-footer-widget">
-                            <div class="footer-logo mb-30">
-                                <a href="#">
-                                    <img src="img/logos/logo白字.png" alt="">
-                                </a>
-                            </div>
-                            <p>请联系我们</p>
-                            <div class="social-info">
-                                <a href=" https://weibo.com/u/7483500874?is_all=1">
-                                    <img src="img/contact-icons/weibo.png">
-                                </a>
-                                <span class="dropup" >
-                                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                             <img src="img/contact-icons/weixin.png">
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <img src="img/contact-icons/weixin-url.png">
-                                    </div>
-                                </span>
-
-
-                                <span class="dropup" >
-                                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                        <img src="img/contact-icons/mini.png">
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <img src="img/contact-icons/mini-url.png">
-                                    </div>
-                                </span>
-                               
-                                <a href="https://makeitnow.tmall.com">
-                                    <img src="img/contact-icons/tianmao.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="single-footer-widget">
-                            <div class="widget-title">
-                                <h5>快速导航</h5>
-                            </div>
-                            <nav class="widget-nav">
-                                <ul>
-                                    <li>
-                                        <a href="/portfolio.html">产品</a>
-                                    </li>
-                                    <li>
-                                        <a href="/shop.html">商城</a>
-                                    </li>
-                                    <li>
-                                        <a href="/about.html">品牌故事</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="single-footer-widget">
-                            <div class="widget-title">
-                                <h5>联系我们</h5>
-                            </div>
-
-                            <div class="contact-information">
-                                <p>
-                                    <span>地址:</span> 深圳市福田区卓越梅林中心广场卓悦汇B座801B</p>
-                                <p>
-                                    <span>电话:</span>0755-82569749</p>
-                                <p>
-                                    <span>邮箱:</span>assistant@min-makeitnow.com</p>
-                                <p>
-                                    <span>营业时间:</span> 周一 ~ 周五: 8 AM to 9 PM</p>
-                                <p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <div class="footer-logo mb-30">
+                  <a href="#">
+                    <img src="img/logos/logo白字.png" alt="">
+                  </a>
                 </div>
-            </div>
-        </div>
+                <p>{{ $t("footer.follow-us") }}</p>
+                <div class="social-info">
+                  <a href=" https://weibo.com/u/7483500874?is_all=1">
+                    <img src="img/contact-icons/weibo.png">
+                  </a>
+                  <span class="dropup">
+                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <img src="img/contact-icons/weixin.png">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <img src="img/contact-icons/weixin-url.png">
+                    </div>
+                  </span>
 
-        <!-- Footer Bottom Area -->
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="border-line"></div>
+
+                  <span class="dropup">
+                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <img src="img/contact-icons/mini.png">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <img src="img/contact-icons/mini-url.png">
                     </div>
-                    <!-- Copywrite Text -->
-                    <div class="col-12 col-md-6">
-                        <div class="copywrite-text">
-                            <p>&copy;
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Footer Nav -->
-                    <div class="col-12 col-md-6">
-                        <div class="footer-nav">
-                            <ul>
-                                <li>
-                                    <a href="/portfolio.html">产品</a>
-                                </li>
-                                <li>
-                                    <a href="/shop.html">商城</a>
-                                </li>
-                                <li>
-                                    <a href="/about.html">品牌故事</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                  </span>
+
+                  <a href="https://makeitnow.tmall.com">
+                    <img src="img/contact-icons/tianmao.png">
+                  </a>
                 </div>
+              </div>
             </div>
+
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <div class="widget-title">
+                  <h5>{{ $t("footer.fast-nav") }}</h5>
+                </div>
+                <nav class="widget-nav">
+                  <ul>
+                    <li>
+                      <a href="/portfolio.html">{{ $t("navbar.products") }}</a>
+                    </li>
+                    <li>
+                      <a href="/shop.html">{{ $t("navbar.store") }}</a>
+                    </li>
+                    <li>
+                      <a href="/about.html">{{ $t("navbar.brand") }}</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+
+
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <div class="widget-title">
+                  <h5>{{ $t("footer.contact") }}</h5>
+                </div>
+
+                <div class="contact-information">
+                  <p>
+                    <span>{{ $t("footer.address") }}</span>:</span> {{ $t("footer.address-txt") }}
+                  </p>
+                  <p>
+                    <span>{{ $t("footer.phone") }}:</span>0755-82569749
+                  </p>
+                  <p>
+                    <span>{{ $t("footer.email") }}:</span>assistant@min-makeitnow.com
+                  </p>
+                  <p>
+                    <span>{{ $t("footer.workhour") }}:</span> {{ $t("footer.workhour-txt") }}
+                  </p>
+                  <p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Footer Bottom Area -->
+      <div class="footer-bottom-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="border-line"></div>
+            </div>
+            <!-- Copywrite Text -->
+            <div class="col-12 col-md-6">
+              <div class="copywrite-text">
+                <p>&copy;
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  Copyright &copy;
+                  {{ currentYear }}
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+              </div>
+            </div>
+            <!-- Footer Nav -->
+            <div class="col-12 col-md-6">
+              <div class="footer-nav">
+                <ul>
+                  <li>
+                    <a href="/portfolio.html">{{ $t("navbar.products") }}</a>
+                  </li>
+                  <li>
+                    <a href="/shop.html">{{ $t("navbar.store") }}</a>
+                  </li>
+                  <li>
+                    <a href="/about.html">{{ $t("navbar.brand") }}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
+  </div>
 
-    <!-- ##### All Javascript Files ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
+  <!-- ##### All Javascript Files ##### -->
+  <!-- jQuery-2.2.4 js -->
+  <script src="js/jquery/jquery-2.2.4.min.js"></script>
+  <!-- Popper js -->
+  <script src="js/bootstrap/popper.min.js"></script>
+  <!-- Bootstrap js -->
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <!-- All Plugins js -->
+  <script src="js/plugins/plugins.js"></script>
+  <!-- Active js -->
+  <script src="js/active.js"></script>
+  <script src="js/vue/vue.js"></script>
+  <script src="js/vue/vue-i18n.js"></script>
+  <script src="js/locale.js"></script>
+  <script src="js/views/about.js"></script>
 </body>
 
 </html>
