@@ -233,19 +233,23 @@
 
             <div class="col-12 col-md-6">
               <div class="single_product_desc">
-                <h4 class="title">{{info.name}}</h4>
+                <h4 class="title">{{ $i18n.locale === 'en' ? info.nameUs : info.name }}</h4>
                 <h4 class="price">¥{{skus[curSku]? skus[curSku].price:''}}</h4>
                 <div class="short_overview">
-                  <ul>
+                  <ul v-if="isUS">
+                    <li v-for="(v,index) in info.tagsUs" style="list-style:inside">
+                      {{v}}
+                    </li>
+                  </ul>
+                  <ul v-else>
                     <li v-for="(v,index) in info.tags" style="list-style:inside">
-
                       {{v}}
                     </li>
                   </ul>
                 </div>
                 <div class="products--meta">
                   <p>
-                    <span>选择规格</span>
+                    <span>{{ $t("shop-details.chooseSpec") }}</span>
                   </p>
                   <img :src="skus.length ? skus[curSku].image :''" :data-large="skus.length ? skus[curSku].image :''"
                     style="width: 100px;">
@@ -278,15 +282,21 @@
                 </form>
                 <button @click="submit" name="addtocart" value="5" style="width:130px"
                   class="btn alazea-btn mt-15 mb-15">
-                  加入购物车
+                  {{ $t("shop-details.addCart") }}
                 </button>
               </div>
             </div>
           </div>
           <div class="product_details_tab clearfix">
-            <div v-for="(v,index) in info.desc">
-
-              {{v}}
+            <div v-if="isUS">
+              <div v-for="(v,index) in info.descUs">
+                {{v}}
+              </div>
+            </div>
+            <div v-else>
+              <div v-for="(v,index) in info.desc">
+                {{v}}
+              </div>
             </div>
           </div>
 

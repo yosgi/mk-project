@@ -99,7 +99,7 @@
     "address": "Address",
     "email": "Email",
     "phone": "Phone number",
-    "send-verify": "send verify number",
+    "send-verify": "send verify",
     "verify-number": "Verify Number",
     "create-account": "Create an account"
   },
@@ -112,7 +112,9 @@
   },
   "shop-details": {
     "shop-detail": "Product Details",
-    "detail": "Details"
+    "detail": "Details",
+    "chooseSpec": "Choose Model",
+    "addCart": "Add Cart"
   },
   "shop": {
     "store": "Store",
