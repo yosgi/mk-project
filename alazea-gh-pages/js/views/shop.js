@@ -1,7 +1,8 @@
 
 var token = sessionStorage.getItem('token');
     new Vue({
-      el: '.shop-page',
+      el: '#shopPage',
+      i18n,
       data: {
         pageNo:0,
         list:[],
@@ -9,7 +10,8 @@ var token = sessionStorage.getItem('token');
         size:10,
         curHover:-1,
         category:0,
-        categoryMap:['所有','餐具','水瓶','饭兜','其它'],
+        categoryMap: i18n.t('shop.filters'),
+        currentYear: new Date().getFullYear()
       },
       computed: {
         page() {
@@ -20,6 +22,10 @@ var token = sessionStorage.getItem('token');
         this.fetch()
       },
       methods:{
+        switchLocale(lang) {
+          switchLocale(lang)
+          this.categoryMap = i18n.t('shop.filters')
+        },
         change(index) {
           this.category = index
           this.fetch()
@@ -53,5 +59,5 @@ var token = sessionStorage.getItem('token');
             this.fetch()
           }
         }
-      }    
+      }
     })

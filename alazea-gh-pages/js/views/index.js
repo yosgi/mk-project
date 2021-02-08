@@ -1,3 +1,21 @@
+window.onload = function () {
+  new Vue({
+    el: '#homePage',
+    i18n,
+    data() {
+      return {
+        currentYear: new Date().getFullYear()
+      }
+    },
+    methods: {
+      switchLocale(lang) {
+        switchLocale(lang)
+      }
+    }
+  });
+}
+
+
 function parseQueryString(url) {
     var arr;
     var res = {};
@@ -34,7 +52,7 @@ $(document).ready(function () {
             success: function (json) {
                 sessionStorage.setItem('token', json.data.token)
                 showMe()
-                $.sendSuccessToTop('登录成功！', 1000, function(){ 
+                $.sendSuccessToTop('登录成功！', 1000, function(){
                 });
             }
         })

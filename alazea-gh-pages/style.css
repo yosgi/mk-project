@@ -1519,6 +1519,9 @@ img {
   .single-testimonial-slide .testimonial-content .testimonial-author-info p {
     margin-bottom: 0;
     color: #111111; }
+  .testimonial-content > p {
+    white-space: pre-wrap;
+  }
 
 /* :: 12.0 About Us Area CSS */
 .about-us-area {

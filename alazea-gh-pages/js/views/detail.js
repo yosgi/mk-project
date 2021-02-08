@@ -3,14 +3,16 @@ var token = sessionStorage.getItem('token');
 
 
 new Vue({
-  el: '.single_product_details_area',
+  el: '#shopDetailsPage',
+  i18n,
   data: {
     info:{},
     curSku:0,
     skus:[],
     spuAttribute:{key:[]},
     count:1,
-    cur:0
+    cur:0,
+    currentYear: new Date().getFullYear()
   },
   computed: {
     query() {
@@ -48,6 +50,9 @@ new Vue({
     this.fetch()
   },
   methods:{
+    switchLocale(lang) {
+      switchLocale(lang)
+    },
     getText(text) {
       console.log(text)
     },
@@ -71,7 +76,7 @@ new Vue({
           lib.update("products", {skuId}, function(row) {
             row.count+=count
             return row;
-          });        
+          });
         } else {
           lib.insert("products", {name, src, count, price, skuId,spuId,detail})
         }
@@ -96,7 +101,7 @@ new Vue({
                 }
             })
         })
-        
+
     },
     fetch() {
       var _this = this
@@ -127,5 +132,5 @@ new Vue({
         this.fetch()
       }
     }
-  }    
+  }
 })

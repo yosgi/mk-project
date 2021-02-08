@@ -2,458 +2,478 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
     <title>MAKE IT NOW</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/core-img/mlogo.webp">
+  <!-- Favicon -->
+  <link rel="icon" href="img/core-img/mlogo.webp">
 
-    <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/dialog.css">
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/dialog.css">
 </head>
 
 <body>
+  <div id="shopDetailsPage">
     <!-- Preloader -->
     <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-circle"></div>
-        <div class="preloader-img">
-            <img src="img/logos/logo深灰色字.png" alt="">
-        </div>
+      <div class="preloader-circle"></div>
+      <div class="preloader-img">
+        <img src="img/logos/logo深灰色字.png" alt="">
+      </div>
     </div>
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
 
-        <!-- ***** Top Header Area ***** -->
-        <div class="top-header-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="top-header-content d-flex align-items-center justify-content-between">
-                            <!-- Top Header Content -->
-                            <div class="top-header-meta">
-                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com">
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                    <span>邮箱: assistant@min-makeitnow.com</span>
-                                </a>
-                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>联系我们: 0755-82569749</span>
-                                </a>
-                            </div>
-
-                            <!-- Top Header Content -->
-                            <div class="top-header-meta d-flex">
-                                <!-- Language Dropdown -->
-                                <div class="language-dropdown">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">语言</button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">简体中文</a>
-                                            <a class="dropdown-item" href="#">English</a>
-                                            <!-- <a class="dropdown-item" href="#">Bangla</a>
-                                            <a class="dropdown-item" href="#">Hindi</a>
-                                            <a class="dropdown-item" href="#">Spanish</a>
-                                            <a class="dropdown-item" href="#">Latin</a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Login -->
-                                <div class="login">
-                                    <a href="login.html" id="title_login">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <span>登录</span>
-                                    </a>
-                                </div>
-                                <div class="login">
-                                    <div class="dropdown language-dropdown"  id="title_login1" style="display: none">
-                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">我的</button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="checkout.html">收货地址</a>
-                                            <a class="dropdown-item" href="order.html">我的订单</a>
-                                            <a class="dropdown-item" href="#" id="quit">退出登录</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Cart -->
-                                <div class="cart">
-                                    <a href="cart.html">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        <span>购物车
-                                            <span class="cart-quantity"></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- ***** Top Header Area ***** -->
+      <div class="top-header-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="top-header-content d-flex align-items-center justify-content-between">
+                <!-- Top Header Content -->
+                <div class="top-header-meta">
+                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <span>{{ $t("header.email") }}: assistant@min-makeitnow.com</span>
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>{{ $t("header.contact") }}: 0755-82569749</span>
+                  </a>
                 </div>
-            </div>
-        </div>
 
-        <!-- ***** Navbar Area ***** -->
-        <div class="alazea-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
-
-                        <!-- Nav Brand -->
-                        <a href="index.html" class="nav-brand">
-                            <img src="img/logos/logo白字.png" alt="">
-                        </a>
-
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </div>
-
-                        <!-- Menu -->
-                        <div class="classy-menu">
-
-                            <!-- Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap">
-                                    <span class="top"></span>
-                                    <span class="bottom"></span>
-                                </div>
-                            </div>
-
-                            <!-- Navbar Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li>
-                                        <a href="index.html">首页</a>
-                                    </li>
-                                    <li>
-                                        <a href="portfolio.html">每刻产品</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html">每刻商城</a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">品牌故事</a>
-                                    </li>
-
-                                </ul>
-
-                                
-
-                            </div>
-                            <!-- Navbar End -->
-                        </div>
-                    </nav>
-
-                    <!-- Search Form -->
-                    <div class="search-form">
-                        <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
-                            <button type="submit" class="d-none"></button>
-                        </form>
-                        <!-- Close Icon -->
-                        <div class="closeIcon">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                        </div>
+                <!-- Top Header Content -->
+                <div class="top-header-meta d-flex">
+                  <!-- Language Dropdown -->
+                  <div class="language-dropdown">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $t("header.language")
+                        }}</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#" @click="switchLocale('zh')">简体中文</a>
+                        <a class="dropdown-item" href="#" @click="switchLocale('en')">English</a>
+                      </div>
                     </div>
+                  </div>
+                  <!-- Login -->
+                  <div class="login">
+                    <a href="login.html" id="title_login">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                      <span>{{ $t("header.login") }}</span>
+                    </a>
+                  </div>
+                  <div class="login">
+                    <div class="dropdown language-dropdown" id="title_login1" style="display: none">
+                      <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">我的</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="checkout.html">收货地址</a>
+                        <a class="dropdown-item" href="order.html">我的订单</a>
+                        <a class="dropdown-item" href="#" id="quit">退出登录</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Cart -->
+                  <div class="cart">
+                    <a href="cart.html">
+                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      <span>{{ $t("header.cart") }}
+                        <span class="cart-quantity"></span>
+                      </span>
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- ***** Navbar Area ***** -->
+      <div class="alazea-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <!-- Menu -->
+            <nav class="classy-navbar justify-content-between" id="alazeaNav">
+
+              <!-- Nav Brand -->
+              <a href="index.html" class="nav-brand">
+                <img src="img/logos/logo白字.png" alt="">
+              </a>
+
+              <!-- Navbar Toggler -->
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+
+              <!-- Menu -->
+              <div class="classy-menu">
+
+                <!-- Close Button -->
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span>
+                    <span class="bottom"></span>
+                  </div>
+                </div>
+
+                <!-- Navbar Start -->
+                <div class="classynav">
+                  <ul>
+                    <li>
+                      <a href="index.html">{{ $t("navbar.min") }}</a>
+                    </li>
+                    <li>
+                      <a href="portfolio.html">{{ $t("navbar.products") }}</a>
+                    </li>
+                    <li>
+                      <a href="shop.html">{{ $t("navbar.store") }}</a>
+                    </li>
+                    <li>
+                      <a href="about.html">{{ $t("navbar.brand") }}</a>
+                    </li>
+
+                  </ul>
+
+                  <!-- Search Icon -->
+            
+
+                </div>
+                <!-- Navbar End -->
+              </div>
+            </nav>
+
+            <!-- Search Form -->
+            <div class="search-form">
+              <form action="#" method="get">
+                <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                <button type="submit" class="d-none"></button>
+              </form>
+              <!-- Close Icon -->
+              <div class="closeIcon">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
-        <!-- Top Breadcrumb Area -->
-        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/banner/banner6.jpg);">
-            <h2>商品详情</h2>
-        </div>
+      <!-- Top Breadcrumb Area -->
+      <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
+        style="background-image: url(img/banner/banner6.jpg);">
+        <h2>{{ $t("shop-details.shop-detail") }}</h2>
+      </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="#">
-                                    <i class="fa fa-home"></i> 首页</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">商城</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">详情</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">
+                    <i class="fa fa-home"></i> {{ $t("about.front-page") }}</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">{{ $t("shop.store") }}</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $t("shop-details.detail") }}</li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
     <!-- ##### Breadcrumb Area End ##### -->
 
     <!-- ##### Single Product Details Area Start ##### -->
     <section class="single_product_details_area mb-50">
-        <div class="produts-details--content mb-50">
-            <div class="container">
-                <div class="row justify-content-between">
+      <div class="produts-details--content mb-50">
+        <div class="container">
+          <div class="row justify-content-between">
 
-                    <div class="col-12 col-md-6 col-lg-5">
-                        <div class="single_product_thumb">
-                            <div id="product_details_slider" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div :class="['carousel-item', index === 0 ? 'active' : ''].join(' ') " v-for="(v,index) in info.otherImage">
-                                        <a class="product-img"  title="Product Image">
-                                            <img class="d-block w-100 my-foto" :src="v" :alt="info.headImage">
-                                        </a>
-                                    </div>
-                                </div>
-                                <ol class="carousel-indicators" >
-                                    <li v-for="(v,index) in info.otherImage" :class="index === cur ? 'active' : ''" data-target="#product_details_slider" :data-slide-to="index"
-                                        :style="'background-image: url(' + v + ')'">
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
+            <div class="col-12 col-md-6 col-lg-5">
+              <div class="single_product_thumb">
+                <div id="product_details_slider" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div :class="['carousel-item', index === 0 ? 'active' : ''].join(' ') "
+                      v-for="(v,index) in info.otherImage">
+                      <a class="product-img" title="Product Image">
+                        <img class="d-block w-100 my-foto" :src="v" :alt="info.headImage">
+                      </a>
                     </div>
-
-                    <div class="col-12 col-md-6">
-                        <div class="single_product_desc">
-                            <h4 class="title">{{info.name}}</h4>
-                            <h4 class="price">¥{{skus[curSku]? skus[curSku].price:''}}</h4>
-                            <div class="short_overview">
-                                <ul>
-                                    <li v-for="(v,index) in info.tags" style="list-style:inside">
-                                       
-                                        {{v}}
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="products--meta">
-                                <p>
-                                    <span>选择规格</span>
-                                </p>
-                                <img  :src="skus.length ? skus[curSku].image :''" :data-large="skus.length ? skus[curSku].image :''"  style="width: 100px;">
-                                <div style="width: 600px;margin-bottom: 10px;">
-                                    <label
-                                        style="margin:5px 5px 5px 0;width:130px" 
-                                        v-for="(v,index) in skus"
-                                        @click="curSku = index" 
-                                        type="button" 
-           
-                                        :class="['btn','btn-default',curSku === index?'active':'' ].join(' ') ">
-                                            <span v-for="(val,key) in JSON.parse(v.skuAttribute)">
-                                                {{valMap[val.value]}}
-                                            </span>
-                                        </label>
-
-
-                                    
-
-                                </div>
-                            </div>
-                          
-                                <!-- Add to Cart Form -->
-                            <form class="cart clearfix d-flex align-items-center" method="post">
-                                <div class="quantity">
-                                    <span class="qty-minus" @click="count > 1 ? count--:'' ">
-                                        <i class="fa fa-minus" aria-hidden="true"></i>
-                                    </span>
-                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" :value="count">
-                                    <span class="qty-plus" @click="count++">
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </span>
-                                </div>
-                            </form>
-                            <button @click="submit" name="addtocart" value="5" style="width:130px" class="btn alazea-btn mt-15 mb-15">
-                                加入购物车
-                            </button>
-                        </div>
-                    </div>
+                  </div>
+                  <ol class="carousel-indicators">
+                    <li v-for="(v,index) in info.otherImage" :class="index === cur ? 'active' : ''"
+                      data-target="#product_details_slider" :data-slide-to="index"
+                      :style="'background-image: url(' + v + ')'">
+                    </li>
+                  </ol>
                 </div>
-                <div class="product_details_tab clearfix">
-                    <div v-for="(v,index) in info.desc">
-
-                        {{v}}
-                    </div>
-                </div>
-
+              </div>
             </div>
+
+            <div class="col-12 col-md-6">
+              <div class="single_product_desc">
+                <h4 class="title">{{info.name}}</h4>
+                <h4 class="price">¥{{skus[curSku]? skus[curSku].price:''}}</h4>
+                <div class="short_overview">
+                  <ul>
+                    <li v-for="(v,index) in info.tags" style="list-style:inside">
+
+                      {{v}}
+                    </li>
+                  </ul>
+                </div>
+                <div class="products--meta">
+                  <p>
+                    <span>选择规格</span>
+                  </p>
+                  <img :src="skus.length ? skus[curSku].image :''" :data-large="skus.length ? skus[curSku].image :''"
+                    style="width: 100px;">
+                  <div style="width: 600px;margin-bottom: 10px;">
+                    <label style="margin:5px 5px 5px 0;width:130px" v-for="(v,index) in skus" @click="curSku = index"
+                      type="button" :class="['btn','btn-default',curSku === index?'active':'' ].join(' ') ">
+                      <span v-for="(val,key) in JSON.parse(v.skuAttribute)">
+                        {{valMap[val.value]}}
+                      </span>
+                    </label>
+
+
+
+
+                  </div>
+                </div>
+
+                <!-- Add to Cart Form -->
+                <form class="cart clearfix d-flex align-items-center" method="post">
+                  <div class="quantity">
+                    <span class="qty-minus" @click="count > 1 ? count--:'' ">
+                      <i class="fa fa-minus" aria-hidden="true"></i>
+                    </span>
+                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity"
+                      :value="count">
+                    <span class="qty-plus" @click="count++">
+                      <i class="fa fa-plus" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </form>
+                <button @click="submit" name="addtocart" value="5" style="width:130px"
+                  class="btn alazea-btn mt-15 mb-15">
+                  加入购物车
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product_details_tab clearfix">
+            <div v-for="(v,index) in info.desc">
+
+              {{v}}
+            </div>
+          </div>
+
         </div>
+      </div>
 
 
 
     </section>
     <!-- ##### Single Product Details Area End ##### -->
     <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">通知</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>加入成功，是否进入购物车查看 ？</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" onclick="location.href='cart.html'">前往</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">不了</button>
-                </div>
-            </div>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">通知</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>加入成功，是否进入购物车查看 ？</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="location.href='cart.html'">前往</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">不了</button>
+          </div>
         </div>
+      </div>
     </div>
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area bg-img">
-        <!-- Main Footer Area -->
-        <div class="main-footer-area">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="single-footer-widget">
-                            <div class="footer-logo mb-30">
-                                <a href="#">
-                                    <img src="img/logos/logo白字.png" alt="">
-                                </a>
-                            </div>
-                            <p>请联系我们</p>
-                            <div class="social-info">
-                                <a href="https://weibo.com/u/7483500874?is_all=1">
-                                    <img src="img/contact-icons/weibo.png">
-                                </a>
-                                <a href="https://makeitnow.tmall.com">
-                                    <img src="img/contact-icons/weixin.png">
-                                </a>
-                                <a href="#">
-                                    <img src="img/contact-icons/mini.png">
-                                </a>
-                                <a href="#">
-                                    <img src="img/contact-icons/tianmao.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="single-footer-widget">
-                            <div class="widget-title">
-                                <h5>快速导航</h5>
-                            </div>
-                            <nav class="widget-nav">
-                                <ul>
-                                    <li>
-                                        <a href="/portfolio.html">产品</a>
-                                    </li>
-                                    <li>
-                                        <a href="/shop.html">商城</a>
-                                    </li>
-                                    <li>
-                                        <a href="/about.html">品牌故事</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="single-footer-widget">
-                            <div class="widget-title">
-                                <h5>联系我们</h5>
-                            </div>
-
-                            <div class="contact-information">
-                                <p>
-                                    <span>地址:</span> 深圳市福田区卓越梅林中心广场卓悦汇B座801B</p>
-                                <p>
-                                    <span>电话:</span>0755-82569749</p>
-                                <p>
-                                    <span>邮箱:</span>assistant@min-makeitnow.com</p>
-                                <p>
-                                    <span>营业时间:</span> 周一 ~ 周五: 8 AM to 9 PM</p>
-                                <p>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Main Footer Area -->
+      <div class="main-footer-area">
+        <div class="container">
+          <div class="row">
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <div class="footer-logo mb-30">
+                  <a href="#">
+                    <img src="img/logos/logo白字.png" alt="">
+                  </a>
                 </div>
-            </div>
-        </div>
+                <p>{{ $t("footer.follow-us") }}</p>
+                <div class="social-info">
+                  <a href=" https://weibo.com/u/7483500874?is_all=1">
+                    <img src="img/contact-icons/weibo.png">
+                  </a>
 
-        <!-- Footer Bottom Area -->
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="border-line"></div>
+
+
+                  <span class="dropup">
+                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <img src="img/contact-icons/weixin.png">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <img src="img/contact-icons/weixin-url.png">
                     </div>
-                    <!-- Copywrite Text -->
-                    <div class="col-12 col-md-6">
-                        <div class="copywrite-text">
-                            <p>&copy;
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
+                  </span>
+
+
+                  <span class="dropup">
+                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <img src="img/contact-icons/mini.png">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <img src="img/contact-icons/mini-url.png">
                     </div>
-                    <!-- Footer Nav -->
-                    <div class="col-12 col-md-6">
-                        <div class="footer-nav">
-                            <nav>
-                                <ul>
-                                    <li>
-                                        <a href="/portfolio.html">产品</a>
-                                    </li>
-                                    <li>
-                                        <a href="/shop.html">商城</a>
-                                    </li>
-                                    <li>
-                                        <a href="/about.html">品牌故事</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                  </span>
+                  <a href="https://makeitnow.tmall.com">
+                    <img src="img/contact-icons/tianmao.png">
+                  </a>
                 </div>
+              </div>
             </div>
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <div class="widget-title">
+                  <h5>{{ $t("footer.fast-nav") }}</h5>
+                </div>
+                <nav class="widget-nav">
+                  <ul>
+                    <li>
+                      <a href="/portfolio.html">{{ $t("navbar.products") }}</a>
+                    </li>
+                    <li>
+                      <a href="/shop.html">{{ $t("navbar.store") }}</a>
+                    </li>
+                    <li>
+                      <a href="/about.html">{{ $t("navbar.brand") }}</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <div class="widget-title">
+                  <h5>{{ $t("footer.contact") }}</h5>
+                </div>
+
+                <div class="contact-information">
+                  <p>
+                    <span>{{ $t("footer.address") }}</span>:</span> {{ $t("footer.address-txt") }}
+                  </p>
+                  <p>
+                    <span>{{ $t("footer.phone") }}:</span>0755-82569749
+                  </p>
+                  <p>
+                    <span>{{ $t("footer.email") }}:</span>assistant@min-makeitnow.com
+                  </p>
+                  <p>
+                    <span>{{ $t("footer.workhour") }}:</span> {{ $t("footer.workhour-txt") }}
+                  </p>
+                  <p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Footer Bottom Area -->
+      <div class="footer-bottom-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="border-line"></div>
+            </div>
+            <!-- Copywrite Text -->
+            <div class="col-12 col-md-6">
+              <div class="copywrite-text">
+                <p>&copy;
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  Copyright &copy;
+                  {{ currentYear }}
+                  <!-- All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+              </div>
+            </div>
+            <!-- Footer Nav -->
+            <div class="col-12 col-md-6" id="footer-contact">
+              <div class="footer-nav">
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="/portfolio.html">{{ $t("navbar.products") }}</a>
+                    </li>
+                    <li>
+                      <a href="/shop.html">{{ $t("navbar.store") }}</a>
+                    </li>
+                    <li>
+                      <a href="/about.html">{{ $t("navbar.brand") }}</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
+  </div>
 
-
-    <!-- ##### All Javascript Files ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="js/vue/vue.js"></script>
-     <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <script src="js/jquery/jquery.ez-plus.js"></script>
-    <!-- Popper js -->
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/vue/vue.js"></script>
-    <script src="js/localstoragedb/localstoragedb.js"></script>
-    <script src="js/views/detail.js"></script>
+  <!-- ##### All Javascript Files ##### -->
+  <!-- jQuery-2.2.4 js -->
+  <script src="js/vue/vue.js"></script>
+  <script src="js/jquery/jquery-2.2.4.min.js"></script>
+  <script src="js/jquery/jquery.ez-plus.js"></script>
+  <!-- Popper js -->
+  <script src="js/bootstrap/popper.min.js"></script>
+  <!-- Bootstrap js -->
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <!-- All Plugins js -->
+  <script src="js/plugins/plugins.js"></script>
+  <!-- Active js -->
+  <script src="js/active.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/vue/vue.js"></script>
+  <script src="js/vue/vue-i18n.js"></script>
+  <script src="js/locale.js"></script>
+  <script src="js/localstoragedb/localstoragedb.js"></script>
+  <script src="js/views/detail.js"></script>
 </body>
 
 </html>

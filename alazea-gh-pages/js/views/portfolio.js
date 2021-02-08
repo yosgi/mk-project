@@ -1,15 +1,19 @@
 
 var token = sessionStorage.getItem('token');
+console.log(i18n.t('portfolio.filters'));
   new Vue({
-    el: '.alazea-portfolio-area',
+    // el: '.alazea-portfolio-area',
+    el: '#productPage',
+    i18n,
     data: {
       pageNo:0,
       list:[],
       total:0,
       size:30,
-      map:['所有','餐具','水瓶','饭兜','其它'],
+      map: i18n.t('portfolio.filters'),
       cur:0,
-      loading:true
+      loading:true,
+      currentYear: new Date().getFullYear()
     },
     computed: {
       page() {
@@ -20,6 +24,10 @@ var token = sessionStorage.getItem('token');
       this.fetch()
     },
     methods:{
+      switchLocale(lang) {
+        switchLocale(lang)
+        this.map = i18n.t('portfolio.filters')
+      },
       getLg(index) {
         return (index - 1) % 3 === 0 ? 6 : 3
       },
@@ -60,5 +68,5 @@ var token = sessionStorage.getItem('token');
           this.fetch()
         }
       }
-    }    
+    }
   })

@@ -3,13 +3,15 @@ var lib = new localStorageDB('library', localStorage);
 var token = sessionStorage.getItem('token');
 window.onload = function () {
   new Vue({
-    el: '#cartArea',
+    el: '#cartPage',
+    i18n,
     data: {
       list: [],
       address:[],
       curAddress:'',
       orderId:0,
-      login:true
+      login:true,
+      currentYear: new Date().getFullYear()
     },
     computed: {
       total() {
@@ -22,6 +24,9 @@ window.onload = function () {
       this.fetch();
     },
     methods: {
+      switchLocale(lang) {
+        switchLocale(lang) // from locale.js
+      },
       deleteOne(ID) {
         lib.deleteRows('products', { ID });
         lib.commit()
@@ -31,7 +36,7 @@ window.onload = function () {
         var _this = this
         e.preventDefault()
         if (!token) {
-         this.login = false
+          this.login = false
         } else {
           this.login = true
         }
@@ -56,7 +61,7 @@ window.onload = function () {
           method: 'POST',
           contentType:'application/json',
           success:function (json) {
-             console.log(json)
+            console.log(json)
           },
           error:function (err) {
             $('body').html(err.responseText)

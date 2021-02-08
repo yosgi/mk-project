@@ -21,223 +21,222 @@
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-circle"></div>
-        <div class="preloader-img">
-            <img src="img/core-img/mlogo.webp" alt="">
-        </div>
+  <!-- Preloader -->
+  <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="preloader-circle"></div>
+    <div class="preloader-img">
+      <img src="img/core-img/mlogo.webp" alt="">
     </div>
+  </div>
+
+  <div id="shopPage">
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
 
-        <!-- ***** Top Header Area ***** -->
-        <div class="top-header-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="top-header-content d-flex align-items-center justify-content-between">
-                            <!-- Top Header Content -->
-                            <div class="top-header-meta">
-                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com">
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                    <span>邮箱: assistant@min-makeitnow.com</span>
-                                </a>
-                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>联系我们: 0755-82569749</span>
-                                </a>
-                            </div>
-
-                            <!-- Top Header Content -->
-                            <div class="top-header-meta d-flex">
-                                <!-- Language Dropdown -->
-                                <div class="language-dropdown">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">语言</button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">简体中文</a>
-                                            <a class="dropdown-item" href="#">English</a>
-                                            <!-- <a class="dropdown-item" href="#">Bangla</a>
-                                                <a class="dropdown-item" href="#">Hindi</a>
-                                                <a class="dropdown-item" href="#">Spanish</a>
-                                                <a class="dropdown-item" href="#">Latin</a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Login -->
-                                <div class="login">
-                                    <a href="login.html" id="title_login">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <span>登录</span>
-                                    </a>
-                                </div>
-                                <div class="login">
-                                    <div class="dropdown language-dropdown"  id="title_login1" style="display: none">
-                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">我的</button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="checkout.html">收货地址</a>
-                                            <a class="dropdown-item" href="order.html">我的订单</a>
-                                            <a class="dropdown-item" href="#" id="quit">退出登录</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Cart -->
-                                <div class="cart">
-                                    <a href="cart.html">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        <span>购物车
-                                            <span class="cart-quantity"></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- ***** Top Header Area ***** -->
+      <div class="top-header-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="top-header-content d-flex align-items-center justify-content-between">
+                <!-- Top Header Content -->
+                <div class="top-header-meta">
+                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <span>{{ $t("header.email") }}: assistant@min-makeitnow.com</span>
+                  </a>
+                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>{{ $t("header.contact") }}: 0755-82569749</span>
+                  </a>
                 </div>
-            </div>
-        </div>
 
-        <!-- ***** Navbar Area ***** -->
-        <div class="alazea-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
-
-                        <!-- Nav Brand -->
-
-                        <a href="index.html" class="nav-brand">
-                            <img src="img/logos/logo白字.png" alt="">
-                        </a>
-
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </div>
-
-                        <!-- Menu -->
-                        <div class="classy-menu">
-
-                            <!-- Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap">
-                                    <span class="top"></span>
-                                    <span class="bottom"></span>
-                                </div>
-                            </div>
-
-                            <!-- Navbar Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li>
-                                        <a href="index.html">首页</a>
-                                    </li>
-                                    <li>
-                                        <a href="portfolio.html">每刻产品</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop.html">每刻商城</a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">品牌故事</a>
-                                    </li>
-                                    
-                                </ul>
-
-                                
-
-                            </div>
-                            <!-- Navbar End -->
-                        </div>
-                    </nav>
-
-                    <!-- Search Form -->
-                    <div class="search-form">
-                        <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
-                            <button type="submit" class="d-none"></button>
-                        </form>
-                        <!-- Close Icon -->
-                        <div class="closeIcon">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                        </div>
+                <!-- Top Header Content -->
+                <div class="top-header-meta d-flex">
+                  <!-- Language Dropdown -->
+                  <div class="language-dropdown">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $t("header.language")
+                        }}</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#" @click="switchLocale('zh')">简体中文</a>
+                        <a class="dropdown-item" href="#" @click="switchLocale('en')">English</a>
+                      </div>
                     </div>
+                  </div>
+                  <!-- Login -->
+                  <div class="login">
+                    <a href="login.html" id="title_login">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                      <span>{{ $t("header.login") }}</span>
+                    </a>
+                  </div>
+                  <div class="login">
+                    <div class="dropdown language-dropdown" id="title_login1" style="display: none">
+                      <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">我的</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="checkout.html">收货地址</a>
+                        <a class="dropdown-item" href="order.html">我的订单</a>
+                        <a class="dropdown-item" href="#" id="quit">退出登录</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Cart -->
+                  <div class="cart">
+                    <a href="cart.html">
+                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      <span>{{ $t("header.cart") }}
+                        <span class="cart-quantity"></span>
+                      </span>
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- ***** Navbar Area ***** -->
+      <div class="alazea-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <!-- Menu -->
+            <nav class="classy-navbar justify-content-between" id="alazeaNav">
+
+              <!-- Nav Brand -->
+              <a href="index.html" class="nav-brand">
+                <img src="img/logos/logo白字.png" alt="">
+              </a>
+
+              <!-- Navbar Toggler -->
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+
+              <!-- Menu -->
+              <div class="classy-menu">
+
+                <!-- Close Button -->
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span>
+                    <span class="bottom"></span>
+                  </div>
+                </div>
+
+                <!-- Navbar Start -->
+                <div class="classynav">
+                  <ul>
+                    <li>
+                      <a href="index.html">{{ $t("navbar.min") }}</a>
+                    </li>
+                    <li>
+                      <a href="portfolio.html">{{ $t("navbar.products") }}</a>
+                    </li>
+                    <li>
+                      <a href="shop.html">{{ $t("navbar.store") }}</a>
+                    </li>
+                    <li>
+                      <a href="about.html">{{ $t("navbar.brand") }}</a>
+                    </li>
+
+                  </ul>
+
+                  <!-- Search Icon -->
+               
+                </div>
+                <!-- Navbar End -->
+              </div>
+            </nav>
+
+            <!-- Search Form -->
+            <div class="search-form">
+              <form action="#" method="get">
+                <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                <button type="submit" class="d-none"></button>
+              </form>
+              <!-- Close Icon -->
+              <div class="closeIcon">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
-        <!-- Top Breadcrumb Area -->
-        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/banner/banner6.jpg);">
-            <h2>商城</h2>
-        </div>
+      <!-- Top Breadcrumb Area -->
+      <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
+        style="background-image: url(img/banner/banner6.jpg);">
+        <h2>{{ $t("shop.store") }}</h2>
+      </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="#">
-                                    <i class="fa fa-home"></i> 首页</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">商城</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">
+                    <i class="fa fa-home"></i> {{ $t("about.front-page") }}</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $t("shop.store") }}</li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
     <!-- ##### Breadcrumb Area End ##### -->
 
     <!-- ##### Shop Area Start ##### -->
     <section class="shop-page section-padding-0-100">
-        <div class="container">
-            <div class="row">
-                <!-- Shop Sorting Data -->
-                <div class="col-12">
-                    <div class="shop-sorting-data d-flex flex-wrap align-items-center justify-content-between">
-                        <!-- Shop Page Count -->
-                        <div class="shop-page-count">
-                            <p> 第{{pageNo * size + 1 }} – {{ ((pageNo + 1) * size)}} 个 ，共{{total}}个</p>
-                        </div>
-                        <!-- Search by Terms -->
-                        <div class="search_by_terms">
-                            <form action="#" method="post" class="form-inline">
-                                <!-- <select class="custom-select widget-title">
+      <div class="container">
+        <div class="row">
+          <!-- Shop Sorting Data -->
+          <div class="col-12">
+            <div class="shop-sorting-data d-flex flex-wrap align-items-center justify-content-between">
+              <!-- Shop Page Count -->
+              <div class="shop-page-count">
+                <p> 第{{pageNo * size + 1 }} – {{ ((pageNo + 1) * size)}} 个 ，共{{total}}个</p>
+              </div>
+              <!-- Search by Terms -->
+              <div class="search_by_terms">
+                <form action="#" method="post" class="form-inline">
+                  <!-- <select class="custom-select widget-title">
                                   <option selected>按照价格</option>
                                   <option value="1">最新品</option>
                                 </select> -->
-                                <!-- <select class="custom-select widget-title">
+                  <!-- <select class="custom-select widget-title">
                                   <option selected>Show: 9</option>
                                   <option value="1">12</option>
                                   <option value="2">18</option>
                                   <option value="3">24</option>
                                 </select> -->
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                </form>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div class="row">
-                <!-- Sidebar Area -->
-                <div class="col-12 col-md-4 col-lg-3">
-                    <div class="shop-sidebar-area">
+        <div class="row">
+          <!-- Sidebar Area -->
+          <div class="col-12 col-md-4 col-lg-3">
+            <div class="shop-sidebar-area">
 
-                        <!-- Shop Widget -->
-                        <!-- <div class="shop-widget price mb-50">
+              <!-- Shop Widget -->
+              <!-- <div class="shop-widget price mb-50">
                             <h4 class="widget-title">价格</h4>
                             <div class="widget-desc">
                                 <div class="slider-range">
@@ -251,281 +250,280 @@
                             </div>
                         </div> -->
 
-                        <!-- Shop Widget -->
-                        <div class="shop-widget catagory mb-50">
-                            <h4 class="widget-title">分类</h4>
-                            <div class="widget-desc">
-                                <div 
-        
-                                v-for="(v,index) in categoryMap" class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input  type="checkbox" :checked="category == index" class="custom-control-input" :id=" 'customCheck' + index">
-                                    <label @click="change(index)" class="custom-control-label" for="'customCheck' + index">{{v}}</label>
-                                </div>
-                           
-                            </div>
-                        </div>
+              <!-- Shop Widget -->
+              <div class="shop-widget catagory mb-50">
+                <h4 class="widget-title">{{ $t("shop.category") }}</h4>
+                <div class="widget-desc">
+                  <div v-for="(v,index) in categoryMap"
+                    class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                    <input type="checkbox" :checked="category == index" class="custom-control-input"
+                      :id=" 'customCheck' + index">
+                    <label @click="change(index)" class="custom-control-label" for="'customCheck' + index">{{v}}</label>
+                  </div>
 
-                        <!-- Shop Widget -->
-                        <div class="shop-widget sort-by mb-50">
-                            <!-- <h4 class="widget-title">Sort by</h4>
+                </div>
+              </div>
+
+              <!-- Shop Widget -->
+              <div class="shop-widget sort-by mb-50">
+                <!-- <h4 class="widget-title">Sort by</h4>
                             <div class="widget-desc">
-                 
+
                                 <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
                                     <input type="checkbox" class="custom-control-input" id="customCheck7">
                                     <label class="custom-control-label" for="customCheck7">New arrivals</label>
                                 </div>
-                            
+
                                 <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
                                     <input type="checkbox" class="custom-control-input" id="customCheck8">
                                     <label class="custom-control-label" for="customCheck8">Alphabetically, A-Z</label>
                                 </div>
-                       
+
                                 <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
                                     <input type="checkbox" class="custom-control-input" id="customCheck9">
                                     <label class="custom-control-label" for="customCheck9">Alphabetically, Z-A</label>
                                 </div>
-                           
+
                                 <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
                                     <input type="checkbox" class="custom-control-input" id="customCheck10">
                                     <label class="custom-control-label" for="customCheck10">Price: low to high</label>
                                 </div>
-                         
+
                                 <div class="custom-control custom-checkbox d-flex align-items-center">
                                     <input type="checkbox" class="custom-control-input" id="customCheck11">
                                     <label class="custom-control-label" for="customCheck11">Price: high to low</label>
                                 </div>
                             </div> -->
-                        </div>
+              </div>
 
-                        <!-- Shop Widget -->
-                        <div class="shop-widget best-seller mb-50">
-                            <!-- <h4 class="widget-title">Best Seller</h4> -->
-                            <div class="widget-desc">
-                                <!-- Single Best Seller Products -->
-                                <div class="single-best-seller-product d-flex align-items-center">
-                                </div>
+              <!-- Shop Widget -->
+              <div class="shop-widget best-seller mb-50">
+                <!-- <h4 class="widget-title">Best Seller</h4> -->
+                <div class="widget-desc">
+                  <!-- Single Best Seller Products -->
+                  <div class="single-best-seller-product d-flex align-items-center">
+                  </div>
 
-                                <!-- Single Best Seller Products -->
-                                <div class="single-best-seller-product d-flex align-items-center">
-                                </div>
+                  <!-- Single Best Seller Products -->
+                  <div class="single-best-seller-product d-flex align-items-center">
+                  </div>
 
-                            </div>
-                        </div>
-                    </div>
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <!-- All Products Area -->
-                <div class="col-12 col-md-8 col-lg-9">
-                    <div class="shop-products-area">
-                        <div class="row">
+          <!-- All Products Area -->
+          <div class="col-12 col-md-8 col-lg-9">
+            <div class="shop-products-area">
+              <div class="row">
 
-                            <!-- Single Product Area -->
-                            <div class="col-12 col-sm-6 col-lg-4"  v-for="(v,index) in list" 
-                            @mouseover="hoverHandler(index,true)"
-                            @mouseleave="hoverHandler(index,false)"  >
-                                <div class="single-product-area mb-50" >
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <a :href=`shop-details.html?id=${v.id}`>
-                                            <img  class="product-img-in" 
-                                            
-                                            :src="index === curHover? v.coverImageHover : v.coverImage" alt="">
-                                        </a>
-                                        <!-- Product Tag -->
-                                        <!-- <div class="product-tag">
+                <!-- Single Product Area -->
+                <div class="col-12 col-sm-6 col-lg-4" v-for="(v,index) in list" @mouseover="hoverHandler(index,true)"
+                  @mouseleave="hoverHandler(index,false)">
+                  <div class="single-product-area mb-50">
+                    <!-- Product Image -->
+                    <div class="product-img">
+                      <a :href=`shop-details.html?id=${v.id}`>
+                        <img class="product-img-in" :src="index === curHover? v.coverImageHover : v.coverImage" alt="">
+                      </a>
+                      <!-- Product Tag -->
+                      <!-- <div class="product-tag">
                                             <a href="#">Hot</a>
                                         </div> -->
-                                        <div class="product-meta d-flex">
-                                            <!-- <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a> -->
-                                            <a :href=`shop-details.html?id=${v.id}` style="margin: 0 auto" class="add-to-cart-btn">查看详情</a>
-                                            <!-- <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a> -->
-                                        </div>
-                                    </div>
-                                    <!-- Product Info -->
-                                    <div class="product-info mt-15 text-center">
-                                        <a :href=`shop-details.html?id=${v.id}`>
-                                            <p>{{v.name}}</p>
-                                        </a>
-                                        <h6>¥{{v.price}}</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Pagination -->
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li class="page-item" @click="jump(index)" v-for="(v,index) in page">
-                                    <a :class="['page-link',index === pageNo? 'active':''].join(' ') ">{{index + 1}}</a>
-                                </li>
-                                <li class="page-item" @click="nextPage">
-                                    <a class="page-link">
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                      <div class="product-meta d-flex">
+                        <!-- <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a> -->
+                        <a :href=`shop-details.html?id=${v.id}` style="margin: 0 auto" class="add-to-cart-btn">{{ $t("shop.details") }}</a>
+                        <!-- <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a> -->
+                      </div>
                     </div>
+                    <!-- Product Info -->
+                    <div class="product-info mt-15 text-center">
+                      <a :href=`shop-details.html?id=${v.id}`>
+                        <p>{{v.name}}</p>
+                      </a>
+                      <h6>¥{{v.price}}</h6>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <!-- Pagination -->
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li class="page-item" @click="jump(index)" v-for="(v,index) in page">
+                    <a :class="['page-link',index === pageNo? 'active':''].join(' ') ">{{index + 1}}</a>
+                  </li>
+                  <li class="page-item" @click="nextPage">
+                    <a class="page-link">
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- ##### Shop Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area bg-img">
-        <!-- Main Footer Area -->
-        <div class="main-footer-area">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="single-footer-widget">
-                            <div class="footer-logo mb-30">
-                                <a href="#">
-                                    <img src="img/logos/logo白字.png" alt="">
-                                </a>
-                            </div>
-                            <p>可以通过这些方式来关注我们</p>
-                            <div class="social-info">
-                                <a href=" https://weibo.com/u/7483500874?is_all=1">
-                                    <img src="img/contact-icons/weibo.png">
-                                </a>
-                               
-                                
-                         
-                                <span class="dropup" >
-                                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                             <img src="img/contact-icons/weixin.png">
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <img src="img/contact-icons/weixin-url.png">
-                                    </div>
-                                </span>
-
-
-                                <span class="dropup" >
-                                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                        <img src="img/contact-icons/mini.png">
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <img src="img/contact-icons/mini-url.png">
-                                    </div>
-                                </span>
-                               
-                                <a href="https://makeitnow.tmall.com">
-                                    <img src="img/contact-icons/tianmao.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="single-footer-widget">
-                            <div class="widget-title">
-                                <h5>快速导航</h5>
-                            </div>
-                            <nav class="widget-nav">
-                                <ul>
-                                    <li>
-                                        <a href="/portfolio.html">产品</a>
-                                    </li>
-                                    <li>
-                                        <a href="/shop.html">商城</a>
-                                    </li>
-                                    <li>
-                                        <a href="/about.html">品牌故事</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget -->
-
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="single-footer-widget">
-                            <div class="widget-title">
-                                <h5>联系我们</h5>
-                            </div>
-
-                            <div class="contact-information">
-                                <p>
-                                    <span>地址:</span> 深圳市福田区卓越梅林中心广场卓悦汇B座801B</p>
-                                <p>
-                                    <span>电话:</span> 0755-82569749</p>
-                                <p>
-                                    <span>邮箱:</span>assistant@min-makeitnow.com</p>
-                                <p>
-                                    <span>营业时间:</span> 周一 ~ 周五: 8 AM to 9 PM</p>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Main Footer Area -->
+      <div class="main-footer-area">
+        <div class="container">
+          <div class="row">
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <div class="footer-logo mb-30">
+                  <a href="#">
+                    <img src="img/logos/logo白字.png" alt="">
+                  </a>
                 </div>
-            </div>
-        </div>
+                <p>{{ $t("footer.follow-us") }}</p>
+                <div class="social-info">
+                  <a href=" https://weibo.com/u/7483500874?is_all=1">
+                    <img src="img/contact-icons/weibo.png">
+                  </a>
 
-        <!-- Footer Bottom Area -->
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="border-line"></div>
+
+
+                  <span class="dropup">
+                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <img src="img/contact-icons/weixin.png">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <img src="img/contact-icons/weixin-url.png">
                     </div>
-                    <!-- Copywrite Text -->
-                    <div class="col-12 col-md-6">
-                        <div class="copywrite-text">
-                            <p>&copy;
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script>
-                                <!-- All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
+                  </span>
+
+
+                  <span class="dropup">
+                    <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <img src="img/contact-icons/mini.png">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <img src="img/contact-icons/mini-url.png">
                     </div>
-                    <!-- Footer Nav -->
-                    <div class="col-12 col-md-6">
-                        <div class="footer-nav">
-                            <nav>
-                                <ul>
-                                    <li>
-                                        <a href="/portfolio.html">产品</a>
-                                    </li>
-                                    <li>
-                                        <a href="/shop.html">商城</a>
-                                    </li>
-                                    <li>
-                                        <a href="/about.html">品牌故事</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                  </span>
+                  <a href="https://makeitnow.tmall.com">
+                    <img src="img/contact-icons/tianmao.png">
+                  </a>
                 </div>
+              </div>
             </div>
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <div class="widget-title">
+                  <h5>{{ $t("footer.fast-nav") }}</h5>
+                </div>
+                <nav class="widget-nav">
+                  <ul>
+                    <li>
+                      <a href="/portfolio.html">{{ $t("navbar.products") }}</a>
+                    </li>
+                    <li>
+                      <a href="/shop.html">{{ $t("navbar.store") }}</a>
+                    </li>
+                    <li>
+                      <a href="/about.html">{{ $t("navbar.brand") }}</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="single-footer-widget">
+                <div class="widget-title">
+                  <h5>{{ $t("footer.contact") }}</h5>
+                </div>
+
+                <div class="contact-information">
+                  <p>
+                    <span>{{ $t("footer.address") }}</span>:</span> {{ $t("footer.address-txt") }}
+                  </p>
+                  <p>
+                    <span>{{ $t("footer.phone") }}:</span>0755-82569749
+                  </p>
+                  <p>
+                    <span>{{ $t("footer.email") }}:</span>assistant@min-makeitnow.com
+                  </p>
+                  <p>
+                    <span>{{ $t("footer.workhour") }}:</span> {{ $t("footer.workhour-txt") }}
+                  </p>
+                  <p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Footer Bottom Area -->
+      <div class="footer-bottom-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="border-line"></div>
+            </div>
+            <!-- Copywrite Text -->
+            <div class="col-12 col-md-6">
+              <div class="copywrite-text">
+                <p>&copy;
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  Copyright &copy;
+                  {{ currentYear }}
+                  <!-- All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+              </div>
+            </div>
+            <!-- Footer Nav -->
+            <div class="col-12 col-md-6" id="footer-contact">
+              <div class="footer-nav">
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="/portfolio.html">{{ $t("navbar.products") }}</a>
+                    </li>
+                    <li>
+                      <a href="/shop.html">{{ $t("navbar.store") }}</a>
+                    </li>
+                    <li>
+                      <a href="/about.html">{{ $t("navbar.brand") }}</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
-    <!-- ##### All Javascript Files ##### -->
-    <!-- jQuery-2.2.4 js -->
+  </div>
 
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/vue/vue.js"></script>
-    <script src="js/active.js"></script>
-    <script src="js/views/shop.js"></script>
+  <!-- ##### All Javascript Files ##### -->
+  <!-- jQuery-2.2.4 js -->
+
+  <script src="js/jquery/jquery-2.2.4.min.js"></script>
+  <!-- Popper js -->
+  <script src="js/bootstrap/popper.min.js"></script>
+  <!-- Bootstrap js -->
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <!-- All Plugins js -->
+  <script src="js/plugins/plugins.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/vue/vue.js"></script>
+  <script src="js/vue/vue-i18n.js"></script>
+  <script src="js/locale.js"></script>
+  <script src="js/active.js"></script>
+  <script src="js/views/shop.js"></script>
 
 
 </body>
