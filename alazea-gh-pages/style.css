@@ -951,8 +951,6 @@ img {
     color: #111111;
     margin-bottom: 30px; }
   .single_product_desc .short_overview {
-    height: 200px;
-    overflow: auto;
     padding: 30px 0;
     border-bottom: 1px solid #ebebeb;
     margin-bottom: 30px; }
@@ -1203,7 +1201,7 @@ img {
     text-transform: uppercase;
     text-align: left; }
     .cart-table thead th:first-child {
-      width: 40%; }
+      width: 20%; }
   .cart-table tbody tr {
     position: relative;
     z-index: 1;
