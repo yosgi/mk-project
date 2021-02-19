@@ -15,6 +15,9 @@ new Vue({
     currentYear: new Date().getFullYear()
   },
   computed: {
+    isUS() {
+      return i18n.locale === 'en';
+    },
     query() {
         function parseQueryString(url){
             var str=url.split("?")[1],
@@ -40,8 +43,8 @@ new Vue({
     valMap() {
         // 商品属性值
         var vals = {}
-        this.spuAttribute.value.forEach(function (v) {
-            vals[v.id] = v.name
+        this.spuAttribute.value.forEach((v) => {
+            vals[v.id] = this.isUS ? v.nameUs : v.name
         })
         return vals
     }
@@ -113,7 +116,9 @@ new Vue({
             data.otherImage = JSON.parse(data.otherImage)
             data.detail = data.detail
             data.desc = data.desc.split('\n')
+            data.descUs = data.descUs.split('\n')
             data.tags = JSON.parse(data.tags)
+            data.tagsUs = JSON.parse(data.tagsUs)
             _this.skus = data.skus
             _this.spuAttribute = data.spuAttribute
             _this.info = data

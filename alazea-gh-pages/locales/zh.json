@@ -113,7 +113,9 @@
   },
   "shop-details": {
     "shop-detail": "商品详情",
-    "detail": "详情"
+    "detail": "详情",
+    "chooseSpec": "选择规格",
+    "addCart": "加入购物车"
   },
   "shop": {
     "store": "商城",
