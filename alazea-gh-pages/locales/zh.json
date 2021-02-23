@@ -111,6 +111,9 @@
     "filters": ["所有","餐具","水瓶","饭兜","其它"],
     "details": "查看详情"
   },
+  "single-portfolio": {
+    "product-intro": "产品介绍"
+  },
   "shop-details": {
     "shop-detail": "商品详情",
     "detail": "详情",
@@ -122,7 +125,6 @@
     "category": "分类",
     "filters": ["所有","餐具","水瓶","饭兜","其它"]
   },
-  "single-portfolio": {},
   "single-post": {},
   "footer": {
     "follow-us": "可以通过这些方式来关注我们",
