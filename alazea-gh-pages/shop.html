@@ -343,7 +343,7 @@
                     <!-- Product Info -->
                     <div class="product-info mt-15 text-center">
                       <a :href=`shop-details.html?id=${v.id}`>
-                        <p>{{v.name}}</p>
+                        <p>{{ $i18n.locale === 'en' ? v.nameUs : v.name }}</p>
                       </a>
                       <h6>¥{{v.price}}</h6>
                     </div>

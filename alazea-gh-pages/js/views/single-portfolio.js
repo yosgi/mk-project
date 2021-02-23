@@ -1,6 +1,7 @@
 var token = sessionStorage.getItem('token');
 new Vue({
-  el: '#portfolio',
+  el: '#singlePortfolioPage',
+  i18n,
   data: {
     info:{},
     curSku:0,
@@ -91,5 +92,5 @@ new Vue({
         this.fetch()
       }
     }
-  }    
+  }
 })

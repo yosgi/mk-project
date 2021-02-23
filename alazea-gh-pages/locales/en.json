@@ -110,6 +110,9 @@
     "our-products": "Our products",
     "filters": ["All", "Tableware", "Bottle", "Bibs", "Others"]
   },
+  "single-portfolio": {
+    "product-intro": "Product Introduction"
+  },
   "shop-details": {
     "shop-detail": "Product Details",
     "detail": "Details",
@@ -122,7 +125,6 @@
     "filters": ["All","Tableware","Bottle","Bibs","Others"],
     "details": "Details"
   },
-  "single-portfolio": {},
   "single-post": {},
   "footer": {
     "follow-us": "Follow us below",
