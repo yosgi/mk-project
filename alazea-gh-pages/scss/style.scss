@@ -234,6 +234,9 @@ img {
     width: 50px;
   }
 }
+[v-cloak] {
+  display: none;
+}
 .preloader {
   display: none !important;
 
