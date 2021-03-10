@@ -1,4 +1,4 @@
-const DEFAULT_LANG = 'en'
+const DEFAULT_LANG = 'zh'
 const LOCALE_KEY = 'localeLanguage'
 
 const en = $.getJSON({ url:'../locales/en.json', async: false }).responseJSON

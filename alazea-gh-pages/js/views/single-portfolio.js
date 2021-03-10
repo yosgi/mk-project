@@ -45,6 +45,9 @@ new Vue({
     this.fetch()
   },
   methods:{
+    switchLocale(lang) {
+      switchLocale(lang)
+    },
     submit() {
         var sku = this.skus[this.curSku]
         var count = this.count
@@ -78,6 +81,7 @@ new Vue({
             var data  = json.data
             data.otherImage = JSON.parse(data.otherImage).splice(0,3)
             data.detail = JSON.parse(data.detail)
+            data.detailUs = JSON.parse(data.detailUs)
             data.desc = data.desc.split('\n')
             console.log(data)
             _this.skus = data.skus

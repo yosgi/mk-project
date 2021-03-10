@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <div id="homePage" v-cloak>
+  <div id="homePage" >
     <!-- Preloader -->
     <div class="preloader d-flex align-items-center justify-content-center">
       <div class="preloader-circle"></div>
@@ -30,7 +30,7 @@
     </div>
 
     <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
+    <header class="header-area" v-cloak>
 
       <!-- ***** Top Header Area ***** -->
       <div class="top-header-area">
@@ -188,7 +188,7 @@
                 <div class="hero-slides-content text-center">
                   <h1>Make It Now</h1>
                   <p>A companion, in every moment.</p>
-                  <div class="welcome-btn-group">
+                  <div class="welcome-btn-group" v-cloak>
                     <a href="/shop.html" class="btn alazea-btn mr-30">{{ $t("index.shop") }}</a>
                     <a href="#index-contact" class="btn alazea-btn active">{{ $t("footer.contact") }}</a>
                   </div>
@@ -209,7 +209,7 @@
                 <div class="hero-slides-content text-center">
                   <h1>Make It Now</h1>
                   <p>A companion, in every moment.</p>
-                  <div class="welcome-btn-group">
+                  <div class="welcome-btn-group" v-cloak>
                     <a href="/shop.html" class="btn alazea-btn mr-30">{{ $t("index.shop") }}</a>
                     <a href="#footer-contact" class="btn alazea-btn active">{{ $t("footer.contact") }}</a>
                   </div>
@@ -229,7 +229,7 @@
                 <div class="hero-slides-content text-center">
                   <h1>Make It Now</h1>
                   <p>A companion, in every moment.</p>
-                  <div class="welcome-btn-group">
+                  <div class="welcome-btn-group" v-cloak>
                     <a href="/shop.html" class="btn alazea-btn mr-30">{{ $t("index.shop") }}</a>
                     <a href="#footer-contact" class="btn alazea-btn active">{{ $t("footer.contact") }}</a>
                   </div>
@@ -315,7 +315,7 @@
     </section>
     <!-- ##### Testimonial Area End ##### -->
     <!-- ##### Portfolio Area Start ##### -->
-    <section class="alazea-portfolio-area section-padding-100-0">
+    <section class="alazea-portfolio-area section-padding-100-0" v-cloak>
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -446,7 +446,7 @@
     <!-- ##### Service Area End ##### -->
 
     <!-- ##### About Area Start ##### -->
-    <section class="about-us-area section-padding-100-0">
+    <section class="about-us-area section-padding-100-0" v-cloak>
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-12 col-lg-5">
@@ -539,7 +539,7 @@
 
 
     <!-- ##### Product Area Start ##### -->
-    <section class="new-arrivals-products-area bg-gray section-padding-100">
+    <section class="new-arrivals-products-area bg-gray section-padding-100" v-cloak>
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -639,7 +639,7 @@
     <!-- ##### Subscribe Area End ##### -->
 
     <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area section-padding-100-0  row align-items-center justify-content-between">
+    <section class="contact-area section-padding-100-0  row align-items-center justify-content-between" v-cloak>
             <div class="col-12 col-lg-6">
               <div class="contact-information " style="padding-left:20%">
                 <p>
@@ -668,7 +668,7 @@
     <!-- ##### Contact Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area bg-img">
+    <footer class="footer-area bg-img" v-cloak>
       <!-- Main Footer Area -->
       <div class="main-footer-area">
         <div class="container">

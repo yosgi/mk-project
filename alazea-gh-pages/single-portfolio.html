@@ -204,7 +204,15 @@
     <!-- ##### Portfolio Area Start ##### -->
     <div id="portfolio" style="width: 70%;margin:auto">
       <a :href=`shop-details.html?id=${info.id}`>
-        <img class="portfolio-img" v-for="(v,index) in info.detail" :src="v.content">
+        <div  v-if="$i18n.locale === 'en'">
+          <img class="portfolio-img" v-for="(v,index) in  info.detailUs" :src="v.content">
+        </div>
+
+        <div v-else>
+          <img   class="portfolio-img"  v-for="(v,index) in  info.detail" :src="v.content">
+        </div>
+       
+        
       </a>
     </div>
     <!-- ##### Portfolio Area End ##### -->
