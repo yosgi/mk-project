@@ -65,7 +65,7 @@ new Vue({
         var count = this.count
         var spuId = product.spuId
         var name = this.info.name
-        var src = this.info.headImage
+        var src = product.image
         var price = product.price
         var detail = ''
         JSON.parse(product.skuAttribute).forEach(v => {
@@ -77,7 +77,8 @@ new Vue({
         }
         if (lib.query("products", {skuId}).length ){
           lib.update("products", {skuId}, function(row) {
-            row.count+=count
+            row = {name, src, count, price, skuId,spuId,detail}
+            row.count += count;
             return row;
           });
         } else {

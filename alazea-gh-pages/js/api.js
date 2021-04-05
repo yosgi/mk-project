@@ -22,9 +22,9 @@ var token = sessionStorage.getItem('token');
           if (json.msg === 'token过期，请重新登录') {
             sessionStorage.removeItem('token')
             showLogin()
-            $.sendWarning('超时，请重新登录', 3000,function () {
-
-            });
+            $.sendWarning('超时，请重新登录', 3000);
+          } else {
+            $.sendWarning(json.msg);
           }
         }  else {
           success(json)
